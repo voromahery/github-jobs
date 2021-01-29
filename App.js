@@ -1,6 +1,7 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./components";
-import { Home } from "./pages";
+import { Home, Details } from "./pages";
 
 function App() {
   return (
@@ -8,7 +9,16 @@ function App() {
       <Header>
         <Header.Text>Github Jobs</Header.Text>
       </Header>
-      <Home />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/details/:jobId">
+            <Details />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
