@@ -32452,7 +32452,79 @@ HeaderForm.Button = function HeaderFormButton(_ref3) {
 
   return /*#__PURE__*/_react.default.createElement(_headerForm.Button, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/card/styles/card.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Item = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Item = _styledComponents.default.div(_templateObject2());
+
+exports.Item = Item;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/card/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Card;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _card = require("./styles/card");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Card(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Container, restProps, children);
+}
+
+Card.Item = function CardItem(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Item, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32470,13 +32542,21 @@ Object.defineProperty(exports, "HeaderForm", {
     return _headerForm.default;
   }
 });
+Object.defineProperty(exports, "Card", {
+  enumerable: true,
+  get: function () {
+    return _card.default;
+  }
+});
 
 var _header = _interopRequireDefault(require("./header"));
 
 var _headerForm = _interopRequireDefault(require("./header-form"));
 
+var _card = _interopRequireDefault(require("./card"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js"}],"container/header-form.js":[function(require,module,exports) {
+},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js","./card":"components/card/index.js"}],"container/header-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32495,7 +32575,24 @@ function HeaderFormContainer() {
     placeholder: "Title, companies, expertise or benefits"
   }), /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Button, null, "Search"));
 }
-},{"react":"node_modules/react/index.js","../components":"components/index.js"}],"pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"components/index.js"}],"container/card.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CardContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _card = _interopRequireDefault(require("./../components/card"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CardContainer() {
+  return /*#__PURE__*/_react.default.createElement(_card.default, null, /*#__PURE__*/_react.default.createElement(_card.default.Item, null, "CARD ITEMS"));
+}
+},{"react":"node_modules/react/index.js","./../components/card":"components/card/index.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32507,12 +32604,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _headerForm = _interopRequireDefault(require("../container/header-form"));
 
+var _card = _interopRequireDefault(require("../container/card"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
 }
-},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js","../container/card":"container/card.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32561,7 +32660,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody {\n    max-width: 1440px;\n    margin: auto;\n}\n\ninput {\n    width: 100%;\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
