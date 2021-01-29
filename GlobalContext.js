@@ -2,7 +2,13 @@ import React, { useState, useEffect, useReducer, createContext } from "react";
 const Context = createContext(null);
 
 function GlobalContext(props) {
-  const [jobsData, setJobsData] = useState([]);
+  const [location , setLocation ] = useState("New York");
+  const [locationList, setLocationList] = useState([
+    "London",
+    "Amsterdam",
+    "New York",
+    "Berlin",
+  ]);
   const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
 
   const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=python&full_time=true&location=berlin`;
@@ -66,7 +72,7 @@ function GlobalContext(props) {
 
   return (
     <div>
-      <Context.Provider value={{state, dispatch, jobsData}}>
+      <Context.Provider value={{ state, dispatch, locationList, setLocationList }}>
         {props.children}
       </Context.Provider>
     </div>

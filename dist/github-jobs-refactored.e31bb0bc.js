@@ -36626,7 +36626,155 @@ HeaderForm.Button = function HeaderFormButton(_ref3) {
 
   return /*#__PURE__*/_react.default.createElement(_headerForm.Button, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/card/styles/card.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/body-form/styles/body-form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Radio = exports.CheckBox = exports.Input = exports.Label = exports.Span = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Span = _styledComponents.default.span(_templateObject2());
+
+exports.Span = Span;
+
+var Label = _styledComponents.default.label(_templateObject3());
+
+exports.Label = Label;
+
+var Input = _styledComponents.default.input(_templateObject4());
+
+exports.Input = Input;
+
+var CheckBox = _styledComponents.default.input(_templateObject5());
+
+exports.CheckBox = CheckBox;
+
+var Radio = _styledComponents.default.input(_templateObject6());
+
+exports.Radio = Radio;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/body-form/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = BodyForm;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _bodyForm = require("./styles/body-form");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function BodyForm(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Container, restProps, children);
+}
+
+BodyForm.Label = function BodyFormLabel(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Label, restProps, children);
+};
+
+BodyForm.CheckBox = function BodyFormCheckBox(_ref3) {
+  var restProps = Object.assign({}, _ref3);
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.CheckBox, restProps);
+};
+
+BodyForm.Radio = function BodyFormRadio(_ref4) {
+  var restProps = Object.assign({}, _ref4);
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Radio, restProps);
+};
+
+BodyForm.Input = function BodyFormInput(_ref5) {
+  var restProps = Object.assign({}, _ref5);
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Input, restProps);
+};
+
+BodyForm.Span = function BodyFormSpan(_ref6) {
+  var restProps = Object.assign({}, _ref6);
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Span, restProps);
+};
+},{"react":"node_modules/react/index.js","./styles/body-form":"components/body-form/styles/body-form.js"}],"components/card/styles/card.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36759,7 +36907,58 @@ Card.JobName = function CardJobName(_ref5) {
 
   return /*#__PURE__*/_react.default.createElement(_card.JobName, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"components/details/styles/details.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/details/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Details;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _details = require("./styles/details");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Details(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Container, restProps, children);
+}
+},{"react":"node_modules/react/index.js","./styles/details":"components/details/styles/details.js"}],"components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36777,10 +36976,22 @@ Object.defineProperty(exports, "HeaderForm", {
     return _headerForm.default;
   }
 });
+Object.defineProperty(exports, "BodyForm", {
+  enumerable: true,
+  get: function () {
+    return _bodyForm.default;
+  }
+});
 Object.defineProperty(exports, "Card", {
   enumerable: true,
   get: function () {
     return _card.default;
+  }
+});
+Object.defineProperty(exports, "Details", {
+  enumerable: true,
+  get: function () {
+    return _details.default;
   }
 });
 
@@ -36788,10 +36999,14 @@ var _header = _interopRequireDefault(require("./header"));
 
 var _headerForm = _interopRequireDefault(require("./header-form"));
 
+var _bodyForm = _interopRequireDefault(require("./body-form"));
+
 var _card = _interopRequireDefault(require("./card"));
 
+var _details = _interopRequireDefault(require("./details"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js","./card":"components/card/index.js"}],"container/header-form.js":[function(require,module,exports) {
+},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js","./body-form":"components/body-form/index.js","./card":"components/card/index.js","./details":"components/details/index.js"}],"container/header-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36847,10 +37062,15 @@ var Context = (0, _react.createContext)(null);
 exports.Context = Context;
 
 function GlobalContext(props) {
-  var _useState = (0, _react.useState)([]),
+  var _useState = (0, _react.useState)("New York"),
       _useState2 = _slicedToArray(_useState, 2),
-      jobsData = _useState2[0],
-      setJobsData = _useState2[1];
+      location = _useState2[0],
+      setLocation = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(["London", "Amsterdam", "New York", "Berlin"]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      locationList = _useState4[0],
+      setLocationList = _useState4[1];
 
   var regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
   var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=python&full_time=true&location=berlin");
@@ -36923,7 +37143,8 @@ function GlobalContext(props) {
     value: {
       state: state,
       dispatch: dispatch,
-      jobsData: jobsData
+      locationList: locationList,
+      setLocationList: setLocationList
     }
   }, props.children));
 }
@@ -36963,7 +37184,45 @@ function CardContainer() {
     }), /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title)));
   }));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","./../components/card":"components/card/index.js"}],"pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","./../components/card":"components/card/index.js"}],"container/body-form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = BodyFormContainer;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _bodyForm = _interopRequireDefault(require("../components/body-form"));
+
+var _GlobalContext = require("../GlobalContext");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function BodyFormContainer() {
+  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
+      locationList = _useContext.locationList,
+      setLocationList = _useContext.setLocationList;
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+    type: "checkBox"
+  }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, "Full time")), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, null, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+    type: "text",
+    placeholder: "City, state, zip code or country"
+  })), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, locationList.map(function (location) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: location
+    }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+      type: "radio"
+    }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, location));
+  })));
+}
+},{"react":"node_modules/react/index.js","../components/body-form":"components/body-form/index.js","../GlobalContext":"GlobalContext.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36977,6 +37236,8 @@ var _headerForm = _interopRequireDefault(require("../container/header-form"));
 
 var _card = _interopRequireDefault(require("../container/card"));
 
+var _bodyForm = _interopRequireDefault(require("../container/body-form"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -36987,9 +37248,9 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // import { Card } from "../components";
 function Home() {
   // const {state, dispatch} = useContext(Context);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
 }
-},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js","../container/card":"container/card.js"}],"pages/details.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js"}],"pages/details.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37001,7 +37262,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _details = _interopRequireDefault(require("../components/details"));
+
 var _GlobalContext = require("../GlobalContext");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -37017,9 +37282,18 @@ function details() {
   var findJob = state.response.find(function (job) {
     return job.id === jobId;
   });
-  return /*#__PURE__*/_react.default.createElement("h1", null, "JOB DETAILS: ", findJob.id);
+  console.log(findJob);
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: findJob.how_to_apply
+    }
+  }))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: findJob.description
+    }
+  }))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37140,7 +37414,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52406" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,8 +1,9 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import HeaderFormContainer from "../container/header-form";
 import CardContainer from "../container/card";
 // import { Context } from "../GlobalContext";
 // import { Card } from "../components";
+import BodyFormContainer from "../container/body-form";
 
 export default function Home() {
   // const {state, dispatch} = useContext(Context);
@@ -10,7 +11,8 @@ export default function Home() {
   return (
     <div>
       <HeaderFormContainer />
-      <CardContainer/>
+      <BodyFormContainer />
+      <CardContainer />
     </div>
   );
 }
