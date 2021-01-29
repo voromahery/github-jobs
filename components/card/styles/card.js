@@ -21,3 +21,9 @@ export const Image = styled.img``;
 export const Title = styled.h3``;
 
 export const JobName = styled.h4``;
+
+export const Span = styled.span``;
+
+export const Location = styled.span``;
+
+export const Time = styled.time``;

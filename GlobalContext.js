@@ -2,7 +2,8 @@ import React, { useState, useEffect, useReducer, createContext } from "react";
 const Context = createContext(null);
 
 function GlobalContext(props) {
-  const [location , setLocation ] = useState("New York");
+  const [location, setLocation] = useState("New York");
+  const [jobType, setJobType] = useState(false);
   const [locationList, setLocationList] = useState([
     "London",
     "Amsterdam",
@@ -11,7 +12,7 @@ function GlobalContext(props) {
   ]);
   const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
 
-  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=python&full_time=true&location=berlin`;
+  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=python&full_time=${jobType}&location=${location}`;
 
   let [state, dispatch] = useReducer(
     (state, action) => {
@@ -35,6 +36,14 @@ function GlobalContext(props) {
             error: action.error,
           };
         }
+        // case "SEARCH_BY_LOCATION": {
+        //   return {
+        //     ...state,
+        //     loading: false,
+        //     response: action.searchLocation,
+        //     error: null,
+        //   }
+        // }
         default:
           return state;
       }
@@ -66,13 +75,24 @@ function GlobalContext(props) {
     return () => {
       isCurrent = false;
     };
-  }, []);
+  }, [location, jobType]);
 
   console.log(state.response);
 
   return (
     <div>
-      <Context.Provider value={{ state, dispatch, locationList, setLocationList }}>
+      <Context.Provider
+        value={{
+          state,
+          dispatch,
+          locationList,
+          setLocationList,
+          location,
+          setLocation,
+          jobType,
+          setJobType,
+        }}
+      >
         {props.children}
       </Context.Provider>
     </div>
