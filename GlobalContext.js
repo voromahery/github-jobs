@@ -11,7 +11,7 @@ function GlobalContext(props) {
     "New York",
     "Berlin",
   ]);
-  const currentPage = 0;
+  const [currentPage, setCurrentPage] = useState(0);
   const perPage = 5;
   const offSet = currentPage * perPage;
 
@@ -41,14 +41,14 @@ function GlobalContext(props) {
             error: action.error,
           };
         }
-         case "SEARCH_BY_KEYWORD": {
-           return {
-             ...state,
-             loading: false,
-             response: action.filterData,
-             error: null,
-           }
-         }
+        case "SEARCH_BY_KEYWORD": {
+          return {
+            ...state,
+            loading: false,
+            response: action.filterData,
+            error: null,
+          };
+        }
         default:
           return state;
       }
@@ -98,6 +98,8 @@ function GlobalContext(props) {
           setJobType,
           perPage,
           offSet,
+          currentPage,
+          setCurrentPage
         }}
       >
         {props.children}

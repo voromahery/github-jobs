@@ -9,7 +9,7 @@ export default function HeaderFormContainer() {
   function searchByKeyword(e) {
     e.preventDefault();
     const form = e.currentTarget;
-    
+
     const filterByKeyword = copyOfData.filter(
       (data) =>
         data.company.toLowerCase().includes(form.search.value) ||
