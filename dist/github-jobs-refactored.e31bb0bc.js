@@ -37068,11 +37068,101 @@ Card.Wrapper = function CardWrapper(_ref9) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Container = void 0;
+exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Image = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 28px;\n  color: #334680;\n  margin: 0;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  margin-bottom: 10px;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  height: fit-content;\n  max-width: 42px;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 21px;\n  color: #334680;\n  margin: 0;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject() {
   var data = _taggedTemplateLiteral([""]);
@@ -37089,6 +37179,42 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Container = _styledComponents.default.div(_templateObject());
 
 exports.Container = Container;
+
+var Title = _styledComponents.default.h3(_templateObject2());
+
+exports.Title = Title;
+
+var Image = _styledComponents.default.img(_templateObject3());
+
+exports.Image = Image;
+
+var Span = _styledComponents.default.span(_templateObject4());
+
+exports.Span = Span;
+
+var Text = _styledComponents.default.p(_templateObject5());
+
+exports.Text = Text;
+
+var OtherTitle = _styledComponents.default.h3(_templateObject6());
+
+exports.OtherTitle = OtherTitle;
+
+var JobName = _styledComponents.default.h3(_templateObject7());
+
+exports.JobName = JobName;
+
+var Wrapper = _styledComponents.default.div(_templateObject8());
+
+exports.Wrapper = Wrapper;
+
+var Location = _styledComponents.default.span(_templateObject9());
+
+exports.Location = Location;
+
+var Time = _styledComponents.default.span(_templateObject10());
+
+exports.Time = Time;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/details/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37113,6 +37239,67 @@ function Details(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(_details.Container, restProps, children);
 }
+
+Details.Image = function DetailsImage(_ref2) {
+  var restProps = Object.assign({}, _ref2);
+  return /*#__PURE__*/_react.default.createElement(_details.Image, restProps);
+};
+
+Details.Title = function DetailsTitle(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Title, restProps, children);
+};
+
+Details.OtherTitle = function DetailsOtherTitle(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
+};
+
+Details.Span = function DetailsSpan(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Span, restProps, children);
+};
+
+Details.Location = function DetailsLocation(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Location, restProps, children);
+};
+
+Details.Time = function DetailsTime(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Time, restProps, children);
+};
+
+Details.JobName = function DetailsJobName(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.JobName, restProps, children);
+};
+
+Details.Wrapper = function DetailsWrapper(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Wrapper, restProps, children);
+};
+
+Details.Text = function DetailsText(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
+};
 },{"react":"node_modules/react/index.js","./styles/details":"components/details/styles/details.js"}],"components/footer/styles/footer.js":[function(require,module,exports) {
 "use strict";
 
@@ -55729,7 +55916,7 @@ function CardContainer() {
       }
     }, /*#__PURE__*/_react.default.createElement(_card.default.Location, null, data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
       dateTime: data.created_at
-    }, (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()))))));
+    }, (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(data.created_at), new Date()), " ago") : "today")))));
   }));
 }
 },{"react":"node_modules/react/index.js","date-fns":"node_modules/date-fns/esm/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","./../components/card":"components/card/index.js"}],"container/body-form.js":[function(require,module,exports) {
@@ -55930,6 +56117,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _dateFns = require("date-fns");
+
 var _details = _interopRequireDefault(require("../components/details"));
 
 var _GlobalContext = require("../GlobalContext");
@@ -55951,17 +56140,42 @@ function details() {
     return job.id === jobId;
   });
   console.log(findJob);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.how_to_apply
     }
-  }))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+    style: {
+      flexDirection: "column",
+      marginTop: "36px",
+      marginBottom: "36px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
+    dateTime: findJob.created_at
+  }, (0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()), " ago") : "today")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+    style: {
+      flexDirection: "row",
+      marginTop: "36px",
+      marginBottom: "36px",
+      gap: "12px",
+      alignItems: "center"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Image, {
+    src: findJob.company_logo
+  }), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+    style: {
+      flexDirection: "column",
+      gap: "10px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.description
     }
   }))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
