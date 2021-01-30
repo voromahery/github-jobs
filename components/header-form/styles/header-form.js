@@ -6,7 +6,7 @@ export const Container = styled.form`
   padding-bottom: 41px;
   padding-left: 18px;
   padding-right: 18px;
-  background-image: url("../../images/backgroundImg.webp");
+  background-image: url("../images/backgroundImg.webp");
   background-position: 50%;
   border-radius: 8px;
   background-size: cover;
@@ -17,6 +17,7 @@ export const Input = styled.input`
   padding-top: 14px;
   padding-bottom: 14px;
   border: none;
+  width: 100%;
 `;
 
 export const Button = styled.button`
@@ -31,4 +32,16 @@ export const Button = styled.button`
   padding-top: 14px;
   padding-bottom: 14px;
   border: none;
+`;
+
+export const Div = styled.div`
+  height: 55px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 100%;
 `;

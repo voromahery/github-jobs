@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../GlobalContext";
-import { HeaderForm } from "../components";
+import { Header, HeaderForm } from "../components";
 
 export default function HeaderFormContainer() {
   const { state, dispatch, setLocation, location } = useContext(Context);
@@ -30,12 +30,14 @@ export default function HeaderFormContainer() {
 
   return (
     <HeaderForm onSubmit={searchByKeyword}>
-      <HeaderForm.Input
-        name="search"
-        onChange={resetSearch}
-        placeholder="Title, companies, expertise or benefits"
-      />
-      <HeaderForm.Button>Search</HeaderForm.Button>
+      <HeaderForm.Div>
+        <HeaderForm.Input
+          name="search"
+          onChange={resetSearch}
+          placeholder="Title, companies, expertise or benefits"
+        />
+        <HeaderForm.Button>Search</HeaderForm.Button>
+      </HeaderForm.Div>
     </HeaderForm>
   );
 }

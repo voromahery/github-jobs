@@ -36562,11 +36562,21 @@ Header.Span = function HeaderSpan(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.Input = exports.Container = void 0;
+exports.Div = exports.Button = exports.Input = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  width: 100%;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n"]);
@@ -36579,7 +36589,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n  width: 100%;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36589,7 +36599,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(\"../../images/backgroundImg.webp\");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(\"../images/backgroundImg.webp\");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36611,6 +36621,10 @@ exports.Input = Input;
 var Button = _styledComponents.default.button(_templateObject3());
 
 exports.Button = Button;
+
+var Div = _styledComponents.default.div(_templateObject4());
+
+exports.Div = Div;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/header-form/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36646,6 +36660,13 @@ HeaderForm.Button = function HeaderFormButton(_ref3) {
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_headerForm.Button, restProps, children);
+};
+
+HeaderForm.Div = function HeaderFormDiv(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_headerForm.Div, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/body-form/styles/body-form.js":[function(require,module,exports) {
 "use strict";
@@ -37434,11 +37455,11 @@ function HeaderFormContainer() {
 
   return /*#__PURE__*/_react.default.createElement(_components.HeaderForm, {
     onSubmit: searchByKeyword
-  }, /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Input, {
+  }, /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Div, null, /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Input, {
     name: "search",
     onChange: resetSearch,
     placeholder: "Title, companies, expertise or benefits"
-  }), /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Button, null, "Search"));
+  }), /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Button, null, "Search")));
 }
 },{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"node_modules/date-fns/esm/_lib/toInteger/index.js":[function(require,module,exports) {
 "use strict";
