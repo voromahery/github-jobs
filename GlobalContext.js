@@ -41,14 +41,14 @@ function GlobalContext(props) {
             error: action.error,
           };
         }
-        // case "SEARCH_BY_LOCATION": {
-        //   return {
-        //     ...state,
-        //     loading: false,
-        //     response: action.searchLocation,
-        //     error: null,
-        //   }
-        // }
+         case "SEARCH_BY_KEYWORD": {
+           return {
+             ...state,
+             loading: false,
+             response: action.filterData,
+             error: null,
+           }
+         }
         default:
           return state;
       }

@@ -21,7 +21,8 @@ export default function BodyFormContainer() {
 
     if (state.response) {
       setLocation(e.target.value) || setLocation(filterLocation);
-    } else {
+    }
+    if (e.target.value.length === 0) {
       setLocation("New York");
     }
   }
