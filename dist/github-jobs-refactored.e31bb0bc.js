@@ -37126,7 +37126,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color: #b7bcce;\n  border: 1px solid #b7bcce;\n  box-sizing: border-box;\n  border-radius: 4px;\n  width: 36px;\n  height: 36px;\n  background-color: transparent;\n  &:hover {\n    color: #1e86ff;\n    border: 1px solid #1e86ff;\n    box-sizing: border-box;\n    border-radius: 4px;\n  }\n\n  &:focus {\n    background-color: #1e86ff;\n    color: #ffffff;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -37146,7 +37146,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  gap: 12px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -55800,7 +55800,7 @@ function BodyFormContainer() {
       marginBottom: "27px"
     }
   }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, {
-    for: "search"
+    htmlFor: "search"
   }, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
     type: "text",
     id: "search",
@@ -55841,6 +55841,8 @@ var _GlobalContext = require("../GlobalContext");
 
 var _components = require("../components");
 
+var _styledComponents = require("styled-components");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -55848,6 +55850,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function FooterContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       pageNumber = _useContext.pageNumber,
+      currentPage = _useContext.currentPage,
       setCurrentPage = _useContext.setCurrentPage;
 
   var pages = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
@@ -55857,7 +55860,22 @@ function FooterContainer() {
     setCurrentPage(e.target.value);
   }
 
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.List, null, pages.map(function (page, index) {
+  function nextPage() {
+    if (pageNumber > currentPage) {
+      setCurrentPage(Math.ceil(currentPage + 1));
+    }
+  }
+
+  function prevPage() {
+    if (currentPage > 0) {
+      setCurrentPage(Math.ceil(currentPage - 1));
+    }
+  }
+
+  console.log(currentPage);
+  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    onClick: prevPage
+  }, "\u276E"), pages.map(function (page, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Footer.ListItem, {
       key: index
     }, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
@@ -55866,9 +55884,11 @@ function FooterContainer() {
       },
       value: index
     }, page));
-  })));
+  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    onClick: nextPage
+  }, "\u276F")));
 }
-},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

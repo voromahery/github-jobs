@@ -44,7 +44,7 @@ export default function BodyFormContainer() {
           marginBottom: "27px",
         }}
       >
-        <BodyForm.Label for="search">Location</BodyForm.Label>
+        <BodyForm.Label htmlFor="search">Location</BodyForm.Label>
         <BodyForm.Input
           type="text"
           id="search"
