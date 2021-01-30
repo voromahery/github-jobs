@@ -4,6 +4,7 @@ const Context = createContext(null);
 function GlobalContext(props) {
   const [location, setLocation] = useState("New York");
   const [jobType, setJobType] = useState(false);
+  const [jobDescription, setJobDescription] = useState("");
   const [locationList, setLocationList] = useState([
     "London",
     "Amsterdam",
@@ -12,7 +13,7 @@ function GlobalContext(props) {
   ]);
   const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
 
-  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=python&full_time=${jobType}&location=${location}`;
+  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=${jobDescription}&full_time=${jobType}&location=${location}`;
 
   let [state, dispatch] = useReducer(
     (state, action) => {

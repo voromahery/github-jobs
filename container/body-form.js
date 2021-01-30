@@ -15,8 +15,12 @@ export default function BodyFormContainer() {
   } = useContext(Context);
 
   function searchByLocation(e) {
+    const filterLocation = locationList.find((data) =>
+      data.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+
     if (state.response) {
-      setLocation(e.target.value);
+      setLocation(e.target.value) || setLocation(filterLocation);
     } else {
       setLocation("New York");
     }

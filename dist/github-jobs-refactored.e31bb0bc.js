@@ -55304,13 +55304,18 @@ function GlobalContext(props) {
       jobType = _useState4[0],
       setJobType = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(["London", "Amsterdam", "New York", "Berlin"]),
+  var _useState5 = (0, _react.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
-      locationList = _useState6[0],
-      setLocationList = _useState6[1];
+      jobDescription = _useState6[0],
+      setJobDescription = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(["London", "Amsterdam", "New York", "Berlin"]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      locationList = _useState8[0],
+      setLocationList = _useState8[1];
 
   var regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
-  var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=python&full_time=").concat(jobType, "&location=").concat(location);
+  var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=").concat(jobDescription, "&full_time=").concat(jobType, "&location=").concat(location);
 
   var _useReducer = (0, _react.useReducer)(function (state, action) {
     switch (action.type) {
@@ -55469,8 +55474,12 @@ function BodyFormContainer() {
       setJobType = _useContext.setJobType;
 
   function searchByLocation(e) {
+    var filterLocation = locationList.find(function (data) {
+      return data.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+
     if (state.response) {
-      setLocation(e.target.value);
+      setLocation(e.target.value) || setLocation(filterLocation);
     } else {
       setLocation("New York");
     }
@@ -55696,7 +55705,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54479" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49828" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
