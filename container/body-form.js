@@ -5,23 +5,17 @@ import { Context } from "../GlobalContext";
 export default function BodyFormContainer() {
   const {
     state,
-    dispatch,
-    location,
     setLocation,
     locationList,
-    setLocationList,
     jobType,
     setJobType,
   } = useContext(Context);
 
   function searchByLocation(e) {
-    const filterLocation = locationList.find((data) =>
-      data.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-
     if (state.response) {
-      setLocation(e.target.value) || setLocation(filterLocation);
+      setLocation(e.target.value);
     }
+    
     if (e.target.value.length === 0) {
       setLocation("New York");
     }

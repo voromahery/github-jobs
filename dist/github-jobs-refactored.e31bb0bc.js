@@ -37330,7 +37330,8 @@ function GlobalContext(props) {
       isCurrent = false;
     };
   }, [location, jobType]);
-  console.log(state.response);
+  var pageNumber = Math.ceil(state.response.length / perPage);
+  console.log(state.response, pageNumber);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       state: state,
@@ -37344,7 +37345,8 @@ function GlobalContext(props) {
       perPage: perPage,
       offSet: offSet,
       currentPage: currentPage,
-      setCurrentPage: setCurrentPage
+      setCurrentPage: setCurrentPage,
+      pageNumber: pageNumber
     }
   }, props.children));
 }
@@ -55651,21 +55653,14 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function BodyFormContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state,
-      dispatch = _useContext.dispatch,
-      location = _useContext.location,
       setLocation = _useContext.setLocation,
       locationList = _useContext.locationList,
-      setLocationList = _useContext.setLocationList,
       jobType = _useContext.jobType,
       setJobType = _useContext.setJobType;
 
   function searchByLocation(e) {
-    var filterLocation = locationList.find(function (data) {
-      return data.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-
     if (state.response) {
-      setLocation(e.target.value) || setLocation(filterLocation);
+      setLocation(e.target.value);
     }
 
     if (e.target.value.length === 0) {
@@ -55721,16 +55716,25 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function FooterContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
+      pageNumber = _useContext.pageNumber,
       setCurrentPage = _useContext.setCurrentPage;
 
   var pages = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  pages.length = pageNumber;
 
-  function displayPagination() {}
+  function displayPagination(e) {
+    setCurrentPage(e.target.value);
+  }
 
   return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.List, null, pages.map(function (page, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Footer.ListItem, {
       key: index
-    }, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, page));
+    }, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+      onClick: function onClick(value) {
+        return displayPagination(value);
+      },
+      value: index
+    }, page));
   })));
 }
 },{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"pages/home.js":[function(require,module,exports) {
@@ -55927,7 +55931,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53519" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

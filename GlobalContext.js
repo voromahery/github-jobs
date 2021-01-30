@@ -81,8 +81,8 @@ function GlobalContext(props) {
       isCurrent = false;
     };
   }, [location, jobType]);
-
-  console.log(state.response);
+  const pageNumber = Math.ceil(state.response.length / perPage);
+  console.log(state.response, pageNumber);
 
   return (
     <div>
@@ -99,7 +99,8 @@ function GlobalContext(props) {
           perPage,
           offSet,
           currentPage,
-          setCurrentPage
+          setCurrentPage,
+          pageNumber
         }}
       >
         {props.children}
