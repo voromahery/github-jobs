@@ -6,11 +6,16 @@ import {
   Radio,
   Input,
   Span,
+  Wrapper
 } from "./styles/body-form";
 
 export default function BodyForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
+
+BodyForm.Wrapper = function BodyFormWrapper({ children, ...restProps }) {
+  return <Wrapper {...restProps}>{children}</Wrapper>;
+};
 
 BodyForm.Label = function BodyFormLabel({ children, ...restProps }) {
   return <Label {...restProps}>{children}</Label>;

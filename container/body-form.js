@@ -3,19 +3,15 @@ import BodyForm from "../components/body-form";
 import { Context } from "../GlobalContext";
 
 export default function BodyFormContainer() {
-  const {
-    state,
-    setLocation,
-    locationList,
-    jobType,
-    setJobType,
-  } = useContext(Context);
+  const { state, setLocation, locationList, jobType, setJobType } = useContext(
+    Context
+  );
 
   function searchByLocation(e) {
     if (state.response) {
       setLocation(e.target.value);
     }
-    
+
     if (e.target.value.length === 0) {
       setLocation("New York");
     }
@@ -31,31 +27,48 @@ export default function BodyFormContainer() {
   }
 
   return (
-    <>
-      <BodyForm>
+    <BodyForm>
+      <BodyForm.Wrapper>
         <BodyForm.CheckBox type="checkBox" onChange={searchByType} />
         <BodyForm.Span>Full time</BodyForm.Span>
-      </BodyForm>
-      <BodyForm>
+      </BodyForm.Wrapper>
+      <BodyForm.Wrapper
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginTop: "35px",
+          marginBottom: "27px",
+        }}
+      >
         <BodyForm.Label>Location</BodyForm.Label>
         <BodyForm.Input
           type="text"
           onChange={searchByLocation}
           placeholder="City, state, zip code or country"
         />
-      </BodyForm>
-      <BodyForm>
+      </BodyForm.Wrapper>
+      <BodyForm.Wrapper>
         {locationList.map((location) => (
-          <div key={location}>
+          <div
+            key={location}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              marginTop: "18px",
+              marginBottom: "18px",
+            }}
+          >
             <BodyForm.CheckBox
               type="radio"
               value={location}
               onChange={searchByLocationList}
+              style={{ transform: "scale(1.3)", marginTop: 0 }}
             />
             <BodyForm.Span>{location}</BodyForm.Span>
           </div>
         ))}
-      </BodyForm>
-    </>
+      </BodyForm.Wrapper>
+    </BodyForm>
   );
 }

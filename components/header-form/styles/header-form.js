@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bgImage from "../../../images/backgroundImg.webp";
+import workIcon from "../../../images/work.svg";
 
 export const Container = styled.form`
   display: flex;
@@ -15,10 +16,21 @@ export const Container = styled.form`
 `;
 
 export const Input = styled.input`
+  position: relative;
   padding-top: 14px;
   padding-bottom: 14px;
   border: none;
   width: 100%;
+  &:before {
+    content: "";
+    background-image: url(${workIcon});
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+  }
 `;
 
 export const Button = styled.button`
@@ -36,7 +48,7 @@ export const Button = styled.button`
 `;
 
 export const Div = styled.div`
-  height: 55px;
+  max-height: 55px;
   background-color: #ffffff;
   display: flex;
   align-items: center;

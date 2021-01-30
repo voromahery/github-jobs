@@ -36558,6 +36558,8 @@ Header.Span = function HeaderSpan(_ref3) {
 };
 },{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"images/backgroundImg.webp":[function(require,module,exports) {
 module.exports = "/backgroundImg.7be2ab1f.webp";
+},{}],"images/work.svg":[function(require,module,exports) {
+module.exports = "/work.73aca8dc.svg";
 },{}],"components/header-form/styles/header-form.js":[function(require,module,exports) {
 "use strict";
 
@@ -36570,10 +36572,12 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _backgroundImg = _interopRequireDefault(require("../../../images/backgroundImg.webp"));
 
+var _work = _interopRequireDefault(require("../../../images/work.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  border-radius: 8px;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  max-height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  border-radius: 8px;\n  width: 100%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36593,7 +36597,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n  width: 100%;\n  &:before {\n    content: \"\";\n    background-image: url(", ");\n    display: block;\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    width: 15px;\n    height: 15px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36618,7 +36622,7 @@ var Container = _styledComponents.default.form(_templateObject(), _backgroundImg
 
 exports.Container = Container;
 
-var Input = _styledComponents.default.input(_templateObject2());
+var Input = _styledComponents.default.input(_templateObject2(), _work.default);
 
 exports.Input = Input;
 
@@ -36629,7 +36633,7 @@ exports.Button = Button;
 var Div = _styledComponents.default.div(_templateObject4());
 
 exports.Div = Div;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/backgroundImg.webp":"images/backgroundImg.webp"}],"components/header-form/index.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/backgroundImg.webp":"images/backgroundImg.webp","../../../images/work.svg":"images/work.svg"}],"components/header-form/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36678,14 +36682,24 @@ HeaderForm.Div = function HeaderFormDiv(_ref4) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Radio = exports.CheckBox = exports.Input = exports.Label = exports.Span = exports.Container = void 0;
+exports.Radio = exports.CheckBox = exports.Input = exports.Label = exports.Span = exports.Wrapper = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  margin-right: 12px;\n  cursor: pointer;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin-right: 12px;\n  cursor: pointer;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36695,7 +36709,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  height: 45px;\n  padding-left: 14px;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36705,7 +36719,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 21px;\n  text-transform: uppercase;\n  margin-bottom: 14px;\n  color: #b9bdcf;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36715,7 +36729,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #334680;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36735,7 +36749,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 29px;\n  margin-bottom: 23px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36750,23 +36764,27 @@ var Container = _styledComponents.default.div(_templateObject());
 
 exports.Container = Container;
 
-var Span = _styledComponents.default.span(_templateObject2());
+var Wrapper = _styledComponents.default.div(_templateObject2());
+
+exports.Wrapper = Wrapper;
+
+var Span = _styledComponents.default.span(_templateObject3());
 
 exports.Span = Span;
 
-var Label = _styledComponents.default.label(_templateObject3());
+var Label = _styledComponents.default.label(_templateObject4());
 
 exports.Label = Label;
 
-var Input = _styledComponents.default.input(_templateObject4());
+var Input = _styledComponents.default.input(_templateObject5());
 
 exports.Input = Input;
 
-var CheckBox = _styledComponents.default.input(_templateObject5());
+var CheckBox = _styledComponents.default.input(_templateObject6());
 
 exports.CheckBox = CheckBox;
 
-var Radio = _styledComponents.default.input(_templateObject6());
+var Radio = _styledComponents.default.input(_templateObject7());
 
 exports.Radio = Radio;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/body-form/index.js":[function(require,module,exports) {
@@ -36794,30 +36812,37 @@ function BodyForm(_ref) {
   return /*#__PURE__*/_react.default.createElement(_bodyForm.Container, restProps, children);
 }
 
-BodyForm.Label = function BodyFormLabel(_ref2) {
+BodyForm.Wrapper = function BodyFormWrapper(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.Wrapper, restProps, children);
+};
+
+BodyForm.Label = function BodyFormLabel(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_bodyForm.Label, restProps, children);
 };
 
-BodyForm.CheckBox = function BodyFormCheckBox(_ref3) {
-  var restProps = Object.assign({}, _ref3);
+BodyForm.CheckBox = function BodyFormCheckBox(_ref4) {
+  var restProps = Object.assign({}, _ref4);
   return /*#__PURE__*/_react.default.createElement(_bodyForm.CheckBox, restProps);
 };
 
-BodyForm.Radio = function BodyFormRadio(_ref4) {
-  var restProps = Object.assign({}, _ref4);
+BodyForm.Radio = function BodyFormRadio(_ref5) {
+  var restProps = Object.assign({}, _ref5);
   return /*#__PURE__*/_react.default.createElement(_bodyForm.Radio, restProps);
 };
 
-BodyForm.Input = function BodyFormInput(_ref5) {
-  var restProps = Object.assign({}, _ref5);
+BodyForm.Input = function BodyFormInput(_ref6) {
+  var restProps = Object.assign({}, _ref6);
   return /*#__PURE__*/_react.default.createElement(_bodyForm.Input, restProps);
 };
 
-BodyForm.Span = function BodyFormSpan(_ref6) {
-  var restProps = Object.assign({}, _ref6);
+BodyForm.Span = function BodyFormSpan(_ref7) {
+  var restProps = Object.assign({}, _ref7);
   return /*#__PURE__*/_react.default.createElement(_bodyForm.Span, restProps);
 };
 },{"react":"node_modules/react/index.js","./styles/body-form":"components/body-form/styles/body-form.js"}],"components/card/styles/card.js":[function(require,module,exports) {
@@ -55725,20 +55750,38 @@ function BodyFormContainer() {
     setLocation(findJob);
   }
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
     type: "checkBox",
     onChange: searchByType
-  }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, "Full time")), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, null, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
+  }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, "Full time")), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      marginTop: "35px",
+      marginBottom: "27px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, null, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
     type: "text",
     onChange: searchByLocation,
     placeholder: "City, state, zip code or country"
-  })), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, locationList.map(function (location) {
+  })), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, null, locationList.map(function (location) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      key: location
+      key: location,
+      style: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: "18px",
+        marginBottom: "18px"
+      }
     }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
       type: "radio",
       value: location,
-      onChange: searchByLocationList
+      onChange: searchByLocationList,
+      style: {
+        transform: "scale(1.3)",
+        marginTop: 0
+      }
     }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, location));
   })));
 }
@@ -55977,7 +56020,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53519" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57444" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
