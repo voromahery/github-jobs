@@ -55314,6 +55314,9 @@ function GlobalContext(props) {
       locationList = _useState8[0],
       setLocationList = _useState8[1];
 
+  var currentPage = 0;
+  var perPage = 5;
+  var offSet = currentPage * perPage;
   var regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
   var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=").concat(jobDescription, "&full_time=").concat(jobType, "&location=").concat(location);
 
@@ -55398,7 +55401,9 @@ function GlobalContext(props) {
       location: location,
       setLocation: setLocation,
       jobType: jobType,
-      setJobType: setJobType
+      setJobType: setJobType,
+      perPage: perPage,
+      offSet: offSet
     }
   }, props.children));
 }
@@ -55429,9 +55434,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function CardContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state,
-      dispatch = _useContext.dispatch;
+      dispatch = _useContext.dispatch,
+      perPage = _useContext.perPage,
+      offSet = _useContext.offSet;
 
-  return /*#__PURE__*/_react.default.createElement(_card.default, null, state.response.map(function (data) {
+  return /*#__PURE__*/_react.default.createElement(_card.default, null, state.response.slice(offSet, offSet + perPage).map(function (data) {
     return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       key: data.id,
       to: "/details/".concat(data.id)

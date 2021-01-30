@@ -11,6 +11,10 @@ function GlobalContext(props) {
     "New York",
     "Berlin",
   ]);
+  const currentPage = 0;
+  const perPage = 5;
+  const offSet = currentPage * perPage;
+
   const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
 
   const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=${jobDescription}&full_time=${jobType}&location=${location}`;
@@ -92,6 +96,8 @@ function GlobalContext(props) {
           setLocation,
           jobType,
           setJobType,
+          perPage,
+          offSet,
         }}
       >
         {props.children}

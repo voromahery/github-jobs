@@ -5,11 +5,11 @@ import { Context } from "../GlobalContext";
 import Card from "./../components/card";
 
 export default function CardContainer() {
-  const { state, dispatch } = useContext(Context);
+  const { state, dispatch, perPage, offSet } = useContext(Context);
 
   return (
     <Card>
-      {state.response.map((data) => (
+      {state.response.slice(offSet, offSet + perPage).map((data) => (
         <Link key={data.id} to={`/details/${data.id}`}>
           <Card.Item>
             <Card.Image src={data.company_logo} />
