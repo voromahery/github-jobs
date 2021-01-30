@@ -28,6 +28,7 @@ export const Input = styled.input`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   border: none;
+  max-width: 351px;
   height: 45px;
   padding-left: 14px;
 `;

@@ -40,9 +40,10 @@ export default function BodyFormContainer() {
           marginBottom: "27px",
         }}
       >
-        <BodyForm.Label>Location</BodyForm.Label>
+        <BodyForm.Label for="search">Location</BodyForm.Label>
         <BodyForm.Input
           type="text"
+          id="search"
           onChange={searchByLocation}
           placeholder="City, state, zip code or country"
         />

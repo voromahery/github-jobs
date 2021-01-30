@@ -36709,7 +36709,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  height: 45px;\n  padding-left: 14px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: 14px;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36851,14 +36851,24 @@ BodyForm.Span = function BodyFormSpan(_ref7) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Time = exports.Location = exports.Span = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
+exports.Wrapper = exports.Time = exports.Location = exports.Span = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject8() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36868,7 +36878,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36878,7 +36888,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  margin-bottom: 26px;\n  color: #334680;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36888,7 +36898,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 19px;\n  margin-top: 8px;\n  margin-bottom: 14px;\n  color: #334680;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36898,7 +36908,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 14px;\n  color: #334680;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36918,7 +36928,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", Arial, Helvetica, sans-serif;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex-wrap: wrap;\n  margin-top: 23px;\n  margin-bottom: 23px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  gap: 16px;\n  padding: 12px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", Arial, Helvetica, sans-serif;\n  display: flex;\n  flex-direction: row;\n  align-items: start;\n  flex-wrap: wrap;\n  margin-top: 23px;\n  margin-bottom: 23px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  gap: 16px;\n  padding: 12px;\n\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36970,6 +36980,10 @@ exports.Location = Location;
 var Time = _styledComponents.default.time(_templateObject8());
 
 exports.Time = Time;
+
+var Wrapper = _styledComponents.default.div(_templateObject9());
+
+exports.Wrapper = Wrapper;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/card/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37040,6 +37054,13 @@ Card.JobName = function CardJobName(_ref8) {
       restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_card.JobName, restProps, children);
+};
+
+Card.Wrapper = function CardWrapper(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Wrapper, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"components/details/styles/details.js":[function(require,module,exports) {
 "use strict";
@@ -55696,9 +55717,19 @@ function CardContainer() {
       to: "/details/".concat(data.id)
     }, /*#__PURE__*/_react.default.createElement(_card.default.Item, null, /*#__PURE__*/_react.default.createElement(_card.default.Image, {
       src: data.company_logo
-    }), /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title), /*#__PURE__*/_react.default.createElement(_card.default.Span, null, data.type), /*#__PURE__*/_react.default.createElement(_card.default.Location, null, data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
+    }), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
+      style: {
+        flexDirection: "column"
+      }
+    }, /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title), /*#__PURE__*/_react.default.createElement(_card.default.Span, null, data.type), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
+      style: {
+        justifyContent: "space-between",
+        width: "100%",
+        maxWidth: "calc(112px + 15px + 59px)"
+      }
+    }, /*#__PURE__*/_react.default.createElement(_card.default.Location, null, data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
       dateTime: data.created_at
-    }, (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()))));
+    }, (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()))))));
   }));
 }
 },{"react":"node_modules/react/index.js","date-fns":"node_modules/date-fns/esm/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","./../components/card":"components/card/index.js"}],"container/body-form.js":[function(require,module,exports) {
@@ -55760,8 +55791,11 @@ function BodyFormContainer() {
       marginTop: "35px",
       marginBottom: "27px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, null, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
+  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, {
+    for: "search"
+  }, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
     type: "text",
+    id: "search",
     onChange: searchByLocation,
     placeholder: "City, state, zip code or country"
   })), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, null, locationList.map(function (location) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Item, Image, Title, JobName, Span, Location, Time } from "./styles/card";
+import { Container, Item, Image, Title, JobName, Span, Location, Time, Wrapper } from "./styles/card";
 
 export default function Card({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -31,4 +31,8 @@ Card.Time = function CardTime({ children, ...restProps }) {
 
 Card.JobName = function CardJobName({ children, ...restProps }) {
   return <JobName {...restProps}>{children}</JobName>;
+};
+
+Card.Wrapper = function CardWrapper({ children, ...restProps }) {
+  return <Wrapper {...restProps}>{children}</Wrapper>;
 };
