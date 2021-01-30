@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgImage from "../../../images/backgroundImg.webp";
 
 export const Container = styled.form`
   display: flex;
@@ -6,7 +7,7 @@ export const Container = styled.form`
   padding-bottom: 41px;
   padding-left: 18px;
   padding-right: 18px;
-  background-image: url("../images/backgroundImg.webp");
+  background-image: url(${bgImage});
   background-position: 50%;
   border-radius: 8px;
   background-size: cover;
@@ -43,5 +44,6 @@ export const Div = styled.div`
   padding-bottom: 4px;
   padding-right: 5px;
   padding-left: 5px;
+  border-radius: 8px;
   width: 100%;
 `;

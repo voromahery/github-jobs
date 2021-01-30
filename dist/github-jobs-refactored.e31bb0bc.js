@@ -36556,7 +36556,9 @@ Header.Span = function HeaderSpan(_ref3) {
 
   return /*#__PURE__*/_react.default.createElement(_header.Span, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"components/header-form/styles/header-form.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"images/backgroundImg.webp":[function(require,module,exports) {
+module.exports = "/backgroundImg.7be2ab1f.webp";
+},{}],"components/header-form/styles/header-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36566,10 +36568,12 @@ exports.Div = exports.Button = exports.Input = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _backgroundImg = _interopRequireDefault(require("../../../images/backgroundImg.webp"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  border-radius: 8px;\n  width: 100%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36599,7 +36603,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(\"../images/backgroundImg.webp\");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(", ");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36610,7 +36614,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.form(_templateObject());
+var Container = _styledComponents.default.form(_templateObject(), _backgroundImg.default);
 
 exports.Container = Container;
 
@@ -36625,7 +36629,7 @@ exports.Button = Button;
 var Div = _styledComponents.default.div(_templateObject4());
 
 exports.Div = Div;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/header-form/index.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/backgroundImg.webp":"images/backgroundImg.webp"}],"components/header-form/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
