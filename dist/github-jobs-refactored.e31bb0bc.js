@@ -36469,14 +36469,24 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Text = exports.Container = void 0;
+exports.Span = exports.Text = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 300;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-style: normal;\n  font-weight: bold;\n  font-size: 24px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36486,7 +36496,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color: #282538;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36504,6 +36514,10 @@ exports.Container = Container;
 var Text = _styledComponents.default.h1(_templateObject2());
 
 exports.Text = Text;
+
+var Span = _styledComponents.default.span(_templateObject3());
+
+exports.Span = Span;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/header/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36534,6 +36548,13 @@ Header.Text = function HeaderText(_ref2) {
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
+};
+
+Header.Span = function HeaderSpan(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Span, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"components/header-form/styles/header-form.js":[function(require,module,exports) {
 "use strict";
@@ -55853,7 +55874,7 @@ var _pages = require("./pages");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Github Jobs")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Github ", /*#__PURE__*/_react.default.createElement(_components.Header.Span, null, "Jobs"))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_pages.Home, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {

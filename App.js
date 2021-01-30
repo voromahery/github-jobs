@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <Header>
-        <Header.Text>Github Jobs</Header.Text>
+        <Header.Text>
+          Github <Header.Span>Jobs</Header.Span>
+        </Header.Text>
       </Header>
       <Router>
         <Switch>
