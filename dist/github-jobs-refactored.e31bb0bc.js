@@ -36938,7 +36938,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  max-width: 791px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -55781,8 +55781,16 @@ function BodyFormContainer() {
     setLocation(findJob);
   }
 
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+  return /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
+    style: {
+      display: "flex",
+      alignItems: "center"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
     type: "checkBox",
+    style: {
+      transform: "scale(1.3)"
+    },
     onChange: searchByType
   }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, "Full time")), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
     style: {
@@ -55997,7 +56005,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;

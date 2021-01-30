@@ -35,6 +35,12 @@ h1 {
   color: #282538;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width: 300px) {
     h1 {
         font-size: 24px;

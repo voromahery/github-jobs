@@ -28,8 +28,12 @@ export default function BodyFormContainer() {
 
   return (
     <BodyForm>
-      <BodyForm.Wrapper>
-        <BodyForm.CheckBox type="checkBox" onChange={searchByType} />
+      <BodyForm.Wrapper style={{ display: "flex", alignItems: "center" }}>
+        <BodyForm.CheckBox
+          type="checkBox"
+          style={{ transform: "scale(1.3)" }}
+          onChange={searchByType}
+        />
         <BodyForm.Span>Full time</BodyForm.Span>
       </BodyForm.Wrapper>
       <BodyForm.Wrapper
