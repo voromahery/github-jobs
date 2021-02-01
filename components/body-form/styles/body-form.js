@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   margin-top: 29px;
   margin-bottom: 23px;
+  @media (min-width: 1100px) {
+    max-width: 29%;
+  }
 `;
 
 export const Wrapper = styled.div``;
@@ -31,6 +35,10 @@ export const Input = styled.input`
   max-width: 351px;
   height: 45px;
   padding-left: 14px;
+
+  @media (min-width: 1100px) {
+    max-width: 100%;
+  }
 `;
 
 export const CheckBox = styled.input`

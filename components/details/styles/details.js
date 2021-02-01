@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (min-width: 1100px) {
+  @media (min-width: 1000px) {
     display: flex;
     flex-direction: row;
     gap: calc(77px / 2);

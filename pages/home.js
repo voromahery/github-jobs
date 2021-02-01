@@ -1,20 +1,15 @@
-import React, { useContext } from "react";
-import HeaderFormContainer from "../container/header-form";
+import React from "react";
 import CardContainer from "../container/card";
-// import { Context } from "../GlobalContext";
-// import { Card } from "../components";
 import BodyFormContainer from "../container/body-form";
-import PaginationContainer from "../container/pagination";
+import { Random } from "../components/";
 
 export default function Home() {
-  // const {state, dispatch} = useContext(Context);
-
   return (
-    <div>
-      <HeaderFormContainer />
+    <Random>
       <BodyFormContainer />
-      <CardContainer />
-      <PaginationContainer/>
-    </div>
+      <Random.Div>
+        <CardContainer />
+      </Random.Div>
+    </Random>
   );
 }

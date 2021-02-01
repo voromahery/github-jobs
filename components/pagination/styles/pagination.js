@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.footer``;
+export const Container = styled.div`
+  display: flex;
+  place-content: flex-end;
+`;
 
 export const List = styled.ul`
   display: flex;
