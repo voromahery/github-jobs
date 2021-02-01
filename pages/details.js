@@ -18,13 +18,13 @@ export default function details() {
       </Link>
       <Details>
         <Details.OtherTitle>How to apply</Details.OtherTitle>
-        <article>
+        <Details.Description>
           {
             <div
               dangerouslySetInnerHTML={{ __html: findJob.how_to_apply }}
             ></div>
           }
-        </article>
+        </Details.Description>
       </Details>
       <Details.Wrapper
         style={{
@@ -57,13 +57,13 @@ export default function details() {
         </Details.Wrapper>
       </Details.Wrapper>
       <Details>
-        <article>
+        <Details.Description>
           {
             <div
               dangerouslySetInnerHTML={{ __html: findJob.description }}
             ></div>
           }
-        </article>
+        </Details.Description>
       </Details>
     </Details>
   );

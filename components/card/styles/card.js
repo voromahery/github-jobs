@@ -16,13 +16,23 @@ export const Item = styled.div`
   border-radius: 4px;
   gap: 16px;
   padding: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  &,
+  &:hover {
+    transition: all ease-in 0.2s;
+  }
   @media (min-width: 300px) {
     flex-wrap: nowrap;
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  width: 100%;
+`;
 
 export const Title = styled.h3`
   margin: 0;

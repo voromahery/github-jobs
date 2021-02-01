@@ -15,6 +15,13 @@ export const Image = styled.img`
   max-width: 42px;
 `;
 
+export const Description = styled.article`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #334680;
+`;
+
 export const Span = styled.span`
   font-weight: bold;
   font-size: 12px;
@@ -28,9 +35,20 @@ export const Span = styled.span`
   margin-bottom: 10px;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1e86ff;
+`;
 
-export const OtherTitle = styled.h3``;
+export const OtherTitle = styled.h3`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #b9bdcf;
+`;
 
 export const JobName = styled.h3`
   font-weight: bold;

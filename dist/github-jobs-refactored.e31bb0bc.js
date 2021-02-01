@@ -36918,7 +36918,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36928,7 +36928,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", Arial, Helvetica, sans-serif;\n  display: flex;\n  flex-direction: row;\n  align-items: start;\n  flex-wrap: wrap;\n  margin-top: 23px;\n  margin-bottom: 23px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  gap: 16px;\n  padding: 12px;\n\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", Arial, Helvetica, sans-serif;\n  display: flex;\n  flex-direction: row;\n  align-items: start;\n  flex-wrap: wrap;\n  margin-top: 23px;\n  margin-bottom: 23px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  gap: 16px;\n  padding: 12px;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n\n  &:hover {\n    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);\n  }\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -37068,14 +37068,24 @@ Card.Wrapper = function CardWrapper(_ref9) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Image = exports.Title = exports.Container = void 0;
+exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject10() {
+function _templateObject11() {
   var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -37085,7 +37095,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -37095,7 +37105,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 28px;\n  color: #334680;\n  margin: 0;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -37105,7 +37115,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 28px;\n  color: #334680;\n  margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 21px;\n  text-transform: uppercase;\n  color: #b9bdcf;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -37115,7 +37125,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1e86ff;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -37125,7 +37135,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  margin-bottom: 10px;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -37135,7 +37145,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  margin-bottom: 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 150%;\n  color: #334680;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -37188,31 +37198,35 @@ var Image = _styledComponents.default.img(_templateObject3());
 
 exports.Image = Image;
 
-var Span = _styledComponents.default.span(_templateObject4());
+var Description = _styledComponents.default.article(_templateObject4());
+
+exports.Description = Description;
+
+var Span = _styledComponents.default.span(_templateObject5());
 
 exports.Span = Span;
 
-var Text = _styledComponents.default.p(_templateObject5());
+var Text = _styledComponents.default.p(_templateObject6());
 
 exports.Text = Text;
 
-var OtherTitle = _styledComponents.default.h3(_templateObject6());
+var OtherTitle = _styledComponents.default.h3(_templateObject7());
 
 exports.OtherTitle = OtherTitle;
 
-var JobName = _styledComponents.default.h3(_templateObject7());
+var JobName = _styledComponents.default.h3(_templateObject8());
 
 exports.JobName = JobName;
 
-var Wrapper = _styledComponents.default.div(_templateObject8());
+var Wrapper = _styledComponents.default.div(_templateObject9());
 
 exports.Wrapper = Wrapper;
 
-var Location = _styledComponents.default.span(_templateObject9());
+var Location = _styledComponents.default.span(_templateObject10());
 
 exports.Location = Location;
 
-var Time = _styledComponents.default.span(_templateObject10());
+var Time = _styledComponents.default.span(_templateObject11());
 
 exports.Time = Time;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/details/index.js":[function(require,module,exports) {
@@ -37245,58 +37259,65 @@ Details.Image = function DetailsImage(_ref2) {
   return /*#__PURE__*/_react.default.createElement(_details.Image, restProps);
 };
 
-Details.Title = function DetailsTitle(_ref3) {
+Details.Description = function DetailsDescription(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Description, restProps, children);
+};
+
+Details.Title = function DetailsTitle(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Title, restProps, children);
 };
 
-Details.OtherTitle = function DetailsOtherTitle(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Details.OtherTitle = function DetailsOtherTitle(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
 };
 
-Details.Span = function DetailsSpan(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
+Details.Span = function DetailsSpan(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Span, restProps, children);
 };
 
-Details.Location = function DetailsLocation(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
+Details.Location = function DetailsLocation(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Location, restProps, children);
 };
 
-Details.Time = function DetailsTime(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Details.Time = function DetailsTime(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Time, restProps, children);
 };
 
-Details.JobName = function DetailsJobName(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+Details.JobName = function DetailsJobName(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.JobName, restProps, children);
 };
 
-Details.Wrapper = function DetailsWrapper(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Details.Wrapper = function DetailsWrapper(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Wrapper, restProps, children);
 };
 
-Details.Text = function DetailsText(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+Details.Text = function DetailsText(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
 };
@@ -56142,7 +56163,7 @@ function details() {
   console.log(findJob);
   return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.how_to_apply
     }
@@ -56169,7 +56190,7 @@ function details() {
       flexDirection: "column",
       gap: "10px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Description, null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.description
     }
@@ -56239,7 +56260,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56296,7 +56317,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49723" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

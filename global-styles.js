@@ -16,6 +16,10 @@ code {
 
 a {
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1E86FF;
 }
 
 img {
