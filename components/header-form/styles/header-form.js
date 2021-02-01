@@ -13,6 +13,20 @@ export const Container = styled.form`
   border-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-width: 1000px) {
+    padding-left: calc(206px / 2);
+    padding-right: calc(206px / 2);
+    padding-top: calc(42px / 2);
+    padding-bottom: calc(42px / 2);
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 206px;
+    padding-right: 206px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
 `;
 
 export const Input = styled.input`

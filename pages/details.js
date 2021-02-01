@@ -13,7 +13,7 @@ export default function details() {
 
   return (
     <Details>
-      <Details.Wrapper>
+      <Details.Wrapper style={{width:"100%"}}>
         <Link to="/">
           <Details.Text>Back to search</Details.Text>
         </Link>

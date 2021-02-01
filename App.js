@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./components";
-import HeaderFormContainer from "./container/header-form";
 import { Home, Details } from "./pages";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
           Github <Header.Span>Jobs</Header.Span>
         </Header.Text>
       </Header>
-      <HeaderFormContainer />
       <Router>
         <Switch>
           <Route exact path="/">
