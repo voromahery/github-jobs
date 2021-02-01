@@ -46,6 +46,10 @@ ul {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (min-width: 300px) {
     h1 {
         font-size: 24px;

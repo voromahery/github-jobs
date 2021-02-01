@@ -82,7 +82,6 @@ function GlobalContext(props) {
     };
   }, [location, jobType]);
   const pageNumber = Math.ceil(state.response.length / perPage);
-  console.log(state.response, pageNumber);
 
   return (
     <div>

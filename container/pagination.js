@@ -45,8 +45,6 @@ export default function FooterContainer() {
     }
   }
 
-  console.log(currentPage);
-
   return (
     <Pagination>
       <Pagination.List>

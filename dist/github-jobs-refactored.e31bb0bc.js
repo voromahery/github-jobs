@@ -55880,7 +55880,6 @@ function GlobalContext(props) {
     };
   }, [location, jobType]);
   var pageNumber = Math.ceil(state.response.length / perPage);
-  console.log(state.response, pageNumber);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       state: state,
@@ -55944,7 +55943,6 @@ function FooterContainer() {
     }
   }
 
-  console.log(currentPage);
   return /*#__PURE__*/_react.default.createElement(_components.Pagination, null, /*#__PURE__*/_react.default.createElement(_components.Pagination.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
     onClick: prevPage
   }, "\u276E"), pages.map(function (page, index) {
@@ -56359,7 +56357,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56416,7 +56414,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54256" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49747" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
