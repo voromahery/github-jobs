@@ -37321,7 +37321,7 @@ Details.Text = function DetailsText(_ref11) {
 
   return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/details":"components/details/styles/details.js"}],"components/footer/styles/footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/details":"components/details/styles/details.js"}],"components/pagination/styles/pagination.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37390,17 +37390,17 @@ exports.ListItem = ListItem;
 var Button = _styledComponents.default.button(_templateObject4());
 
 exports.Button = Button;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/footer/index.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/pagination/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Footer;
+exports.default = Pagination;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _footer = require("./styles/footer");
+var _pagination = require("./styles/pagination");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37408,34 +37408,34 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function Footer(_ref) {
+function Pagination(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Container, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_pagination.Container, restProps, children);
 }
 
-Footer.List = function FooterList(_ref2) {
+Pagination.List = function PaginationList(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.List, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_pagination.List, restProps, children);
 };
 
-Footer.ListItem = function FooterListItem(_ref3) {
+Pagination.ListItem = function PaginationListItem(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.ListItem, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_pagination.ListItem, restProps, children);
 };
 
-Footer.Button = function FooterButton(_ref4) {
+Pagination.Button = function PaginationButton(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Button, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_pagination.Button, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/footer":"components/footer/styles/footer.js"}],"components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/pagination":"components/pagination/styles/pagination.js"}],"components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37471,10 +37471,10 @@ Object.defineProperty(exports, "Details", {
     return _details.default;
   }
 });
-Object.defineProperty(exports, "Footer", {
+Object.defineProperty(exports, "Pagination", {
   enumerable: true,
   get: function () {
-    return _footer.default;
+    return _pagination.default;
   }
 });
 
@@ -37488,10 +37488,10 @@ var _card = _interopRequireDefault(require("./card"));
 
 var _details = _interopRequireDefault(require("./details"));
 
-var _footer = _interopRequireDefault(require("./footer"));
+var _pagination = _interopRequireDefault(require("./pagination"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js","./body-form":"components/body-form/index.js","./card":"components/card/index.js","./details":"components/details/index.js","./footer":"components/footer/index.js"}],"GlobalContext.js":[function(require,module,exports) {
+},{"./header":"components/header/index.js","./header-form":"components/header-form/index.js","./body-form":"components/body-form/index.js","./card":"components/card/index.js","./details":"components/details/index.js","./pagination":"components/pagination/index.js"}],"GlobalContext.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56035,7 +56035,7 @@ function BodyFormContainer() {
     }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, location));
   })));
 }
-},{"react":"node_modules/react/index.js","../components/body-form":"components/body-form/index.js","../GlobalContext":"GlobalContext.js"}],"container/footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/body-form":"components/body-form/index.js","../GlobalContext":"GlobalContext.js"}],"container/pagination.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56081,18 +56081,18 @@ function FooterContainer() {
   }
 
   console.log(currentPage);
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+  return /*#__PURE__*/_react.default.createElement(_components.Pagination, null, /*#__PURE__*/_react.default.createElement(_components.Pagination.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
     onClick: prevPage
   }, "\u276E"), pages.map(function (page, index) {
-    return /*#__PURE__*/_react.default.createElement(_components.Footer.ListItem, {
+    return /*#__PURE__*/_react.default.createElement(_components.Pagination.ListItem, {
       key: index
-    }, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    }, /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
       onClick: function onClick(value) {
         return displayPagination(value);
       },
       value: index
     }, page));
-  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
     onClick: nextPage
   }, "\u276F")));
 }
@@ -56112,7 +56112,7 @@ var _card = _interopRequireDefault(require("../container/card"));
 
 var _bodyForm = _interopRequireDefault(require("../container/body-form"));
 
-var _footer = _interopRequireDefault(require("../container/footer"));
+var _pagination = _interopRequireDefault(require("../container/pagination"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56124,9 +56124,9 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // import { Card } from "../components";
 function Home() {
   // const {state, dispatch} = useContext(Context);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null), /*#__PURE__*/_react.default.createElement(_pagination.default, null));
 }
-},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js","../container/footer":"container/footer.js"}],"pages/details.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../container/header-form":"container/header-form.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js","../container/pagination":"container/pagination.js"}],"pages/details.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56328,7 +56328,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49723" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52910" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

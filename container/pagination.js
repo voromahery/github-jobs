@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../GlobalContext";
-import { Footer } from "../components";
+import { Pagination } from "../components";
 import { styled } from 'styled-components';
 
 export default function FooterContainer() {
@@ -48,23 +48,23 @@ export default function FooterContainer() {
   console.log(currentPage);
 
   return (
-    <Footer>
-      <Footer.List>
-        {currentPage > 0 && <Footer.Button onClick={prevPage}>❮</Footer.Button>}
+    <Pagination>
+      <Pagination.List>
+        {currentPage > 0 && <Pagination.Button onClick={prevPage}>❮</Pagination.Button>}
         {pages.map((page, index) => (
-          <Footer.ListItem key={index}>
-            <Footer.Button
+          <Pagination.ListItem key={index}>
+            <Pagination.Button
               onClick={(value) => displayPagination(value)}
               value={index}
             >
               {page}
-            </Footer.Button>
-          </Footer.ListItem>
+            </Pagination.Button>
+          </Pagination.ListItem>
         ))}
         {pageNumber - 1 > currentPage && (
-          <Footer.Button onClick={nextPage}>❯</Footer.Button>
+          <Pagination.Button onClick={nextPage}>❯</Pagination.Button>
         )}
-      </Footer.List>
-    </Footer>
+      </Pagination.List>
+    </Pagination>
   );
 }

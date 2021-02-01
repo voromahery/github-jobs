@@ -3,4 +3,4 @@ export { default as HeaderForm } from "./header-form";
 export { default as BodyForm } from "./body-form";
 export { default as Card } from "./card";
 export { default as Details } from "./details";
-export { default as Footer } from "./footer";
+export { default as Pagination } from "./pagination";

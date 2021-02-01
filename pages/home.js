@@ -4,7 +4,7 @@ import CardContainer from "../container/card";
 // import { Context } from "../GlobalContext";
 // import { Card } from "../components";
 import BodyFormContainer from "../container/body-form";
-import FooterContainer from "../container/footer";
+import PaginationContainer from "../container/pagination";
 
 export default function Home() {
   // const {state, dispatch} = useContext(Context);
@@ -14,7 +14,7 @@ export default function Home() {
       <HeaderFormContainer />
       <BodyFormContainer />
       <CardContainer />
-      <FooterContainer/>
+      <PaginationContainer/>
     </div>
   );
 }
