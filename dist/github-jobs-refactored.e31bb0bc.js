@@ -36659,7 +36659,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n\n  &:hover {\n    background-color: #449bff;\n  }\n\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56416,7 +56416,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51450" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54256" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

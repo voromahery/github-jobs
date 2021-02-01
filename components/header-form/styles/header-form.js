@@ -59,6 +59,15 @@ export const Button = styled.button`
   padding-top: 14px;
   padding-bottom: 14px;
   border: none;
+
+  &:hover {
+    background-color: #449bff;
+  }
+
+  &,
+  &:hover {
+    transition: all ease-in 0.2s;
+  }
 `;
 
 export const Div = styled.div`
