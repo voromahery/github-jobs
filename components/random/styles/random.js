@@ -12,3 +12,9 @@ export const Container = styled.div`
 export const Div = styled.div`
   width: 100%;
 `;
+
+export const DetailsApplication = styled.div`
+  @media (min-width: 1000px) {
+    max-width: 29%;
+  }
+`;

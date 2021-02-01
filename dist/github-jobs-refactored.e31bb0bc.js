@@ -36562,11 +36562,21 @@ Header.Span = function HeaderSpan(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Div = exports.Container = void 0;
+exports.DetailsApplication = exports.Div = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    max-width: 29%;\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
@@ -36597,6 +36607,10 @@ exports.Container = Container;
 var Div = _styledComponents.default.div(_templateObject2());
 
 exports.Div = Div;
+
+var DetailsApplication = _styledComponents.default.div(_templateObject3());
+
+exports.DetailsApplication = DetailsApplication;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/random/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36627,6 +36641,13 @@ Random.Div = function RandomDiv(_ref2) {
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_random.Div, restProps, children);
+};
+
+Random.DetailsApplication = function RandomDetailsApplication(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_random.DetailsApplication, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/random":"components/random/styles/random.js"}],"images/backgroundImg.webp":[function(require,module,exports) {
 module.exports = "/backgroundImg.7be2ab1f.webp";
@@ -56226,6 +56247,8 @@ var _details = _interopRequireDefault(require("../components/details"));
 
 var _GlobalContext = require("../GlobalContext");
 
+var _components = require("./../components");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -56242,12 +56265,7 @@ function details() {
   var findJob = state.response.find(function (job) {
     return job.id === jobId;
   });
-  console.log(findJob);
-  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
-    style: {
-      width: "100%"
-    }
-  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_components.Random.DetailsApplication, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, {
     style: {
@@ -56293,7 +56311,7 @@ function details() {
     }
   })))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js","./../components":"components/index.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56414,7 +56432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49747" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50865" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

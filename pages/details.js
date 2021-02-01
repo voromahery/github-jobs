@@ -3,17 +3,17 @@ import { Link, useParams } from "react-router-dom";
 import { formatDistance } from "date-fns";
 import Details from "../components/details";
 import { Context } from "../GlobalContext";
+import { Random } from "./../components";
 
 export default function details() {
   const { state } = useContext(Context);
   const { jobId } = useParams();
 
   const findJob = state.response.find((job) => job.id === jobId);
-  console.log(findJob);
 
   return (
     <Details>
-      <Details.Wrapper style={{width:"100%"}}>
+      <Random.DetailsApplication>
         <Link to="/">
           <Details.Text>Back to search</Details.Text>
         </Link>
@@ -27,7 +27,7 @@ export default function details() {
             }
           </Details.Description>
         </Details.Wrapper>
-      </Details.Wrapper>
+      </Random.DetailsApplication>
 
       <Details.Wrapper
         style={{
