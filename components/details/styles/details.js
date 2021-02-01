@@ -86,3 +86,4 @@ export const Time = styled.span`
   line-height: 14px;
   color: #b7bcce;
 `;
+
