@@ -20,6 +20,7 @@ a {
   font-size: 14px;
   line-height: 21px;
   color: #1E86FF;
+  overflow-wrap: break-word; 
 }
 
 img {
@@ -49,5 +50,19 @@ ul {
     h1 {
         font-size: 24px;
       }
+}
+
+@media (min-width: 650px) {
+  body {
+    padding-left: calc(120px / 2);
+    padding-right: calc(120px / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 `;

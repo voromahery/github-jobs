@@ -27,9 +27,13 @@ export default function CardContainer() {
               >
                 <Card.Location>{data.location}</Card.Location>
                 <Card.Time dateTime={data.created_at}>
-                {formatDistance(new Date(data.created_at), new Date()) !== "today"
-            ? `${formatDistance(new Date(data.created_at), new Date())} ago`
-            : "today"}
+                  {formatDistance(new Date(data.created_at), new Date()) !==
+                  "today"
+                    ? `${formatDistance(
+                        new Date(data.created_at),
+                        new Date()
+                      )} ago`
+                    : "today"}
                 </Card.Time>
               </Card.Wrapper>
             </Card.Wrapper>

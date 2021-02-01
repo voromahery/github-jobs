@@ -13,58 +13,75 @@ export default function details() {
 
   return (
     <Details>
-      <Link to="/">
-        <Details.Text>Back to search</Details.Text>
-      </Link>
-      <Details>
-        <Details.OtherTitle>How to apply</Details.OtherTitle>
-        <Details.Description>
-          {
-            <div
-              dangerouslySetInnerHTML={{ __html: findJob.how_to_apply }}
-            ></div>
-          }
-        </Details.Description>
-      </Details>
-      <Details.Wrapper
-        style={{
-          flexDirection: "column",
-          marginTop: "36px",
-          marginBottom: "36px",
-        }}
-      >
-        <Details.JobName>{findJob.title}</Details.JobName>
-        <Details.Span>{findJob.type}</Details.Span>
-        <Details.Time dateTime={findJob.created_at}>
-          {formatDistance(new Date(findJob.created_at), new Date()) !== "today"
-            ? `${formatDistance(new Date(findJob.created_at), new Date())} ago`
-            : "today"}
-        </Details.Time>
-      </Details.Wrapper>
-      <Details.Wrapper
-        style={{
-          flexDirection: "row",
-          marginTop: "36px",
-          marginBottom: "36px",
-          gap: "12px",
-          alignItems: "center",
-        }}
-      >
-        <Details.Image src={findJob.company_logo} />
-        <Details.Wrapper style={{ flexDirection: "column", gap: "10px" }}>
-          <Details.Title>{findJob.company}</Details.Title>
-          <Details.Location>{findJob.location}</Details.Location>
+      <Details.Wrapper>
+        <Link to="/">
+          <Details.Text>Back to search</Details.Text>
+        </Link>
+        <Details.Wrapper>
+          <Details.OtherTitle>How to apply</Details.OtherTitle>
+          <Details.Description style={{ overflowWrap: "break-word" }}>
+            {
+              <div
+                dangerouslySetInnerHTML={{ __html: findJob.how_to_apply }}
+              ></div>
+            }
+          </Details.Description>
         </Details.Wrapper>
       </Details.Wrapper>
-      <Details>
-        <Details.Description>
-          {
-            <div
-              dangerouslySetInnerHTML={{ __html: findJob.description }}
-            ></div>
-          }
-        </Details.Description>
-      </Details>
+
+      <Details.Wrapper
+        style={{
+          marginTop: "calc(36px - 16px)",
+          marginBottom: "36px",
+        }}
+      >
+        <Details.Wrapper>
+          <Details.JobName>{findJob.title}</Details.JobName>
+          <Details.Span>{findJob.type}</Details.Span>
+          <Details.Time dateTime={findJob.created_at}>
+            {formatDistance(new Date(findJob.created_at), new Date()) !==
+            "today"
+              ? `${formatDistance(
+                  new Date(findJob.created_at),
+                  new Date()
+                )} ago`
+              : "today"}
+          </Details.Time>
+        </Details.Wrapper>
+        <Details.Wrapper
+          style={{
+            flexDirection: "row",
+            marginTop: "36px",
+            marginBottom: "36px",
+            gap: "12px",
+            alignItems: "center",
+          }}
+        >
+          <Details.Image src={findJob.company_logo} />
+          <Details.Wrapper style={{ gap: "10px" }}>
+            <Details.Title>{findJob.company}</Details.Title>
+            <Details.Location>{findJob.location}</Details.Location>
+          </Details.Wrapper>
+        </Details.Wrapper>
+        <Details
+          style={{
+            fontFamily: "Roboto",
+            fontStyle: "normal",
+            fontWeight: "normal",
+            fontSize: "16px",
+            lineHeight: "150%",
+            color: "#334680",
+          }}
+        >
+          <article>
+            {
+              <div
+                dangerouslySetInnerHTML={{ __html: findJob.description }}
+              ></div>
+            }
+          </article>
+        </Details>
+      </Details.Wrapper>
     </Details>
   );
 }

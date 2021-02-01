@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  @media (min-width: 1100px) {
+    display: flex;
+    flex-direction: row;
+    gap: calc(77px / 2);
+  }
+
+  @media (min-width: 1200px) {
+    gap: 77px;
+  }
+`;
 
 export const Title = styled.h3`
   font-weight: bold;
@@ -60,6 +70,7 @@ export const JobName = styled.h3`
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 export const Location = styled.span`

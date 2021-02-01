@@ -37095,7 +37095,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -37175,7 +37175,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1100px) {\n    display: flex;\n    flex-direction: row;\n    gap: calc(77px / 2);\n  }\n\n  @media (min-width: 1200px) {\n    gap: 77px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56161,19 +56161,22 @@ function details() {
     return job.id === jobId;
   });
   console.log(findJob);
-  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, null, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, {
+    style: {
+      overflowWrap: "break-word"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.how_to_apply
     }
-  }))), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+  })))), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
-      flexDirection: "column",
-      marginTop: "36px",
+      marginTop: "calc(36px - 16px)",
       marginBottom: "36px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
     dateTime: findJob.created_at
   }, (0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()), " ago") : "today")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
@@ -56187,14 +56190,22 @@ function details() {
     src: findJob.company_logo
   }), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
-      flexDirection: "column",
       gap: "10px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Description, null, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, {
+    style: {
+      fontFamily: "Roboto",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "16px",
+      lineHeight: "150%",
+      color: "#334680"
+    }
+  }, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
       __html: findJob.description
     }
-  }))));
+  })))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
@@ -56260,7 +56271,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
