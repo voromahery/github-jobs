@@ -18,6 +18,7 @@ export default function HeaderFormContainer() {
 
     dispatch({ type: "SEARCH_BY_KEYWORD", filterData: filterByKeyword });
 
+    // Reset form after submitting
     form.reset();
   }
 
