@@ -50,6 +50,12 @@ button {
   cursor: pointer;
 }
 
+.current,
+.current:hover {
+  background-color: #1e86ff;
+  color: #ffffff;
+}
+
 @media (min-width: 300px) {
     h1 {
         font-size: 24px;

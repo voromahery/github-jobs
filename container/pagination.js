@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../GlobalContext";
 import { Pagination } from "../components";
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export default function FooterContainer() {
   const { pageNumber, currentPage, setCurrentPage } = useContext(Context);
@@ -48,10 +48,14 @@ export default function FooterContainer() {
   return (
     <Pagination>
       <Pagination.List>
-        {currentPage > 0 && <Pagination.Arrow onClick={prevPage}>❮</Pagination.Arrow>}
+        {currentPage > 0 && (
+          <Pagination.Arrow onClick={prevPage}>❮</Pagination.Arrow>
+        )}
         {pages.map((page, index) => (
           <Pagination.ListItem key={index}>
             <Pagination.Button
+              className={page === currentPage + 1 && "current"}
+              disabled={page === currentPage + 1 && true}
               onClick={(value) => displayPagination(value)}
               value={index}
             >

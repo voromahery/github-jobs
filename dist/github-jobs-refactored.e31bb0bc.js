@@ -55991,6 +55991,8 @@ function FooterContainer() {
     return /*#__PURE__*/_react.default.createElement(_components.Pagination.ListItem, {
       key: index
     }, /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
+      className: page === currentPage + 1 && "current",
+      disabled: page === currentPage + 1 && true,
       onClick: function onClick(value) {
         return displayPagination(value);
       },
@@ -56395,7 +56397,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n.current,\n.current:hover {\n  background-color: #1e86ff;\n  color: #ffffff;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
