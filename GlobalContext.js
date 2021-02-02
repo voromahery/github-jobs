@@ -2,7 +2,7 @@ import React, { useState, useEffect, useReducer, createContext } from "react";
 const Context = createContext(null);
 
 function GlobalContext(props) {
-  const [location, setLocation] = useState("New York");
+  const [locations, setLocations] = useState("New York");
   const [jobType, setJobType] = useState(false);
   const [jobDescription, setJobDescription] = useState("");
   const [locationList, setLocationList] = useState([
@@ -17,7 +17,7 @@ function GlobalContext(props) {
 
   const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
 
-  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=${jobDescription}&full_time=${jobType}&location=${location}`;
+  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=${jobDescription}&full_time=${jobType}&location=${locations}`;
 
   let [state, dispatch] = useReducer(
     (state, action) => {
@@ -80,7 +80,7 @@ function GlobalContext(props) {
     return () => {
       isCurrent = false;
     };
-  }, [location, jobType]);
+  }, [locations, jobType]);
   const pageNumber = Math.ceil(state.response.length / perPage);
 
   return (
@@ -91,8 +91,8 @@ function GlobalContext(props) {
           dispatch,
           locationList,
           setLocationList,
-          location,
-          setLocation,
+          locations,
+          setLocations,
           jobType,
           setJobType,
           perPage,

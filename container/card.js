@@ -6,7 +6,7 @@ import PaginationContainer from "../container/pagination";
 import Card from "./../components/card";
 
 export default function CardContainer() {
-  const { state, dispatch, perPage, offSet } = useContext(Context);
+  const { state, perPage, offSet } = useContext(Context);
 
   return (
     <>

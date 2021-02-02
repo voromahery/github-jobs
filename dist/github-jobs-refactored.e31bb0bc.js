@@ -55821,8 +55821,8 @@ exports.Context = Context;
 function GlobalContext(props) {
   var _useState = (0, _react.useState)("New York"),
       _useState2 = _slicedToArray(_useState, 2),
-      location = _useState2[0],
-      setLocation = _useState2[1];
+      locations = _useState2[0],
+      setLocations = _useState2[1];
 
   var _useState3 = (0, _react.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -55847,7 +55847,7 @@ function GlobalContext(props) {
   var perPage = 5;
   var offSet = currentPage * perPage;
   var regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
-  var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=").concat(jobDescription, "&full_time=").concat(jobType, "&location=").concat(location);
+  var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=").concat(jobDescription, "&full_time=").concat(jobType, "&location=").concat(locations);
 
   var _useReducer = (0, _react.useReducer)(function (state, action) {
     switch (action.type) {
@@ -55920,7 +55920,7 @@ function GlobalContext(props) {
     return function () {
       isCurrent = false;
     };
-  }, [location, jobType]);
+  }, [locations, jobType]);
   var pageNumber = Math.ceil(state.response.length / perPage);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
@@ -55928,8 +55928,8 @@ function GlobalContext(props) {
       dispatch: dispatch,
       locationList: locationList,
       setLocationList: setLocationList,
-      location: location,
-      setLocation: setLocation,
+      locations: locations,
+      setLocations: setLocations,
       jobType: jobType,
       setJobType: setJobType,
       perPage: perPage,
@@ -56031,7 +56031,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function CardContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state,
-      dispatch = _useContext.dispatch,
       perPage = _useContext.perPage,
       offSet = _useContext.offSet;
 
@@ -56079,18 +56078,19 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function BodyFormContainer() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state,
-      setLocation = _useContext.setLocation,
+      setLocations = _useContext.setLocations,
+      locations = _useContext.locations,
       locationList = _useContext.locationList,
       jobType = _useContext.jobType,
       setJobType = _useContext.setJobType;
 
   function searchByLocation(e) {
     if (state.response) {
-      setLocation(e.target.value);
+      setLocations(e.target.value);
     }
 
     if (e.target.value.length === 0) {
-      setLocation("New York");
+      setLocations("New York");
     }
   }
 
@@ -56102,7 +56102,7 @@ function BodyFormContainer() {
     var findJob = locationList.find(function (data) {
       return data === e.target.value;
     });
-    setLocation(findJob);
+    setLocations(findJob);
   }
 
   return /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
@@ -56140,10 +56140,12 @@ function BodyFormContainer() {
         marginTop: "18px",
         marginBottom: "18px"
       }
-    }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+    }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Radio, {
       type: "radio",
-      value: location // checked={location === "New York"}
-      ,
+      value: location,
+      id: location,
+      name: "location",
+      checked: location === locations && "checked",
       onChange: searchByLocationList,
       style: {
         transform: "scale(1.3)",

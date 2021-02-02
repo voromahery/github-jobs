@@ -3,17 +3,22 @@ import BodyForm from "../components/body-form";
 import { Context } from "../GlobalContext";
 
 export default function BodyFormContainer() {
-  const { state, setLocation, locationList, jobType, setJobType } = useContext(
-    Context
-  );
+  const {
+    state,
+    setLocations,
+    locations,
+    locationList,
+    jobType,
+    setJobType,
+  } = useContext(Context);
 
   function searchByLocation(e) {
     if (state.response) {
-      setLocation(e.target.value);
+      setLocations(e.target.value);
     }
 
     if (e.target.value.length === 0) {
-      setLocation("New York");
+      setLocations("New York");
     }
   }
 
@@ -23,7 +28,7 @@ export default function BodyFormContainer() {
 
   function searchByLocationList(e) {
     const findJob = locationList.find((data) => data === e.target.value);
-    setLocation(findJob);
+    setLocations(findJob);
   }
 
   return (
@@ -64,10 +69,12 @@ export default function BodyFormContainer() {
               marginBottom: "18px",
             }}
           >
-            <BodyForm.CheckBox
+            <BodyForm.Radio
               type="radio"
               value={location}
-              // checked={location === "New York"}
+              id={location}
+              name="location"
+              checked={location === locations && "checked"}
               onChange={searchByLocationList}
               style={{ transform: "scale(1.3)", marginTop: 0 }}
             />
