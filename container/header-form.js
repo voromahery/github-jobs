@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Context } from "../GlobalContext";
-import { Header, HeaderForm } from "../components";
+import { HeaderForm } from "../components";
 
 export default function HeaderFormContainer() {
-  const { state, dispatch, setLocation, location } = useContext(Context);
+  const { state, dispatch, setLocations, locations } = useContext(Context);
   let copyOfData = [...state.response];
 
   function searchByKeyword(e) {
@@ -17,14 +17,16 @@ export default function HeaderFormContainer() {
     );
 
     dispatch({ type: "SEARCH_BY_KEYWORD", filterData: filterByKeyword });
+
+    form.reset();
   }
 
   function resetSearch(e) {
     if (e.target.value.length === 0) {
-      setLocation("New York");
+      setLocations("New York");
     }
     if (e.target.value.length === 0 && location === "New York") {
-      setLocation("Berlin" || "Amsterdam" || "London");
+      setLocations("Berlin" || "Amsterdam" || "London");
     }
   }
 

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../GlobalContext";
 import { Pagination } from "../components";
-import { styled } from "styled-components";
 
 export default function FooterContainer() {
   const { pageNumber, currentPage, setCurrentPage } = useContext(Context);
