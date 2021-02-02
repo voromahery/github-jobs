@@ -74,7 +74,7 @@ export default function BodyFormContainer() {
               value={location}
               id={location}
               name="location"
-              checked={location === locations && "checked"}
+              checked={location.toLowerCase() === locations.toLowerCase() && "checked"}
               onChange={searchByLocationList}
               style={{ transform: "scale(1.3)", marginTop: 0 }}
             />

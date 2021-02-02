@@ -14,7 +14,6 @@ export default function Home() {
         <BodyFormContainer />
         {state.loading && <h1>Loading...</h1>}
         {state.error && <h1>Oh no!😢 There is an error, please refresh your browser!</h1>}
-        {state.response.length === 0 && <h1>No result found!😢 Please, try again...</h1>}
         {state.response && (
           <Random.Div>
             <CardContainer />

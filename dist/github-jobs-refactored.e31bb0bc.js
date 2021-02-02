@@ -56200,7 +56200,7 @@ function BodyFormContainer() {
       value: location,
       id: location,
       name: "location",
-      checked: location === locations && "checked",
+      checked: location.toLowerCase() === locations.toLowerCase() && "checked",
       onChange: searchByLocationList,
       style: {
         transform: "scale(1.3)",
@@ -56314,7 +56314,7 @@ function Home() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state;
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_components.Random, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), state.loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), state.error && /*#__PURE__*/_react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response.length === 0 && /*#__PURE__*/_react.default.createElement("h1", null, "No result found!\uD83D\uDE22 Please, try again..."), state.response && /*#__PURE__*/_react.default.createElement(_components.Random.Div, null, /*#__PURE__*/_react.default.createElement(_card.default, null))));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_components.Random, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), state.loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), state.error && /*#__PURE__*/_react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response && /*#__PURE__*/_react.default.createElement(_components.Random.Div, null, /*#__PURE__*/_react.default.createElement(_card.default, null))));
 }
 },{"react":"node_modules/react/index.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js","../container/header-form":"container/header-form.js","../components/":"components/index.js","../GlobalContext":"GlobalContext.js"}],"pages/details.js":[function(require,module,exports) {
 "use strict";
