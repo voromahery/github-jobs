@@ -30,6 +30,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   background: #ffffff;
+  color: #334680;
   background-image: url(${locationIcon});
   background-position: 14px 50%;
   background-size: 15px;

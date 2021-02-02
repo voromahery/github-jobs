@@ -15,19 +15,20 @@ export default function HeaderFormContainer() {
         data.company.toLowerCase().includes(form.search.value) ||
         data.title.toLowerCase().includes(form.search.value)
     );
-
     dispatch({ type: "SEARCH_BY_KEYWORD", filterData: filterByKeyword });
-
-    // Reset form after submitting
-    form.reset();
   }
 
+  console.log(copyOfData);
   function resetSearch(e) {
-    if (e.target.value.length === 0) {
-      setLocations("New York");
+    if (locations === locations.toLowerCase()) {
+      if (e.target.value.length === 0) {
+        setLocations(locations.toUpperCase());
+      }
     }
-    if (e.target.value.length === 0 && location === "New York") {
-      setLocations("Berlin" || "Amsterdam" || "London");
+    if (locations === locations.toUpperCase()) {
+      if (e.target.value.length === 0) {
+        setLocations(locations.toLowerCase());
+      }
     }
   }
 

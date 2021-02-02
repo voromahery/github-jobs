@@ -36669,7 +36669,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  position: relative;\n  padding-left: calc(17px + 15px + 10px);\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border-radius: 4px;\n  border: none;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  position: relative;\n  padding-left: calc(17px + 15px + 10px);\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border-radius: 4px;\n  color: #334680;\n  border: none;\n  width: 100%;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36785,7 +36785,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: calc(14px + 15px + 14px);\n\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  color: #334680;\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: calc(14px + 15px + 14px);\n\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56257,18 +56257,22 @@ function HeaderFormContainer() {
     dispatch({
       type: "SEARCH_BY_KEYWORD",
       filterData: filterByKeyword
-    }); // Reset form after submitting
-
-    form.reset();
+    });
   }
 
+  console.log(copyOfData);
+
   function resetSearch(e) {
-    if (e.target.value.length === 0) {
-      setLocations("New York");
+    if (locations === locations.toLowerCase()) {
+      if (e.target.value.length === 0) {
+        setLocations(locations.toUpperCase());
+      }
     }
 
-    if (e.target.value.length === 0 && location === "New York") {
-      setLocations("Berlin" || "Amsterdam" || "London");
+    if (locations === locations.toUpperCase()) {
+      if (e.target.value.length === 0) {
+        setLocations(locations.toLowerCase());
+      }
     }
   }
 
@@ -56310,7 +56314,7 @@ function Home() {
   var _useContext = (0, _react.useContext)(_GlobalContext.Context),
       state = _useContext.state;
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_components.Random, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), state.loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), state.error && /*#__PURE__*/_react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response && /*#__PURE__*/_react.default.createElement(_components.Random.Div, null, /*#__PURE__*/_react.default.createElement(_card.default, null))));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_components.Random, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), state.loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), state.error && /*#__PURE__*/_react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response.length === 0 && /*#__PURE__*/_react.default.createElement("h1", null, "No result found!\uD83D\uDE22 Please, try again..."), state.response && /*#__PURE__*/_react.default.createElement(_components.Random.Div, null, /*#__PURE__*/_react.default.createElement(_card.default, null))));
 }
 },{"react":"node_modules/react/index.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js","../container/header-form":"container/header-form.js","../components/":"components/index.js","../GlobalContext":"GlobalContext.js"}],"pages/details.js":[function(require,module,exports) {
 "use strict";
@@ -56521,7 +56525,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56446" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58201" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

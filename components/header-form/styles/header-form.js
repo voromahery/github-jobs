@@ -39,6 +39,7 @@ export const Input = styled.input`
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 4px;
+  color: #334680;
   border: none;
   width: 100%;
 `;
