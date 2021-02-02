@@ -70,6 +70,7 @@ button {
 .current:hover {
   background-color: #1e86ff;
   color: #ffffff;
+  cursor: default;
 }
 
 @media (min-width: 300px) {
