@@ -30,21 +30,17 @@ export const Container = styled.form`
 `;
 
 export const Input = styled.input`
+  background-image: url(${workIcon});
+  background-position: 14px 50%;
+  background-size: 15px;
+  background-repeat: no-repeat;
   position: relative;
+  padding-left: calc(17px + 15px + 10px);
   padding-top: 14px;
   padding-bottom: 14px;
+  border-radius: 4px;
   border: none;
   width: 100%;
-  &:before {
-    content: "";
-    background-image: url(${workIcon});
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    width: 15px;
-    height: 15px;
-  }
 `;
 
 export const Button = styled.button`
@@ -68,17 +64,32 @@ export const Button = styled.button`
   &:hover {
     transition: all ease-in 0.2s;
   }
+  @media (min-width: 320px) {
+    padding-left: 27px;
+    padding-right: 27px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 `;
 
 export const Div = styled.div`
-  max-height: 55px;
-  background-color: #ffffff;
   display: flex;
-  align-items: center;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 5px;
-  padding-left: 5px;
+  flex-wrap: wrap;
   border-radius: 8px;
   width: 100%;
+  gap: 16px;
+
+  @media (min-width: 320px) {
+    background-color: #ffffff;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 5px;
+    padding-left: 5px;
+    gap: 0;
+  }
 `;

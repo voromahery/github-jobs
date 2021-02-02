@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import locationIcon from "../../../images/globe.svg";
 
 export const Container = styled.div`
   width: 100%;
@@ -29,12 +30,16 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   background: #ffffff;
+  background-image: url(${locationIcon});
+  background-position: 14px 50%;
+  background-size: 15px;
+  background-repeat: no-repeat;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   border: none;
   max-width: 351px;
   height: 45px;
-  padding-left: 14px;
+  padding-left: calc(14px + 15px + 14px);
 
   @media (min-width: 1100px) {
     max-width: 100%;

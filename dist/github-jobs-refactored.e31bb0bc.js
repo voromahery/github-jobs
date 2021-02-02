@@ -36649,7 +36649,7 @@ var _work = _interopRequireDefault(require("../../../images/work.svg"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  max-height: 55px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 5px;\n  padding-left: 5px;\n  border-radius: 8px;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  border-radius: 8px;\n  width: 100%;\n  gap: 16px;\n\n  @media (min-width: 320px) {\n    background-color: #ffffff;\n    flex-wrap: nowrap;\n    align-items: center;\n    padding-top: 4px;\n    padding-bottom: 4px;\n    padding-right: 5px;\n    padding-left: 5px;\n    gap: 0;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36659,7 +36659,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n\n  &:hover {\n    background-color: #449bff;\n  }\n\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n\n  &:hover {\n    background-color: #449bff;\n  }\n\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n  @media (min-width: 320px) {\n    padding-left: 27px;\n    padding-right: 27px;\n    font-weight: 500;\n    font-size: 16px;\n    line-height: 19px;\n    padding-top: 14px;\n    padding-bottom: 14px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36669,7 +36669,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n  width: 100%;\n  &:before {\n    content: \"\";\n    background-image: url(", ");\n    display: block;\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    width: 15px;\n    height: 15px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  position: relative;\n  padding-left: calc(17px + 15px + 10px);\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border-radius: 4px;\n  border: none;\n  width: 100%;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36748,7 +36748,9 @@ HeaderForm.Div = function HeaderFormDiv(_ref4) {
 
   return /*#__PURE__*/_react.default.createElement(_headerForm.Div, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"components/body-form/styles/body-form.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"images/globe.svg":[function(require,module,exports) {
+module.exports = "/globe.bedc0633.svg";
+},{}],"components/body-form/styles/body-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36757,6 +36759,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.Radio = exports.CheckBox = exports.Input = exports.Label = exports.Span = exports.Wrapper = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _globe = _interopRequireDefault(require("../../../images/globe.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36781,7 +36785,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: 14px;\n\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: calc(14px + 15px + 14px);\n\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36848,7 +36852,7 @@ var Label = _styledComponents.default.label(_templateObject4());
 
 exports.Label = Label;
 
-var Input = _styledComponents.default.input(_templateObject5());
+var Input = _styledComponents.default.input(_templateObject5(), _globe.default);
 
 exports.Input = Input;
 
@@ -36859,7 +36863,7 @@ exports.CheckBox = CheckBox;
 var Radio = _styledComponents.default.input(_templateObject7());
 
 exports.Radio = Radio;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/body-form/index.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/globe.svg":"images/globe.svg"}],"components/body-form/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56042,9 +56046,7 @@ function FooterContainer() {
     onClick: nextPage
   }, "\u276F")));
 }
-},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"images/globe.svg":[function(require,module,exports) {
-module.exports = "/globe.bedc0633.svg";
-},{}],"images/clock.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"images/clock.svg":[function(require,module,exports) {
 module.exports = "/clock.469a1c26.svg";
 },{}],"container/card.js":[function(require,module,exports) {
 "use strict";
