@@ -37274,7 +37274,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  height: fit-content;\n  max-width: 42px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: fit-content;\n  max-width: 42px;\n  max-height: 42px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56521,7 +56521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50964" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56446" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

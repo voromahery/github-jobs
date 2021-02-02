@@ -24,6 +24,7 @@ export const Title = styled.h3`
 export const Image = styled.img`
   height: fit-content;
   max-width: 42px;
+  max-height: 42px;
 `;
 
 export const Description = styled.article`
