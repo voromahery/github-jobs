@@ -36562,21 +36562,11 @@ Header.Span = function HeaderSpan(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DetailsApplication = exports.Div = exports.Container = void 0;
+exports.Div = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    max-width: 29%;\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
@@ -36607,10 +36597,6 @@ exports.Container = Container;
 var Div = _styledComponents.default.div(_templateObject2());
 
 exports.Div = Div;
-
-var DetailsApplication = _styledComponents.default.div(_templateObject3());
-
-exports.DetailsApplication = DetailsApplication;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/random/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36641,13 +36627,6 @@ Random.Div = function RandomDiv(_ref2) {
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_random.Div, restProps, children);
-};
-
-Random.DetailsApplication = function RandomDetailsApplication(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_random.DetailsApplication, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/random":"components/random/styles/random.js"}],"images/backgroundImg.webp":[function(require,module,exports) {
 module.exports = "/backgroundImg.7be2ab1f.webp";
@@ -37161,11 +37140,21 @@ Card.Wrapper = function CardWrapper(_ref9) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
+exports.Application = exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    max-width: 29%;\n  }\n"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject11() {
   var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
@@ -37322,6 +37311,10 @@ exports.Location = Location;
 var Time = _styledComponents.default.span(_templateObject11());
 
 exports.Time = Time;
+
+var Application = _styledComponents.default.div(_templateObject12());
+
+exports.Application = Application;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/details/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37366,51 +37359,58 @@ Details.Title = function DetailsTitle(_ref4) {
   return /*#__PURE__*/_react.default.createElement(_details.Title, restProps, children);
 };
 
-Details.OtherTitle = function DetailsOtherTitle(_ref5) {
+Details.Application = function DetailsApplication(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_details.Application, restProps, children);
+};
+
+Details.OtherTitle = function DetailsOtherTitle(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
 };
 
-Details.Span = function DetailsSpan(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
+Details.Span = function DetailsSpan(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Span, restProps, children);
 };
 
-Details.Location = function DetailsLocation(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Details.Location = function DetailsLocation(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Location, restProps, children);
 };
 
-Details.Time = function DetailsTime(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+Details.Time = function DetailsTime(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Time, restProps, children);
 };
 
-Details.JobName = function DetailsJobName(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Details.JobName = function DetailsJobName(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.JobName, restProps, children);
 };
 
-Details.Wrapper = function DetailsWrapper(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+Details.Wrapper = function DetailsWrapper(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Wrapper, restProps, children);
 };
 
-Details.Text = function DetailsText(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
+Details.Text = function DetailsText(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
 };
@@ -37420,11 +37420,21 @@ Details.Text = function DetailsText(_ref11) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.ListItem = exports.List = exports.Container = void 0;
+exports.Arrow = exports.Button = exports.ListItem = exports.List = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  color: #b7bcce;\n  border: 1px solid #b7bcce;\n  box-sizing: border-box;\n  border-radius: 4px;\n  width: 36px;\n  height: 36px;\n  background-color: transparent;\n  &:hover {\n    color: #1e86ff;\n    border: 1px solid #1e86ff;\n    box-sizing: border-box;\n    border-radius: 4px;\n  }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject4() {
   var data = _taggedTemplateLiteral(["\n  color: #b7bcce;\n  border: 1px solid #b7bcce;\n  box-sizing: border-box;\n  border-radius: 4px;\n  width: 36px;\n  height: 36px;\n  background-color: transparent;\n  &:hover {\n    color: #1e86ff;\n    border: 1px solid #1e86ff;\n    box-sizing: border-box;\n    border-radius: 4px;\n  }\n\n  &:focus {\n    background-color: #1e86ff;\n    color: #ffffff;\n  }\n"]);
@@ -37483,6 +37493,10 @@ exports.ListItem = ListItem;
 var Button = _styledComponents.default.button(_templateObject4());
 
 exports.Button = Button;
+
+var Arrow = _styledComponents.default.button(_templateObject5());
+
+exports.Arrow = Arrow;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/pagination/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37527,6 +37541,13 @@ Pagination.Button = function PaginationButton(_ref4) {
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_pagination.Button, restProps, children);
+};
+
+Pagination.Arrow = function PaginationArrow(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_pagination.Arrow, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/pagination":"components/pagination/styles/pagination.js"}],"components/index.js":[function(require,module,exports) {
 "use strict";
@@ -55964,7 +55985,7 @@ function FooterContainer() {
     }
   }
 
-  return /*#__PURE__*/_react.default.createElement(_components.Pagination, null, /*#__PURE__*/_react.default.createElement(_components.Pagination.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
+  return /*#__PURE__*/_react.default.createElement(_components.Pagination, null, /*#__PURE__*/_react.default.createElement(_components.Pagination.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Pagination.Arrow, {
     onClick: prevPage
   }, "\u276E"), pages.map(function (page, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Pagination.ListItem, {
@@ -55975,7 +55996,7 @@ function FooterContainer() {
       },
       value: index
     }, page));
-  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
+  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Pagination.Arrow, {
     onClick: nextPage
   }, "\u276F")));
 }
@@ -56119,7 +56140,8 @@ function BodyFormContainer() {
       }
     }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
       type: "radio",
-      value: location,
+      value: location // checked={location === "New York"}
+      ,
       onChange: searchByLocationList,
       style: {
         transform: "scale(1.3)",
@@ -56247,8 +56269,6 @@ var _details = _interopRequireDefault(require("../components/details"));
 
 var _GlobalContext = require("../GlobalContext");
 
-var _components = require("./../components");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -56265,7 +56285,7 @@ function details() {
   var findJob = state.response.find(function (job) {
     return job.id === jobId;
   });
-  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_components.Random.DetailsApplication, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Application, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, {
     style: {
@@ -56311,7 +56331,7 @@ function details() {
     }
   })))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js","./../components":"components/index.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56432,7 +56452,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50865" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60578" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

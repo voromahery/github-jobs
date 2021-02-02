@@ -67,6 +67,7 @@ export default function BodyFormContainer() {
             <BodyForm.CheckBox
               type="radio"
               value={location}
+              // checked={location === "New York"}
               onChange={searchByLocationList}
               style={{ transform: "scale(1.3)", marginTop: 0 }}
             />

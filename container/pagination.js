@@ -48,7 +48,7 @@ export default function FooterContainer() {
   return (
     <Pagination>
       <Pagination.List>
-        {currentPage > 0 && <Pagination.Button onClick={prevPage}>❮</Pagination.Button>}
+        {currentPage > 0 && <Pagination.Arrow onClick={prevPage}>❮</Pagination.Arrow>}
         {pages.map((page, index) => (
           <Pagination.ListItem key={index}>
             <Pagination.Button
@@ -60,7 +60,7 @@ export default function FooterContainer() {
           </Pagination.ListItem>
         ))}
         {pageNumber - 1 > currentPage && (
-          <Pagination.Button onClick={nextPage}>❯</Pagination.Button>
+          <Pagination.Arrow onClick={nextPage}>❯</Pagination.Arrow>
         )}
       </Pagination.List>
     </Pagination>

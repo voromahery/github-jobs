@@ -10,7 +10,8 @@ import {
   Time,
   Text,
   OtherTitle,
-  Description
+  Description,
+  Application
 } from "./styles/details";
 
 export default function Details({ children, ...restProps }) {
@@ -27,6 +28,10 @@ Details.Description = function DetailsDescription({ children, ...restProps }) {
 
 Details.Title = function DetailsTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
+};
+
+Details.Application = function DetailsApplication({ children, ...restProps }) {
+  return <Application {...restProps}>{children}</Application>;
 };
 
 Details.OtherTitle = function DetailsOtherTitle({ children, ...restProps }) {

@@ -33,3 +33,19 @@ export const Button = styled.button`
     color: #ffffff;
   }
 `;
+
+export const Arrow = styled.button`
+  color: #b7bcce;
+  border: 1px solid #b7bcce;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  &:hover {
+    color: #1e86ff;
+    border: 1px solid #1e86ff;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+`;

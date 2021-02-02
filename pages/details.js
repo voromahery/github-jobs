@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { formatDistance } from "date-fns";
 import Details from "../components/details";
 import { Context } from "../GlobalContext";
-import { Random } from "./../components";
 
 export default function details() {
   const { state } = useContext(Context);
@@ -13,7 +12,7 @@ export default function details() {
 
   return (
     <Details>
-      <Random.DetailsApplication>
+      <Details.Application>
         <Link to="/">
           <Details.Text>Back to search</Details.Text>
         </Link>
@@ -27,7 +26,7 @@ export default function details() {
             }
           </Details.Description>
         </Details.Wrapper>
-      </Random.DetailsApplication>
+      </Details.Application>
 
       <Details.Wrapper
         style={{

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, List, ListItem, Button } from "./styles/pagination";
+import { Container, List, ListItem, Button, Arrow } from "./styles/pagination";
 
 export default function Pagination({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -15,5 +15,9 @@ Pagination.ListItem = function PaginationListItem({ children, ...restProps }) {
 
 Pagination.Button = function PaginationButton({ children, ...restProps }) {
     return <Button {...restProps}>{children}</Button>;
+  };
+  
+  Pagination.Arrow = function PaginationArrow({ children, ...restProps }) {
+    return <Arrow {...restProps}>{children}</Arrow>;
   };
   
