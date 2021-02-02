@@ -46,6 +46,22 @@ ul {
   margin: 0;
 }
 
+::-moz-input-placeholder{
+  color: #B9BDCF;
+}
+
+::-webkit-input-placeholder{
+  color: #B9BDCF;
+}
+
+:-ms-input-placeholder {
+  color: #B9BDCF;
+}
+
+::placeholder {
+  color: #B9BDCF;
+}
+
 button {
   cursor: pointer;
 }
