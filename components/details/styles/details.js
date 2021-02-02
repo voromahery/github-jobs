@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import leftArrow from "../../../images/arrow.svg";
 
 export const Container = styled.div`
   @media (min-width: 1000px) {
@@ -46,10 +47,28 @@ export const Span = styled.span`
 `;
 
 export const Text = styled.p`
+  display: flex;
+  flex-direction: row;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #1e86ff;
+  padding-left: calc(18.5px + 15px);
+  &::before {
+    content: "";
+    background-image: url(${leftArrow});
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: calc(14px / 2);
+    left: -25px;
+    width: 30px;
+    height: 19px;
+    transform: rotate(-180deg);
+    margin-left: 18px;
+  }
 `;
 
 export const OtherTitle = styled.h3`
@@ -74,13 +93,17 @@ export const Wrapper = styled.div`
 `;
 
 export const Location = styled.span`
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #b9bdcf;
 `;
 
-export const Time = styled.span`
+export const Time = styled.time`
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -93,3 +116,7 @@ export const Application = styled.div`
   }
 `;
 
+export const Icon = styled.img`
+  max-width: 15px;
+  margin-right: 8.5px;
+`;

@@ -36923,14 +36923,24 @@ BodyForm.Span = function BodyFormSpan(_ref7) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Wrapper = exports.Time = exports.Location = exports.Span = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
+exports.Icon = exports.Wrapper = exports.Time = exports.Location = exports.Span = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  max-width: 15px;\n  margin-right: 8.5px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36940,7 +36950,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36950,7 +36960,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -37056,6 +37066,10 @@ exports.Time = Time;
 var Wrapper = _styledComponents.default.div(_templateObject9());
 
 exports.Wrapper = Wrapper;
+
+var Icon = _styledComponents.default.img(_templateObject10());
+
+exports.Icon = Icon;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/card/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37121,30 +37135,49 @@ Card.Time = function CardTime(_ref7) {
   return /*#__PURE__*/_react.default.createElement(_card.Time, restProps, children);
 };
 
-Card.JobName = function CardJobName(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+Card.Icon = function CardIcon(_ref8) {
+  var restProps = Object.assign({}, _ref8);
+  return /*#__PURE__*/_react.default.createElement(_card.Icon, restProps);
+};
+
+Card.JobName = function CardJobName(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_card.JobName, restProps, children);
 };
 
-Card.Wrapper = function CardWrapper(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Card.Wrapper = function CardWrapper(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_card.Wrapper, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"components/details/styles/details.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"images/arrow.svg":[function(require,module,exports) {
+module.exports = "/arrow.305c14c2.svg";
+},{}],"components/details/styles/details.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Application = exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
+exports.Icon = exports.Application = exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _arrow = _interopRequireDefault(require("../../../images/arrow.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n  max-width: 15px;\n  margin-right: 8.5px;\n"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject12() {
   var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    max-width: 29%;\n  }\n"]);
@@ -37157,7 +37190,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -37167,7 +37200,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -37207,7 +37240,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1e86ff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  position: relative;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1e86ff;\n  padding-left: calc(18.5px + 15px);\n  &::before {\n    content: \"\";\n    background-image: url(", ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    display: block;\n    position: absolute;\n    top: calc(14px / 2);\n    left: -25px;\n    width: 30px;\n    height: 19px;\n    transform: rotate(-180deg);\n    margin-left: 18px;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -37288,7 +37321,7 @@ var Span = _styledComponents.default.span(_templateObject5());
 
 exports.Span = Span;
 
-var Text = _styledComponents.default.p(_templateObject6());
+var Text = _styledComponents.default.p(_templateObject6(), _arrow.default);
 
 exports.Text = Text;
 
@@ -37308,14 +37341,18 @@ var Location = _styledComponents.default.span(_templateObject10());
 
 exports.Location = Location;
 
-var Time = _styledComponents.default.span(_templateObject11());
+var Time = _styledComponents.default.time(_templateObject11());
 
 exports.Time = Time;
 
 var Application = _styledComponents.default.div(_templateObject12());
 
 exports.Application = Application;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/details/index.js":[function(require,module,exports) {
+
+var Icon = _styledComponents.default.img(_templateObject13());
+
+exports.Icon = Icon;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/arrow.svg":"images/arrow.svg"}],"components/details/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37345,72 +37382,77 @@ Details.Image = function DetailsImage(_ref2) {
   return /*#__PURE__*/_react.default.createElement(_details.Image, restProps);
 };
 
-Details.Description = function DetailsDescription(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
+Details.Icon = function DetailsIcon(_ref3) {
+  var restProps = Object.assign({}, _ref3);
+  return /*#__PURE__*/_react.default.createElement(_details.Icon, restProps);
+};
+
+Details.Description = function DetailsDescription(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Description, restProps, children);
 };
 
-Details.Title = function DetailsTitle(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Details.Title = function DetailsTitle(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Title, restProps, children);
 };
 
-Details.Application = function DetailsApplication(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
+Details.Application = function DetailsApplication(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Application, restProps, children);
 };
 
-Details.OtherTitle = function DetailsOtherTitle(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
+Details.OtherTitle = function DetailsOtherTitle(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
 };
 
-Details.Span = function DetailsSpan(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Details.Span = function DetailsSpan(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Span, restProps, children);
 };
 
-Details.Location = function DetailsLocation(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+Details.Location = function DetailsLocation(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Location, restProps, children);
 };
 
-Details.Time = function DetailsTime(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Details.Time = function DetailsTime(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Time, restProps, children);
 };
 
-Details.JobName = function DetailsJobName(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+Details.JobName = function DetailsJobName(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.JobName, restProps, children);
 };
 
-Details.Wrapper = function DetailsWrapper(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
+Details.Wrapper = function DetailsWrapper(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Wrapper, restProps, children);
 };
 
-Details.Text = function DetailsText(_ref12) {
-  var children = _ref12.children,
-      restProps = _objectWithoutProperties(_ref12, ["children"]);
+Details.Text = function DetailsText(_ref13) {
+  var children = _ref13.children,
+      restProps = _objectWithoutProperties(_ref13, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
 };
@@ -56000,7 +56042,11 @@ function FooterContainer() {
     onClick: nextPage
   }, "\u276F")));
 }
-},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"container/card.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"images/globe.svg":[function(require,module,exports) {
+module.exports = "/globe.bedc0633.svg";
+},{}],"images/clock.svg":[function(require,module,exports) {
+module.exports = "/clock.469a1c26.svg";
+},{}],"container/card.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56019,6 +56065,10 @@ var _GlobalContext = require("../GlobalContext");
 var _pagination = _interopRequireDefault(require("../container/pagination"));
 
 var _card = _interopRequireDefault(require("./../components/card"));
+
+var _globe = _interopRequireDefault(require("../images/globe.svg"));
+
+var _clock = _interopRequireDefault(require("../images/clock.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56046,14 +56096,19 @@ function CardContainer() {
       style: {
         justifyContent: "space-between",
         width: "100%",
-        maxWidth: "calc(112px + 15px + 59px)"
+        maxWidth: "max-content",
+        gap: "28.5px"
       }
-    }, /*#__PURE__*/_react.default.createElement(_card.default.Location, null, data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
+    }, /*#__PURE__*/_react.default.createElement(_card.default.Location, null, /*#__PURE__*/_react.default.createElement(_card.default.Icon, {
+      src: _globe.default
+    }), " ", data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
       dateTime: data.created_at
-    }, (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(data.created_at), new Date()), " ago") : "today")))));
+    }, /*#__PURE__*/_react.default.createElement(_card.default.Icon, {
+      src: _clock.default
+    }), (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(data.created_at), new Date()), " ago") : "today")))));
   })), /*#__PURE__*/_react.default.createElement(_pagination.default, null));
 }
-},{"react":"node_modules/react/index.js","date-fns":"node_modules/date-fns/esm/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","../container/pagination":"container/pagination.js","./../components/card":"components/card/index.js"}],"container/body-form.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","date-fns":"node_modules/date-fns/esm/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","../container/pagination":"container/pagination.js","./../components/card":"components/card/index.js","../images/globe.svg":"images/globe.svg","../images/clock.svg":"images/clock.svg"}],"container/body-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56273,6 +56328,10 @@ var _details = _interopRequireDefault(require("../components/details"));
 
 var _GlobalContext = require("../GlobalContext");
 
+var _clock = _interopRequireDefault(require("../images/clock.svg"));
+
+var _globe = _interopRequireDefault(require("../images/globe.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -56297,16 +56356,18 @@ function details() {
     }
   }, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
-      __html: findJob.how_to_apply
+      __html: findJob === null || findJob === void 0 ? void 0 : findJob.how_to_apply
     }
   })))), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
       marginTop: "calc(36px - 16px)",
       marginBottom: "36px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
-    dateTime: findJob.created_at
-  }, (0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(findJob.created_at), new Date()), " ago") : "today")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob === null || findJob === void 0 ? void 0 : findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob === null || findJob === void 0 ? void 0 : findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
+    dateTime: findJob === null || findJob === void 0 ? void 0 : findJob.created_at
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Icon, {
+    src: _clock.default
+  }), (0, _dateFns.formatDistance)(new Date(findJob === null || findJob === void 0 ? void 0 : findJob.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(findJob === null || findJob === void 0 ? void 0 : findJob.created_at), new Date()), " ago") : "today")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
       flexDirection: "row",
       marginTop: "36px",
@@ -56315,12 +56376,14 @@ function details() {
       alignItems: "center"
     }
   }, /*#__PURE__*/_react.default.createElement(_details.default.Image, {
-    src: findJob.company_logo
+    src: findJob === null || findJob === void 0 ? void 0 : findJob.company_logo
   }), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
     style: {
       gap: "10px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob === null || findJob === void 0 ? void 0 : findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, " ", /*#__PURE__*/_react.default.createElement(_details.default.Icon, {
+    src: _globe.default
+  }), findJob === null || findJob === void 0 ? void 0 : findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, {
     style: {
       fontFamily: "Roboto",
       fontStyle: "normal",
@@ -56331,11 +56394,11 @@ function details() {
     }
   }, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
     dangerouslySetInnerHTML: {
-      __html: findJob.description
+      __html: findJob === null || findJob === void 0 ? void 0 : findJob.description
     }
   })))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js"}],"pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","date-fns":"node_modules/date-fns/esm/index.js","../components/details":"components/details/index.js","../GlobalContext":"GlobalContext.js","../images/clock.svg":"images/clock.svg","../images/globe.svg":"images/globe.svg"}],"pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56456,7 +56519,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50964" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

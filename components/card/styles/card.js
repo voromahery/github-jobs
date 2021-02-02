@@ -69,6 +69,8 @@ export const Span = styled.span`
 `;
 
 export const Location = styled.span`
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -76,6 +78,8 @@ export const Location = styled.span`
 `;
 
 export const Time = styled.time`
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -84,4 +88,13 @@ export const Time = styled.time`
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 300px) {
+    flex-wrap: nowrap;
+  }
+`;
+
+export const Icon = styled.img`
+  max-width: 15px;
+  margin-right: 8.5px;
 `;

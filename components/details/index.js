@@ -2,6 +2,7 @@ import React from "react";
 import {
   Container,
   Image,
+  Icon,
   Title,
   Span,
   Location,
@@ -20,6 +21,10 @@ export default function Details({ children, ...restProps }) {
 
 Details.Image = function DetailsImage({ ...restProps }) {
   return <Image {...restProps} />;
+};
+
+Details.Icon = function DetailsIcon({ ...restProps }) {
+  return <Icon {...restProps}/>;
 };
 
 Details.Description = function DetailsDescription({ children, ...restProps }) {

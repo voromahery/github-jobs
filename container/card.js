@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../GlobalContext";
 import PaginationContainer from "../container/pagination";
 import Card from "./../components/card";
+import locationIcon from "../images/globe.svg";
+import timeIcon from "../images/clock.svg";
 
 export default function CardContainer() {
   const { state, perPage, offSet } = useContext(Context);
@@ -24,11 +26,15 @@ export default function CardContainer() {
                   style={{
                     justifyContent: "space-between",
                     width: "100%",
-                    maxWidth: "calc(112px + 15px + 59px)",
+                    maxWidth: "max-content",
+                    gap: "28.5px"
                   }}
                 >
-                  <Card.Location>{data.location}</Card.Location>
+                  <Card.Location>
+                    <Card.Icon src={locationIcon} /> {data.location}
+                  </Card.Location>
                   <Card.Time dateTime={data.created_at}>
+                    <Card.Icon src={timeIcon} />
                     {formatDistance(new Date(data.created_at), new Date()) !==
                     "today"
                       ? `${formatDistance(

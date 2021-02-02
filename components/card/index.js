@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Item, Image, Title, JobName, Span, Location, Time, Wrapper } from "./styles/card";
+import { Container, Item, Image, Title, JobName, Span, Location, Time, Wrapper, Icon } from "./styles/card";
 
 export default function Card({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -27,6 +27,11 @@ Card.Location = function CardLocation({ children, ...restProps }) {
 
 Card.Time = function CardTime({ children, ...restProps }) {
   return <Time {...restProps}>{children}</Time>;
+};
+
+
+Card.Icon = function CardIcon({ ...restProps }) {
+  return <Icon {...restProps}/>;
 };
 
 Card.JobName = function CardJobName({ children, ...restProps }) {
