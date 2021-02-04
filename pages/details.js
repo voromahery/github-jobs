@@ -40,7 +40,7 @@ export default function details() {
       >
         <Details.Wrapper>
           <Details.JobName>{findJob?.title}</Details.JobName>
-          <Details.Span>{findJob?.type}</Details.Span>
+          <Details.JobType>{findJob?.type}</Details.JobType>
           <Details.Time dateTime={findJob?.created_at}>
             <Details.Icon src={timeIcon} />
             {formatDistance(new Date(findJob?.created_at), new Date()) !==

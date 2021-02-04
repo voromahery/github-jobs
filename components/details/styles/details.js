@@ -2,7 +2,7 @@ import styled from "styled-components";
 import leftArrow from "../../../images/arrow.svg";
 
 export const Container = styled.div`
-  @media (min-width: 1000px) {
+  @media (min-width: 600px) {
     display: flex;
     flex-direction: row;
     gap: calc(77px / 2);
@@ -34,7 +34,7 @@ export const Description = styled.article`
   color: #334680;
 `;
 
-export const Span = styled.span`
+export const JobType = styled.button`
   font-weight: bold;
   font-size: 12px;
   border: 2px solid #334680;
@@ -44,6 +44,7 @@ export const Span = styled.span`
   border-radius: 4px;
   color: #334680;
   margin-top: 10px;
+  background-color: transparent;
   margin-bottom: 10px;
 `;
 
@@ -112,7 +113,7 @@ export const Time = styled.time`
 `;
 
 export const Application = styled.div`
-  @media (min-width: 1000px) {
+  @media (min-width: 1100px) {
     max-width: 29%;
   }
 `;

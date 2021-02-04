@@ -21,7 +21,7 @@ export const Container = styled.form`
     padding-bottom: calc(42px / 2);
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     padding-left: 206px;
     padding-right: 206px;
     padding-top: 42px;

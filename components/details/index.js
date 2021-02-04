@@ -4,7 +4,7 @@ import {
   Image,
   Icon,
   Title,
-  Span,
+  JobType,
   Location,
   JobName,
   Wrapper,
@@ -43,8 +43,8 @@ Details.OtherTitle = function DetailsOtherTitle({ children, ...restProps }) {
   return <OtherTitle {...restProps}>{children}</OtherTitle>;
 };
 
-Details.Span = function DetailsSpan({ children, ...restProps }) {
-  return <Span {...restProps}>{children}</Span>;
+Details.JobType = function DetailsJobType({ children, ...restProps }) {
+  return <JobType {...restProps}>{children}</JobType>;
 };
 
 Details.Location = function DetailsLocation({ children, ...restProps }) {

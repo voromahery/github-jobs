@@ -17,17 +17,19 @@ export default function CardContainer() {
           <Link key={data.id} to={`/details/${data.id}`}>
             <Card.Item>
               <Card.Image src={data.company_logo} />
-              <Card.Wrapper style={{ flexDirection: "column" }}>
-                <Card.Title>{data.company}</Card.Title>
-                <Card.JobName>{data.title}</Card.JobName>
-                <Card.Span>{data.type}</Card.Span>
+              <Card.InnerWrapper>
+                <div>
+                  <Card.Title>{data.company}</Card.Title>
+                  <Card.JobName>{data.title}</Card.JobName>
+                  <Card.JobType>{data.type}</Card.JobType>
+                </div>
 
                 <Card.Wrapper
                   style={{
                     justifyContent: "space-between",
                     width: "100%",
                     maxWidth: "max-content",
-                    gap: "28.5px"
+                    gap: "28.5px",
                   }}
                 >
                   <Card.Location>
@@ -44,7 +46,7 @@ export default function CardContainer() {
                       : "today"}
                   </Card.Time>
                 </Card.Wrapper>
-              </Card.Wrapper>
+              </Card.InnerWrapper>
             </Card.Item>
           </Link>
         ))}

@@ -36579,7 +36579,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    gap: 44px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1100px) {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    gap: 44px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36679,7 +36679,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(", ");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n\n  @media (min-width: 1000px) {\n    padding-left: calc(206px / 2);\n    padding-right: calc(206px / 2);\n    padding-top: calc(42px / 2);\n    padding-bottom: calc(42px / 2);\n  }\n\n  @media (min-width: 1200px) {\n    padding-left: 206px;\n    padding-right: 206px;\n    padding-top: 42px;\n    padding-bottom: 42px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(", ");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n\n  @media (min-width: 1000px) {\n    padding-left: calc(206px / 2);\n    padding-right: calc(206px / 2);\n    padding-top: calc(42px / 2);\n    padding-bottom: calc(42px / 2);\n  }\n\n  @media (min-width: 1100px) {\n    padding-left: 206px;\n    padding-right: 206px;\n    padding-top: 42px;\n    padding-bottom: 42px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36927,14 +36927,24 @@ BodyForm.Span = function BodyFormSpan(_ref7) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Icon = exports.Wrapper = exports.Time = exports.Location = exports.Span = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
+exports.Icon = exports.InnerWrapper = exports.Wrapper = exports.Time = exports.Location = exports.JobType = exports.JobName = exports.Title = exports.Image = exports.Item = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject10() {
+function _templateObject11() {
   var data = _taggedTemplateLiteral(["\n  max-width: 15px;\n  margin-right: 8.5px;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  @media (min-width: 1000px) {\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: flex-end;\n  }\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -36974,7 +36984,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  margin-bottom: 26px;\n  color: #334680;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  margin-bottom: 26px;\n  color: #334680;\n  background-color: transparent;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -37024,7 +37034,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 791px;\n  @media (min-width: 1000px) {\n    max-width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 791px;\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37055,9 +37065,9 @@ var JobName = _styledComponents.default.h4(_templateObject5());
 
 exports.JobName = JobName;
 
-var Span = _styledComponents.default.span(_templateObject6());
+var JobType = _styledComponents.default.button(_templateObject6());
 
-exports.Span = Span;
+exports.JobType = JobType;
 
 var Location = _styledComponents.default.span(_templateObject7());
 
@@ -37071,7 +37081,11 @@ var Wrapper = _styledComponents.default.div(_templateObject9());
 
 exports.Wrapper = Wrapper;
 
-var Icon = _styledComponents.default.img(_templateObject10());
+var InnerWrapper = _styledComponents.default.div(_templateObject10());
+
+exports.InnerWrapper = InnerWrapper;
+
+var Icon = _styledComponents.default.img(_templateObject11());
 
 exports.Icon = Icon;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/card/index.js":[function(require,module,exports) {
@@ -37118,11 +37132,11 @@ Card.Title = function CardTitle(_ref4) {
   return /*#__PURE__*/_react.default.createElement(_card.Title, restProps, children);
 };
 
-Card.Span = function CardSpan(_ref5) {
+Card.JobType = function CardJobType(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Span, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_card.JobType, restProps, children);
 };
 
 Card.Location = function CardLocation(_ref6) {
@@ -37157,6 +37171,13 @@ Card.Wrapper = function CardWrapper(_ref10) {
 
   return /*#__PURE__*/_react.default.createElement(_card.Wrapper, restProps, children);
 };
+
+Card.InnerWrapper = function CardInnerWrapper(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.InnerWrapper, restProps, children);
+};
 },{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"images/arrow.svg":[function(require,module,exports) {
 module.exports = "/arrow.305c14c2.svg";
 },{}],"components/details/styles/details.js":[function(require,module,exports) {
@@ -37165,7 +37186,7 @@ module.exports = "/arrow.305c14c2.svg";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Icon = exports.Application = exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.Span = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
+exports.Icon = exports.Application = exports.Time = exports.Location = exports.Wrapper = exports.JobName = exports.OtherTitle = exports.Text = exports.JobType = exports.Description = exports.Image = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -37184,7 +37205,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    max-width: 29%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1100px) {\n    max-width: 29%;\n  }\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -37254,7 +37275,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  margin-bottom: 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  background-color: transparent;\n  margin-bottom: 10px;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -37294,7 +37315,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1000px) {\n    display: flex;\n    flex-direction: row;\n    gap: calc(77px / 2);\n  }\n\n  @media (min-width: 1200px) {\n    gap: 77px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @media (min-width: 600px) {\n    display: flex;\n    flex-direction: row;\n    gap: calc(77px / 2);\n  }\n\n  @media (min-width: 1200px) {\n    gap: 77px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37321,9 +37342,9 @@ var Description = _styledComponents.default.article(_templateObject4());
 
 exports.Description = Description;
 
-var Span = _styledComponents.default.span(_templateObject5());
+var JobType = _styledComponents.default.button(_templateObject5());
 
-exports.Span = Span;
+exports.JobType = JobType;
 
 var Text = _styledComponents.default.p(_templateObject6(), _arrow.default);
 
@@ -37419,11 +37440,11 @@ Details.OtherTitle = function DetailsOtherTitle(_ref7) {
   return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
 };
 
-Details.Span = function DetailsSpan(_ref8) {
+Details.JobType = function DetailsJobType(_ref8) {
   var children = _ref8.children,
       restProps = _objectWithoutProperties(_ref8, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_details.Span, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_details.JobType, restProps, children);
 };
 
 Details.Location = function DetailsLocation(_ref9) {
@@ -56090,11 +56111,7 @@ function CardContainer() {
       to: "/details/".concat(data.id)
     }, /*#__PURE__*/_react.default.createElement(_card.default.Item, null, /*#__PURE__*/_react.default.createElement(_card.default.Image, {
       src: data.company_logo
-    }), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
-      style: {
-        flexDirection: "column"
-      }
-    }, /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title), /*#__PURE__*/_react.default.createElement(_card.default.Span, null, data.type), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
+    }), /*#__PURE__*/_react.default.createElement(_card.default.InnerWrapper, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title), /*#__PURE__*/_react.default.createElement(_card.default.JobType, null, data.type)), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
       style: {
         justifyContent: "space-between",
         width: "100%",
@@ -56369,7 +56386,7 @@ function details() {
       marginTop: "calc(36px - 16px)",
       marginBottom: "36px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob === null || findJob === void 0 ? void 0 : findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.Span, null, findJob === null || findJob === void 0 ? void 0 : findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
+  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob === null || findJob === void 0 ? void 0 : findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.JobType, null, findJob === null || findJob === void 0 ? void 0 : findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
     dateTime: findJob === null || findJob === void 0 ? void 0 : findJob.created_at
   }, /*#__PURE__*/_react.default.createElement(_details.default.Icon, {
     src: _clock.default
@@ -56525,7 +56542,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58201" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57378" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

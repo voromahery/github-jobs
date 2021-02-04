@@ -1,5 +1,17 @@
 import React from "react";
-import { Container, Item, Image, Title, JobName, Span, Location, Time, Wrapper, Icon } from "./styles/card";
+import {
+  Container,
+  Item,
+  Image,
+  Title,
+  JobName,
+  JobType,
+  Location,
+  Time,
+  Wrapper,
+  InnerWrapper,
+  Icon,
+} from "./styles/card";
 
 export default function Card({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -9,16 +21,16 @@ Card.Item = function CardItem({ children, ...restProps }) {
   return <Item {...restProps}>{children}</Item>;
 };
 
-Card.Image = function CardImage({...restProps }) {
-  return <Image {...restProps}/>
+Card.Image = function CardImage({ ...restProps }) {
+  return <Image {...restProps} />;
 };
 
 Card.Title = function CardTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Card.Span = function CardSpan({ children, ...restProps }) {
-  return <Span {...restProps}>{children}</Span>;
+Card.JobType = function CardJobType({ children, ...restProps }) {
+  return <JobType {...restProps}>{children}</JobType>;
 };
 
 Card.Location = function CardLocation({ children, ...restProps }) {
@@ -29,9 +41,8 @@ Card.Time = function CardTime({ children, ...restProps }) {
   return <Time {...restProps}>{children}</Time>;
 };
 
-
 Card.Icon = function CardIcon({ ...restProps }) {
-  return <Icon {...restProps}/>;
+  return <Icon {...restProps} />;
 };
 
 Card.JobName = function CardJobName({ children, ...restProps }) {
@@ -40,4 +51,8 @@ Card.JobName = function CardJobName({ children, ...restProps }) {
 
 Card.Wrapper = function CardWrapper({ children, ...restProps }) {
   return <Wrapper {...restProps}>{children}</Wrapper>;
+};
+
+Card.InnerWrapper = function CardInnerWrapper({ children, ...restProps }) {
+  return <InnerWrapper {...restProps}>{children}</InnerWrapper>;
 };

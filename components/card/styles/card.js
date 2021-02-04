@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   max-width: 791px;
-  @media (min-width: 1000px) {
+  @media (min-width: 1100px) {
     max-width: 100%;
   }
 `;
@@ -56,7 +56,7 @@ export const JobName = styled.h4`
   color: #334680;
 `;
 
-export const Span = styled.span`
+export const JobType = styled.button`
   font-weight: bold;
   font-size: 12px;
   border: 2px solid #334680;
@@ -66,6 +66,7 @@ export const Span = styled.span`
   border-radius: 4px;
   margin-bottom: 26px;
   color: #334680;
+  background-color: transparent;
 `;
 
 export const Location = styled.span`
@@ -91,6 +92,17 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   @media (min-width: 300px) {
     flex-wrap: nowrap;
+  }
+`;
+
+export const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 `;
 
