@@ -29,6 +29,7 @@ function GlobalContext(props) {
           return {
             ...state,
             loading: false,
+            allData: action.allData,
             response: action.response,
             error: null,
           };
@@ -56,6 +57,7 @@ function GlobalContext(props) {
     {
       loading: false,
       response: [],
+      allData: [],
       error: null,
     }
   );
@@ -69,7 +71,7 @@ function GlobalContext(props) {
       .then((response) => response.json())
       .then((json) => {
         if (isCurrent) {
-          dispatch({ type: "RESOLVED", response: json });
+          dispatch({ type: "RESOLVED", response: json, allData: json });
         }
       })
 
@@ -81,7 +83,14 @@ function GlobalContext(props) {
       isCurrent = false;
     };
   }, [locations, jobType]);
-  const pageNumber = Math.ceil(state.response.length / perPage);
+
+  let pageNumber = "";
+
+  if (state.response) {
+    pageNumber = Math.ceil(state.response.length / perPage);
+  } else {
+    pageNumber = 1;
+  }
 
   return (
     <div>
@@ -99,7 +108,7 @@ function GlobalContext(props) {
           offSet,
           currentPage,
           setCurrentPage,
-          pageNumber
+          pageNumber,
         }}
       >
         {props.children}

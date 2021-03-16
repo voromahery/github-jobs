@@ -10814,7 +10814,7 @@ if ("development" !== "production") {
       }
 
       var eventName = 'on' + eventNameSuffix;
-      var isSupported = (eventName in document);
+      var isSupported = eventName in document;
 
       if (!isSupported) {
         var element = document.createElement('div');
@@ -31963,7 +31963,9 @@ function createReactContext(defaultValue, calculateChangedBits) {
 
   var contextProp = '__create-react-context-' + getUniqueId() + '__';
 
-  var Provider = /*#__PURE__*/function (_Component) {
+  var Provider =
+  /*#__PURE__*/
+  function (_Component) {
     (0, _inheritsLoose2.default)(Provider, _Component);
 
     function Provider() {
@@ -32015,7 +32017,9 @@ function createReactContext(defaultValue, calculateChangedBits) {
 
   Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = _propTypes.default.object.isRequired, _Provider$childContex);
 
-  var Consumer = /*#__PURE__*/function (_Component2) {
+  var Consumer =
+  /*#__PURE__*/
+  function (_Component2) {
     (0, _inheritsLoose2.default)(Consumer, _Component2);
 
     function Consumer() {
@@ -33093,7 +33097,9 @@ var createNamedContext = function createNamedContext(name) {
   return context;
 };
 
-var historyContext = /*#__PURE__*/createNamedContext("Router-History"); // TODO: Replace with React.createContext once we can assume React 16+
+var historyContext =
+/*#__PURE__*/
+createNamedContext("Router-History"); // TODO: Replace with React.createContext once we can assume React 16+
 
 exports.__HistoryContext = historyContext;
 
@@ -33103,14 +33109,18 @@ var createNamedContext$1 = function createNamedContext(name) {
   return context;
 };
 
-var context = /*#__PURE__*/createNamedContext$1("Router");
+var context =
+/*#__PURE__*/
+createNamedContext$1("Router");
 /**
  * The public API for putting history on context.
  */
 
 exports.__RouterContext = context;
 
-var Router = /*#__PURE__*/function (_React$Component) {
+var Router =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Router, _React$Component);
 
   Router.computeRootMatch = function computeRootMatch(pathname) {
@@ -33203,7 +33213,9 @@ if ("development" !== "production") {
  */
 
 
-var MemoryRouter = /*#__PURE__*/function (_React$Component) {
+var MemoryRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(MemoryRouter, _React$Component);
 
   function MemoryRouter() {
@@ -33246,7 +33258,9 @@ if ("development" !== "production") {
   };
 }
 
-var Lifecycle = /*#__PURE__*/function (_React$Component) {
+var Lifecycle =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Lifecycle, _React$Component);
 
   function Lifecycle() {
@@ -33492,7 +33506,9 @@ function evalChildrenDev(children, props, path) {
  */
 
 
-var Route = /*#__PURE__*/function (_React$Component) {
+var Route =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Route, _React$Component);
 
   function Route() {
@@ -33601,7 +33617,9 @@ function noop() {}
  */
 
 
-var StaticRouter = /*#__PURE__*/function (_React$Component) {
+var StaticRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(StaticRouter, _React$Component);
 
   function StaticRouter() {
@@ -33695,7 +33713,9 @@ if ("development" !== "production") {
  */
 
 
-var Switch = /*#__PURE__*/function (_React$Component) {
+var Switch =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Switch, _React$Component);
 
   function Switch() {
@@ -33952,7 +33972,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * The public API for a <Router> that uses HTML5 history.
  */
-var BrowserRouter = /*#__PURE__*/function (_React$Component) {
+var BrowserRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(BrowserRouter, _React$Component);
 
   function BrowserRouter() {
@@ -33999,7 +34021,9 @@ if ("development" !== "production") {
  */
 
 
-var HashRouter = /*#__PURE__*/function (_React$Component) {
+var HashRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(HashRouter, _React$Component);
 
   function HashRouter() {
@@ -35263,7 +35287,7 @@ var index = (0, _memoize.default)(function (prop) {
 );
 var _default = index;
 exports.default = _default;
-},{"@emotion/memoize":"node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+},{"@emotion/memoize":"node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -35507,31 +35531,25 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function v() {
   return (v = Object.assign || function (e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
 
-      for (var r in n) {
-        Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-      }
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
     }
 
     return e;
   }).apply(this, arguments);
 }
 
-var g = function g(e, t) {
-  for (var n = [e[0]], r = 0, o = t.length; r < o; r += 1) {
-    n.push(t[r], e[r + 1]);
-  }
+var g = function (e, t) {
+  for (var n = [e[0]], r = 0, o = t.length; r < o; r += 1) n.push(t[r], e[r + 1]);
 
   return n;
 },
-    S = function S(t) {
-  return null !== t && "object" == _typeof(t) && "[object Object]" === (t.toString ? t.toString() : Object.prototype.toString.call(t)) && !(0, _reactIs.typeOf)(t);
+    S = function (t) {
+  return null !== t && "object" == typeof t && "[object Object]" === (t.toString ? t.toString() : Object.prototype.toString.call(t)) && !(0, _reactIs.typeOf)(t);
 },
     w = Object.freeze([]),
     E = Object.freeze({});
@@ -35575,9 +35593,7 @@ var A = "undefined" != typeof process && (undefined || undefined) || "data-style
 exports.version = C;
 
 function D() {
-  for (var e = arguments.length <= 0 ? void 0 : arguments[0], t = [], n = 1, r = arguments.length; n < r; n += 1) {
-    t.push(n < 0 || arguments.length <= n ? void 0 : arguments[n]);
-  }
+  for (var e = arguments.length <= 0 ? void 0 : arguments[0], t = [], n = 1, r = arguments.length; n < r; n += 1) t.push(n < 0 || arguments.length <= n ? void 0 : arguments[n]);
 
   return t.forEach(function (t) {
     e = e.replace(/%[a-z]/, t);
@@ -35585,9 +35601,7 @@ function D() {
 }
 
 function j(e) {
-  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
-    n[r - 1] = arguments[r];
-  }
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
 
   throw "production" === "development" ? new Error("An error occurred. See https://git.io/JUIaE#" + e + " for more information." + (n.length > 0 ? " Args: " + n.join(", ") : "")) : new Error(D.apply(void 0, [R[e]].concat(n)).trim());
 }
@@ -35599,27 +35613,19 @@ var T = function () {
 
   var t = e.prototype;
   return t.indexOfGroup = function (e) {
-    for (var t = 0, n = 0; n < e; n++) {
-      t += this.groupSizes[n];
-    }
+    for (var t = 0, n = 0; n < e; n++) t += this.groupSizes[n];
 
     return t;
   }, t.insertRules = function (e, t) {
     if (e >= this.groupSizes.length) {
-      for (var n = this.groupSizes, r = n.length, o = r; e >= o;) {
-        (o <<= 1) < 0 && j(16, "" + e);
-      }
+      for (var n = this.groupSizes, r = n.length, o = r; e >= o;) (o <<= 1) < 0 && j(16, "" + e);
 
       this.groupSizes = new Uint32Array(o), this.groupSizes.set(n), this.length = o;
 
-      for (var s = r; s < o; s++) {
-        this.groupSizes[s] = 0;
-      }
+      for (var s = r; s < o; s++) this.groupSizes[s] = 0;
     }
 
-    for (var i = this.indexOfGroup(e + 1), a = 0, c = t.length; a < c; a++) {
-      this.tag.insertRule(i, t[a]) && (this.groupSizes[e]++, i++);
-    }
+    for (var i = this.indexOfGroup(e + 1), a = 0, c = t.length; a < c; a++) this.tag.insertRule(i, t[a]) && (this.groupSizes[e]++, i++);
   }, t.clearGroup = function (e) {
     if (e < this.length) {
       var t = this.groupSizes[e],
@@ -35627,17 +35633,13 @@ var T = function () {
           r = n + t;
       this.groupSizes[e] = 0;
 
-      for (var o = n; o < r; o++) {
-        this.tag.deleteRule(n);
-      }
+      for (var o = n; o < r; o++) this.tag.deleteRule(n);
     }
   }, t.getGroup = function (e) {
     var t = "";
     if (e >= this.length || 0 === this.groupSizes[e]) return t;
 
-    for (var n = this.groupSizes[e], r = this.indexOfGroup(e), o = r + n, s = r; s < o; s++) {
-      t += this.tag.getRule(s) + "/*!sc*/\n";
-    }
+    for (var n = this.groupSizes[e], r = this.indexOfGroup(e), o = r + n, s = r; s < o; s++) t += this.tag.getRule(s) + "/*!sc*/\n";
 
     return t;
   }, e;
@@ -35645,30 +35647,26 @@ var T = function () {
     k = new Map(),
     x = new Map(),
     V = 1,
-    B = function B(e) {
+    B = function (e) {
   if (k.has(e)) return k.get(e);
 
-  for (; x.has(V);) {
-    V++;
-  }
+  for (; x.has(V);) V++;
 
   var t = V++;
   return "production" !== "development" && ((0 | t) < 0 || t > 1 << 30) && j(16, "" + t), k.set(e, t), x.set(t, e), t;
 },
-    M = function M(e) {
+    M = function (e) {
   return x.get(e);
 },
-    z = function z(e, t) {
+    z = function (e, t) {
   k.set(e, t), x.set(t, e);
 },
     L = "style[" + A + '][data-styled-version="5.2.1"]',
     G = new RegExp("^" + A + '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),
-    F = function F(e, t, n) {
-  for (var r, o = n.split(","), s = 0, i = o.length; s < i; s++) {
-    (r = o[s]) && e.registerName(t, r);
-  }
+    F = function (e, t, n) {
+  for (var r, o = n.split(","), s = 0, i = o.length; s < i; s++) (r = o[s]) && e.registerName(t, r);
 },
-    Y = function Y(e, t) {
+    Y = function (e, t) {
   for (var n = t.innerHTML.split("/*!sc*/\n"), r = [], o = 0, s = n.length; o < s; o++) {
     var i = n[o].trim();
 
@@ -35683,10 +35681,10 @@ var T = function () {
     }
   }
 },
-    q = function q() {
+    q = function () {
   return "undefined" != typeof __webpack_nonce__ ? __webpack_nonce__ : null;
 },
-    H = function H(e) {
+    H = function (e) {
   var t = document.head,
       n = e || t,
       r = document.createElement("style"),
@@ -35832,7 +35830,7 @@ var T = function () {
   }, e;
 }(),
     K = /(a)(d)/gi,
-    Q = function Q(e) {
+    Q = function (e) {
   return String.fromCharCode(e + (e > 25 ? 39 : 97));
 };
 
@@ -35840,21 +35838,17 @@ function ee(e) {
   var t,
       n = "";
 
-  for (t = Math.abs(e); t > 52; t = t / 52 | 0) {
-    n = Q(t % 52) + n;
-  }
+  for (t = Math.abs(e); t > 52; t = t / 52 | 0) n = Q(t % 52) + n;
 
   return (Q(t % 52) + n).replace(K, "$1-$2");
 }
 
-var te = function te(e, t) {
-  for (var n = t.length; n;) {
-    e = 33 * e ^ t.charCodeAt(--n);
-  }
+var te = function (e, t) {
+  for (var n = t.length; n;) e = 33 * e ^ t.charCodeAt(--n);
 
   return e;
 },
-    ne = function ne(e) {
+    ne = function (e) {
   return te(5381, e);
 };
 
@@ -35961,7 +35955,7 @@ function ce(e) {
   }(function (e) {
     d.push(e);
   }),
-      f = function f(e, r, s) {
+      f = function (e, r, s) {
     return 0 === r && ae.includes(s[n.length]) || s.match(o) ? e : "." + t;
   };
 
@@ -36050,7 +36044,7 @@ var ve = function () {
     ge = /([A-Z])/,
     Se = /([A-Z])/g,
     we = /^ms-/,
-    Ee = function Ee(e) {
+    Ee = function (e) {
   return "-" + e.toLowerCase();
 };
 
@@ -36058,15 +36052,13 @@ function be(e) {
   return ge.test(e) ? e.replace(Se, Ee).replace(we, "-ms-") : e;
 }
 
-var _e = function _e(e) {
+var _e = function (e) {
   return null == e || !1 === e || "" === e;
 };
 
 function Ne(e, n, r, o) {
   if (Array.isArray(e)) {
-    for (var s, i = [], a = 0, c = e.length; a < c; a += 1) {
-      "" !== (s = Ne(e[a], n, r, o)) && (Array.isArray(s) ? i.push.apply(i, s) : i.push(s));
-    }
+    for (var s, i = [], a = 0, c = e.length; a < c; a += 1) "" !== (s = Ne(e[a], n, r, o)) && (Array.isArray(s) ? i.push.apply(i, s) : i.push(s));
 
     return i;
   }
@@ -36086,25 +36078,21 @@ function Ne(e, n, r, o) {
         o,
         s = [];
 
-    for (var i in t) {
-      t.hasOwnProperty(i) && !_e(t[i]) && (S(t[i]) ? s.push.apply(s, e(t[i], i)) : b(t[i]) ? s.push(be(i) + ":", t[i], ";") : s.push(be(i) + ": " + (r = i, null == (o = t[i]) || "boolean" == typeof o || "" === o ? "" : "number" != typeof o || 0 === o || r in _unitless.default ? String(o).trim() : o + "px") + ";"));
-    }
+    for (var i in t) t.hasOwnProperty(i) && !_e(t[i]) && (S(t[i]) ? s.push.apply(s, e(t[i], i)) : b(t[i]) ? s.push(be(i) + ":", t[i], ";") : s.push(be(i) + ": " + (r = i, null == (o = t[i]) || "boolean" == typeof o || "" === o ? "" : "number" != typeof o || 0 === o || r in _unitless.default ? String(o).trim() : o + "px") + ";"));
 
     return n ? [n + " {"].concat(s, ["}"]) : s;
   }(e) : e.toString();
 }
 
 function Ae(e) {
-  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
-    n[r - 1] = arguments[r];
-  }
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
 
   return b(e) || S(e) ? Ne(g(w, [e].concat(n))) : 0 === n.length && 1 === e.length && "string" == typeof e[0] ? e : Ne(g(e, n));
 }
 
 var Ce = /invalid hook call/i,
     Ie = new Set(),
-    Pe = function Pe(e, t) {
+    Pe = function (e, t) {
   if ("production" !== "development") {
     var n = "The component " + e + (t ? ' with the id of "' + t + '"' : "") + " has been created dynamically.\nYou may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.";
 
@@ -36115,7 +36103,7 @@ var Ce = /invalid hook call/i,
     }
   }
 },
-    Oe = function Oe(e, t, n) {
+    Oe = function (e, t, n) {
   return void 0 === n && (n = E), e.theme !== n.theme && e.theme || t || n.theme;
 },
     Re = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,
@@ -36125,7 +36113,7 @@ function je(e) {
   return e.replace(Re, "-").replace(De, "");
 }
 
-var Te = function Te(e) {
+var Te = function (e) {
   return ee(ne(e) >>> 0);
 };
 
@@ -36133,10 +36121,10 @@ function ke(e) {
   return "string" == typeof e && ("production" === "development" || e.charAt(0) === e.charAt(0).toLowerCase());
 }
 
-var xe = function xe(e) {
-  return "function" == typeof e || "object" == _typeof(e) && null !== e && !Array.isArray(e);
+var xe = function (e) {
+  return "function" == typeof e || "object" == typeof e && null !== e && !Array.isArray(e);
 },
-    Ve = function Ve(e) {
+    Ve = function (e) {
   return "__proto__" !== e && "constructor" !== e && "prototype" !== e;
 };
 
@@ -36146,15 +36134,11 @@ function Be(e, t, n) {
 }
 
 function Me(e) {
-  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
-    n[r - 1] = arguments[r];
-  }
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
 
   for (var o = 0, s = n; o < s.length; o++) {
     var i = s[o];
-    if (xe(i)) for (var a in i) {
-      Ve(a) && Be(e, i[a], a);
-    }
+    if (xe(i)) for (var a in i) Ve(a) && Be(e, i[a], a);
   }
 
   return e;
@@ -36174,10 +36158,10 @@ function Ge(e) {
 
       if (b(e)) {
         var n = e(t);
-        return "production" === "development" || null !== n && !Array.isArray(n) && "object" == _typeof(n) ? n : j(7);
+        return "production" === "development" || null !== n && !Array.isArray(n) && "object" == typeof n ? n : j(7);
       }
 
-      return Array.isArray(e) || "object" != _typeof(e) ? j(8) : t ? v({}, t, {}, e) : e;
+      return Array.isArray(e) || "object" != typeof e ? j(8) : t ? v({}, t, {}, e) : e;
     }(e.theme, t);
   }, [e.theme, t]);
   return e.children ? _react.default.createElement(ze.Provider, {
@@ -36213,7 +36197,7 @@ function Ye(e, t, n) {
   var C,
       I = new se(n, g, o ? e.componentStyle : void 0),
       P = I.isStatic && 0 === c.length,
-      O = function O(e, t) {
+      O = function (e, t) {
     return function (e, t, n, r) {
       var o = e.attrs,
           i = e.componentStyle,
@@ -36236,9 +36220,7 @@ function Ye(e, t, n) {
               s,
               i = e;
 
-          for (t in b(i) && (i = i(r)), i) {
-            r[t] = o[t] = "className" === t ? (n = o[t], s = i[t], n && s ? n + " " + s : n || s) : i[t];
-          }
+          for (t in b(i) && (i = i(r)), i) r[t] = o[t] = "className" === t ? (n = o[t], s = i[t], n && s ? n + " " + s : n || s) : i[t];
         }), [r, o];
       }(Oe(t, (0, _react.useContext)(ze), a) || E, t, o),
           y = f[0],
@@ -36255,9 +36237,7 @@ function Ye(e, t, n) {
           A = g !== t ? v({}, t, {}, g) : t,
           C = {};
 
-      for (var I in A) {
-        "$" !== I[0] && "as" !== I && ("forwardedAs" === I ? C.as = A[I] : (d ? d(I, _isPropValid.default) : !N || (0, _isPropValid.default)(I)) && (C[I] = A[I]));
-      }
+      for (var I in A) "$" !== I[0] && "as" !== I && ("forwardedAs" === I ? C.as = A[I] : (d ? d(I, _isPropValid.default) : !N || (0, _isPropValid.default)(I)) && (C[I] = A[I]));
 
       return t.style && g.style !== t.style && (C.style = v({}, t.style, {}, g.style)), C.className = Array.prototype.concat(c, h, S !== h ? S : null, t.className, g.className).filter(Boolean).join(" "), C.ref = w, (0, _react.createElement)(_, C);
     }(C, e, t, P);
@@ -36272,9 +36252,7 @@ function Ye(e, t, n) {
           o = {},
           s = Object.keys(e);
 
-      for (r = 0; r < s.length; r++) {
-        n = s[r], t.indexOf(n) >= 0 || (o[n] = e[n]);
-      }
+      for (r = 0; r < s.length; r++) n = s[r], t.indexOf(n) >= 0 || (o[n] = e[n]);
 
       return o;
     }(t, ["componentId"]),
@@ -36285,10 +36263,10 @@ function Ye(e, t, n) {
       componentId: s
     }), n);
   }, Object.defineProperty(C, "defaultProps", {
-    get: function get() {
+    get: function () {
       return this._foldedDefaultProps;
     },
-    set: function set(t) {
+    set: function (t) {
       this._foldedDefaultProps = o ? Me({}, e.defaultProps, t) : t;
     }
   }), "production" !== "development" && (Pe(f, g), C.warnTooManyClasses = function (e, t) {
@@ -36314,11 +36292,11 @@ function Ye(e, t, n) {
   }), C;
 }
 
-var qe = function qe(e) {
+var qe = function (e) {
   return function e(t, r, o) {
     if (void 0 === o && (o = E), !(0, _reactIs.isValidElementType)(r)) return j(1, String(r));
 
-    var s = function s() {
+    var s = function () {
       return t(r, o, Ae.apply(void 0, arguments));
     };
 
@@ -36354,9 +36332,7 @@ var He = function () {
 }();
 
 function $e(e) {
-  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), o = 1; o < t; o++) {
-    n[o - 1] = arguments[o];
-  }
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), o = 1; o < t; o++) n[o - 1] = arguments[o];
 
   var i = Ae.apply(void 0, [e].concat(n)),
       a = "sc-global-" + Te(JSON.stringify(i)),
@@ -36391,9 +36367,7 @@ function $e(e) {
 function We(e) {
   "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
 
-  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
-    n[r - 1] = arguments[r];
-  }
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
 
   var o = Ae.apply(void 0, [e].concat(n)).join(""),
       s = Te(o);
@@ -36435,7 +36409,7 @@ var Ue = function () {
     return j(3);
   }, e;
 }(),
-    Je = function Je(e) {
+    Je = function (e) {
   var t = _react.default.forwardRef(function (t, n) {
     var o = (0, _react.useContext)(ze),
         i = e.defaultProps,
@@ -36448,7 +36422,7 @@ var Ue = function () {
 
   return (0, _hoistNonReactStatics.default)(t, e), t.displayName = "WithTheme(" + _(e) + ")", t;
 },
-    Xe = function Xe() {
+    Xe = function () {
   return (0, _react.useContext)(ze);
 },
     Ze = {
@@ -36463,7 +36437,7 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"components/header/styles/header.js":[function(require,module,exports) {
+},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"node_modules/process/browser.js"}],"components/header/styles/header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36475,48 +36449,19 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 300;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-style: normal;\n  font-weight: bold;\n  font-size: 24px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  color: #282538;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+const Container = _styledComponents.default.div`
+  color: #282538;
+`;
 exports.Container = Container;
-
-var Text = _styledComponents.default.h1(_templateObject2());
-
+const Text = _styledComponents.default.h1`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+`;
 exports.Text = Text;
-
-var Span = _styledComponents.default.span(_templateObject3());
-
+const Span = _styledComponents.default.span`
+  font-weight: 300;
+`;
 exports.Span = Span;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/header/index.js":[function(require,module,exports) {
 "use strict";
@@ -36532,29 +36477,25 @@ var _header = require("./styles/header");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function Header(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_header.Container, restProps, children);
+function Header({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_header.Container, restProps, children);
 }
 
-Header.Text = function HeaderText(_ref2) {
-  var children = _ref2.children,
-      restProps = _objectWithoutProperties(_ref2, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
+Header.Text = function HeaderText({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_header.Text, restProps, children);
 };
 
-Header.Span = function HeaderSpan(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_header.Span, restProps, children);
+Header.Span = function HeaderSpan({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_header.Span, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"components/random/styles/random.js":[function(require,module,exports) {
 "use strict";
@@ -36568,34 +36509,18 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1100px) {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    gap: 44px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+const Container = _styledComponents.default.div`
+  @media (min-width: 1100px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 44px;
+  }
+`;
 exports.Container = Container;
-
-var Div = _styledComponents.default.div(_templateObject2());
-
+const Div = _styledComponents.default.div`
+  width: 100%;
+`;
 exports.Div = Div;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/random/index.js":[function(require,module,exports) {
 "use strict";
@@ -36611,22 +36536,18 @@ var _random = require("./styles/random");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function Random(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_random.Container, restProps, children);
+function Random({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_random.Container, restProps, children);
 }
 
-Random.Div = function RandomDiv(_ref2) {
-  var children = _ref2.children,
-      restProps = _objectWithoutProperties(_ref2, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_random.Div, restProps, children);
+Random.Div = function RandomDiv({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_random.Div, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/random":"components/random/styles/random.js"}],"images/backgroundImg.webp":[function(require,module,exports) {
 module.exports = "/backgroundImg.7be2ab1f.webp";
@@ -36648,62 +36569,98 @@ var _work = _interopRequireDefault(require("../../../images/work.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  border-radius: 8px;\n  width: 100%;\n  gap: 16px;\n\n  @media (min-width: 320px) {\n    background-color: #ffffff;\n    flex-wrap: nowrap;\n    align-items: center;\n    padding-top: 4px;\n    padding-bottom: 4px;\n    padding-right: 5px;\n    padding-left: 5px;\n    gap: 0;\n  }\n"]);
+const Container = _styledComponents.default.form`
+  display: flex;
+  padding-top: 41px;
+  padding-bottom: 41px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-image: url(${_backgroundImg.default});
+  background-position: 50%;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
+  @media (min-width: 1000px) {
+    padding-left: calc(206px / 2);
+    padding-right: calc(206px / 2);
+    padding-top: calc(42px / 2);
+    padding-bottom: calc(42px / 2);
+  }
 
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  background: #1e86ff;\n  border-radius: 4px;\n  padding-left: 27px;\n  padding-right: 27px;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 19px;\n  color: #ffffff;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border: none;\n\n  &:hover {\n    background-color: #449bff;\n  }\n\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n  @media (min-width: 320px) {\n    padding-left: 27px;\n    padding-right: 27px;\n    font-weight: 500;\n    font-size: 16px;\n    line-height: 19px;\n    padding-top: 14px;\n    padding-bottom: 14px;\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  position: relative;\n  padding-left: calc(17px + 15px + 10px);\n  padding-top: 14px;\n  padding-bottom: 14px;\n  border-radius: 4px;\n  color: #334680;\n  border: none;\n  width: 100%;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding-top: 41px;\n  padding-bottom: 41px;\n  padding-left: 18px;\n  padding-right: 18px;\n  background-image: url(", ");\n  background-position: 50%;\n  border-radius: 8px;\n  background-size: cover;\n  background-repeat: no-repeat;\n\n  @media (min-width: 1000px) {\n    padding-left: calc(206px / 2);\n    padding-right: calc(206px / 2);\n    padding-top: calc(42px / 2);\n    padding-bottom: calc(42px / 2);\n  }\n\n  @media (min-width: 1100px) {\n    padding-left: 206px;\n    padding-right: 206px;\n    padding-top: 42px;\n    padding-bottom: 42px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.form(_templateObject(), _backgroundImg.default);
-
+  @media (min-width: 1100px) {
+    padding-left: 206px;
+    padding-right: 206px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+`;
 exports.Container = Container;
-
-var Input = _styledComponents.default.input(_templateObject2(), _work.default);
-
+const Input = _styledComponents.default.input`
+  background-image: url(${_work.default});
+  background-position: 14px 50%;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-left: calc(17px + 15px + 10px);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 4px;
+  color: #334680;
+  border: none;
+  width: 100%;
+`;
 exports.Input = Input;
+const Button = _styledComponents.default.button`
+  background: #1e86ff;
+  border-radius: 4px;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border: none;
 
-var Button = _styledComponents.default.button(_templateObject3());
+  &:hover {
+    background-color: #449bff;
+  }
 
+  &,
+  &:hover {
+    transition: all ease-in 0.2s;
+  }
+  @media (min-width: 320px) {
+    padding-left: 27px;
+    padding-right: 27px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+`;
 exports.Button = Button;
+const Div = _styledComponents.default.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  width: 100%;
+  gap: 16px;
 
-var Div = _styledComponents.default.div(_templateObject4());
-
+  @media (min-width: 320px) {
+    background-color: #ffffff;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 5px;
+    padding-left: 5px;
+    gap: 0;
+  }
+`;
 exports.Div = Div;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/backgroundImg.webp":"images/backgroundImg.webp","../../../images/work.svg":"images/work.svg"}],"components/header-form/index.js":[function(require,module,exports) {
 "use strict";
@@ -36719,34 +36676,30 @@ var _headerForm = require("./styles/header-form");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function HeaderForm(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_headerForm.Container, restProps, children);
+function HeaderForm({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_headerForm.Container, restProps, children);
 }
 
-HeaderForm.Input = function HeaderFormInput(_ref2) {
-  var restProps = Object.assign({}, _ref2);
-  return /*#__PURE__*/_react.default.createElement(_headerForm.Input, restProps);
+HeaderForm.Input = function HeaderFormInput({ ...restProps
+}) {
+  return _react.default.createElement(_headerForm.Input, restProps);
 };
 
-HeaderForm.Button = function HeaderFormButton(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_headerForm.Button, restProps, children);
+HeaderForm.Button = function HeaderFormButton({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_headerForm.Button, restProps, children);
 };
 
-HeaderForm.Div = function HeaderFormDiv(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_headerForm.Div, restProps, children);
+HeaderForm.Div = function HeaderFormDiv({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_headerForm.Div, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/header-form":"components/header-form/styles/header-form.js"}],"images/globe.svg":[function(require,module,exports) {
 module.exports = "/globe.bedc0633.svg";
@@ -36764,104 +36717,61 @@ var _globe = _interopRequireDefault(require("../../../images/globe.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  margin-right: 12px;\n  cursor: pointer;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  margin-right: 12px;\n  cursor: pointer;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background: #ffffff;\n  color: #334680;\n  background-image: url(", ");\n  background-position: 14px 50%;\n  background-size: 15px;\n  background-repeat: no-repeat;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n  border-radius: 4px;\n  border: none;\n  max-width: 351px;\n  height: 45px;\n  padding-left: calc(14px + 15px + 14px);\n\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 21px;\n  text-transform: uppercase;\n  margin-bottom: 14px;\n  color: #b9bdcf;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #334680;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-top: 29px;\n  margin-bottom: 23px;\n  @media (min-width: 1100px) {\n    max-width: 29%;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+const Container = _styledComponents.default.div`
+  width: 100%;
+  margin-top: 29px;
+  margin-bottom: 23px;
+  @media (min-width: 1100px) {
+    max-width: 29%;
+  }
+`;
 exports.Container = Container;
-
-var Wrapper = _styledComponents.default.div(_templateObject2());
-
+const Wrapper = _styledComponents.default.div``;
 exports.Wrapper = Wrapper;
-
-var Span = _styledComponents.default.span(_templateObject3());
-
+const Span = _styledComponents.default.span`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #334680;
+`;
 exports.Span = Span;
-
-var Label = _styledComponents.default.label(_templateObject4());
-
+const Label = _styledComponents.default.label`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: #b9bdcf;
+`;
 exports.Label = Label;
+const Input = _styledComponents.default.input`
+  background: #ffffff;
+  color: #334680;
+  background-image: url(${_globe.default});
+  background-position: 14px 50%;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  max-width: 351px;
+  height: 45px;
+  padding-left: calc(14px + 15px + 14px);
 
-var Input = _styledComponents.default.input(_templateObject5(), _globe.default);
-
+  @media (min-width: 1100px) {
+    max-width: 100%;
+  }
+`;
 exports.Input = Input;
-
-var CheckBox = _styledComponents.default.input(_templateObject6());
-
+const CheckBox = _styledComponents.default.input`
+  margin-right: 12px;
+  cursor: pointer;
+`;
 exports.CheckBox = CheckBox;
-
-var Radio = _styledComponents.default.input(_templateObject7());
-
+const Radio = _styledComponents.default.input`
+  margin-right: 12px;
+  cursor: pointer;
+`;
 exports.Radio = Radio;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/globe.svg":"images/globe.svg"}],"components/body-form/index.js":[function(require,module,exports) {
 "use strict";
@@ -36877,49 +36787,45 @@ var _bodyForm = require("./styles/body-form");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function BodyForm(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Container, restProps, children);
+function BodyForm({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Container, restProps, children);
 }
 
-BodyForm.Wrapper = function BodyFormWrapper(_ref2) {
-  var children = _ref2.children,
-      restProps = _objectWithoutProperties(_ref2, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Wrapper, restProps, children);
+BodyForm.Wrapper = function BodyFormWrapper({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Wrapper, restProps, children);
 };
 
-BodyForm.Label = function BodyFormLabel(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Label, restProps, children);
+BodyForm.Label = function BodyFormLabel({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Label, restProps, children);
 };
 
-BodyForm.CheckBox = function BodyFormCheckBox(_ref4) {
-  var restProps = Object.assign({}, _ref4);
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.CheckBox, restProps);
+BodyForm.CheckBox = function BodyFormCheckBox({ ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.CheckBox, restProps);
 };
 
-BodyForm.Radio = function BodyFormRadio(_ref5) {
-  var restProps = Object.assign({}, _ref5);
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Radio, restProps);
+BodyForm.Radio = function BodyFormRadio({ ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Radio, restProps);
 };
 
-BodyForm.Input = function BodyFormInput(_ref6) {
-  var restProps = Object.assign({}, _ref6);
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Input, restProps);
+BodyForm.Input = function BodyFormInput({ ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Input, restProps);
 };
 
-BodyForm.Span = function BodyFormSpan(_ref7) {
-  var restProps = Object.assign({}, _ref7);
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.Span, restProps);
+BodyForm.Span = function BodyFormSpan({ ...restProps
+}) {
+  return _react.default.createElement(_bodyForm.Span, restProps);
 };
 },{"react":"node_modules/react/index.js","./styles/body-form":"components/body-form/styles/body-form.js"}],"components/card/styles/card.js":[function(require,module,exports) {
 "use strict";
@@ -36933,160 +36839,116 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n  max-width: 15px;\n  margin-right: 8.5px;\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  @media (min-width: 1000px) {\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: flex-end;\n  }\n"]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  margin-bottom: 26px;\n  color: #334680;\n  background-color: transparent;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 19px;\n  margin-top: 8px;\n  margin-bottom: 14px;\n  color: #334680;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 14px;\n  color: #334680;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", Arial, Helvetica, sans-serif;\n  display: flex;\n  flex-direction: row;\n  align-items: start;\n  flex-wrap: wrap;\n  margin-top: 23px;\n  margin-bottom: 23px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  gap: 16px;\n  padding: 12px;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n\n  &:hover {\n    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);\n  }\n  &,\n  &:hover {\n    transition: all ease-in 0.2s;\n  }\n  @media (min-width: 300px) {\n    flex-wrap: nowrap;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 791px;\n  @media (min-width: 1100px) {\n    max-width: 100%;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+const Container = _styledComponents.default.div`
+  width: 100%;
+  max-width: 791px;
+  @media (min-width: 1100px) {
+    max-width: 100%;
+  }
+`;
 exports.Container = Container;
+const Item = _styledComponents.default.div`
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  gap: 16px;
+  padding: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 
-var Item = _styledComponents.default.div(_templateObject2());
-
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  &,
+  &:hover {
+    transition: all ease-in 0.2s;
+  }
+  @media (min-width: 300px) {
+    flex-wrap: nowrap;
+  }
+`;
 exports.Item = Item;
-
-var Image = _styledComponents.default.img(_templateObject3());
-
+const Image = _styledComponents.default.img`
+  width: 100%;
+`;
 exports.Image = Image;
-
-var Title = _styledComponents.default.h3(_templateObject4());
-
+const Title = _styledComponents.default.h3`
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+`;
 exports.Title = Title;
-
-var JobName = _styledComponents.default.h4(_templateObject5());
-
+const JobName = _styledComponents.default.h4`
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+  color: #334680;
+`;
 exports.JobName = JobName;
-
-var JobType = _styledComponents.default.button(_templateObject6());
-
+const JobType = _styledComponents.default.button`
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid #334680;
+  line-height: 14px;
+  padding: 6px;
+  max-width: max-content;
+  border-radius: 4px;
+  margin-bottom: 26px;
+  color: #334680;
+  background-color: transparent;
+`;
 exports.JobType = JobType;
-
-var Location = _styledComponents.default.span(_templateObject7());
-
+const Location = _styledComponents.default.span`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b9bdcf;
+`;
 exports.Location = Location;
-
-var Time = _styledComponents.default.time(_templateObject8());
-
+const Time = _styledComponents.default.time`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b7bcce;
+`;
 exports.Time = Time;
-
-var Wrapper = _styledComponents.default.div(_templateObject9());
-
+const Wrapper = _styledComponents.default.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 300px) {
+    flex-wrap: nowrap;
+  }
+`;
 exports.Wrapper = Wrapper;
-
-var InnerWrapper = _styledComponents.default.div(_templateObject10());
-
+const InnerWrapper = _styledComponents.default.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`;
 exports.InnerWrapper = InnerWrapper;
-
-var Icon = _styledComponents.default.img(_templateObject11());
-
+const Icon = _styledComponents.default.img`
+  max-width: 15px;
+  margin-right: 8.5px;
+`;
 exports.Icon = Icon;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/card/index.js":[function(require,module,exports) {
 "use strict";
@@ -37102,81 +36964,77 @@ var _card = require("./styles/card");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function Card(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Container, restProps, children);
+function Card({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Container, restProps, children);
 }
 
-Card.Item = function CardItem(_ref2) {
-  var children = _ref2.children,
-      restProps = _objectWithoutProperties(_ref2, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Item, restProps, children);
+Card.Item = function CardItem({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Item, restProps, children);
 };
 
-Card.Image = function CardImage(_ref3) {
-  var restProps = Object.assign({}, _ref3);
-  return /*#__PURE__*/_react.default.createElement(_card.Image, restProps);
+Card.Image = function CardImage({ ...restProps
+}) {
+  return _react.default.createElement(_card.Image, restProps);
 };
 
-Card.Title = function CardTitle(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Title, restProps, children);
+Card.Title = function CardTitle({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Title, restProps, children);
 };
 
-Card.JobType = function CardJobType(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.JobType, restProps, children);
+Card.JobType = function CardJobType({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.JobType, restProps, children);
 };
 
-Card.Location = function CardLocation(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Location, restProps, children);
+Card.Location = function CardLocation({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Location, restProps, children);
 };
 
-Card.Time = function CardTime(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Time, restProps, children);
+Card.Time = function CardTime({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Time, restProps, children);
 };
 
-Card.Icon = function CardIcon(_ref8) {
-  var restProps = Object.assign({}, _ref8);
-  return /*#__PURE__*/_react.default.createElement(_card.Icon, restProps);
+Card.Icon = function CardIcon({ ...restProps
+}) {
+  return _react.default.createElement(_card.Icon, restProps);
 };
 
-Card.JobName = function CardJobName(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.JobName, restProps, children);
+Card.JobName = function CardJobName({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.JobName, restProps, children);
 };
 
-Card.Wrapper = function CardWrapper(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.Wrapper, restProps, children);
+Card.Wrapper = function CardWrapper({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.Wrapper, restProps, children);
 };
 
-Card.InnerWrapper = function CardInnerWrapper(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_card.InnerWrapper, restProps, children);
+Card.InnerWrapper = function CardInnerWrapper({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_card.InnerWrapper, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/card":"components/card/styles/card.js"}],"images/arrow.svg":[function(require,module,exports) {
 module.exports = "/arrow.305c14c2.svg";
@@ -37194,188 +37052,127 @@ var _arrow = _interopRequireDefault(require("../../../images/arrow.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n  max-width: 15px;\n  margin-right: 8.5px;\n"]);
+const Container = _styledComponents.default.div`
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    gap: calc(77px / 2);
+  }
 
-  _templateObject13 = function _templateObject13() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 1100px) {\n    max-width: 29%;\n  }\n"]);
-
-  _templateObject12 = function _templateObject12() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b7bcce;\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 14px;\n  color: #b9bdcf;\n"]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 28px;\n  color: #334680;\n  margin: 0;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 21px;\n  text-transform: uppercase;\n  color: #b9bdcf;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  position: relative;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1e86ff;\n  padding-left: calc(18.5px + 15px);\n  &::before {\n    content: \"\";\n    background-image: url(", ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    display: block;\n    position: absolute;\n    top: calc(14px / 2);\n    left: -25px;\n    width: 30px;\n    height: 19px;\n    transform: rotate(-180deg);\n    margin-left: 18px;\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 12px;\n  border: 2px solid #334680;\n  line-height: 14px;\n  padding: 6px;\n  max-width: max-content;\n  border-radius: 4px;\n  color: #334680;\n  margin-top: 10px;\n  background-color: transparent;\n  margin-bottom: 10px;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 150%;\n  color: #334680;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  height: fit-content;\n  max-width: 42px;\n  max-height: 42px;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 21px;\n  color: #334680;\n  margin: 0;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @media (min-width: 600px) {\n    display: flex;\n    flex-direction: row;\n    gap: calc(77px / 2);\n  }\n\n  @media (min-width: 1200px) {\n    gap: 77px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+  @media (min-width: 1200px) {
+    gap: 77px;
+  }
+`;
 exports.Container = Container;
-
-var Title = _styledComponents.default.h3(_templateObject2());
-
+const Title = _styledComponents.default.h3`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #334680;
+  margin: 0;
+`;
 exports.Title = Title;
-
-var Image = _styledComponents.default.img(_templateObject3());
-
+const Image = _styledComponents.default.img`
+  height: fit-content;
+  max-width: 42px;
+  max-height: 42px;
+`;
 exports.Image = Image;
-
-var Description = _styledComponents.default.article(_templateObject4());
-
+const Description = _styledComponents.default.article`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #334680;
+`;
 exports.Description = Description;
-
-var JobType = _styledComponents.default.button(_templateObject5());
-
+const JobType = _styledComponents.default.button`
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid #334680;
+  line-height: 14px;
+  padding: 6px;
+  max-width: max-content;
+  border-radius: 4px;
+  color: #334680;
+  margin-top: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+`;
 exports.JobType = JobType;
-
-var Text = _styledComponents.default.p(_templateObject6(), _arrow.default);
-
+const Text = _styledComponents.default.p`
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1e86ff;
+  padding-left: calc(18.5px + 15px);
+  &::before {
+    content: "";
+    background-image: url(${_arrow.default});
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: calc(14px / 2);
+    left: -25px;
+    width: 30px;
+    height: 19px;
+    transform: rotate(-180deg);
+    margin-left: 18px;
+  }
+`;
 exports.Text = Text;
-
-var OtherTitle = _styledComponents.default.h3(_templateObject7());
-
+const OtherTitle = _styledComponents.default.h3`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #b9bdcf;
+`;
 exports.OtherTitle = OtherTitle;
-
-var JobName = _styledComponents.default.h3(_templateObject8());
-
+const JobName = _styledComponents.default.h3`
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #334680;
+  margin: 0;
+`;
 exports.JobName = JobName;
-
-var Wrapper = _styledComponents.default.div(_templateObject9());
-
+const Wrapper = _styledComponents.default.div`
+  display: flex;
+  flex-direction: column;
+`;
 exports.Wrapper = Wrapper;
-
-var Location = _styledComponents.default.span(_templateObject10());
-
+const Location = _styledComponents.default.span`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b9bdcf;
+`;
 exports.Location = Location;
-
-var Time = _styledComponents.default.time(_templateObject11());
-
+const Time = _styledComponents.default.time`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b7bcce;
+`;
 exports.Time = Time;
-
-var Application = _styledComponents.default.div(_templateObject12());
-
+const Application = _styledComponents.default.div`
+  @media (min-width: 1100px) {
+    max-width: 29%;
+  }
+`;
 exports.Application = Application;
-
-var Icon = _styledComponents.default.img(_templateObject13());
-
+const Icon = _styledComponents.default.img`
+  max-width: 15px;
+  margin-right: 8.5px;
+`;
 exports.Icon = Icon;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../../images/arrow.svg":"images/arrow.svg"}],"components/details/index.js":[function(require,module,exports) {
 "use strict";
@@ -37391,95 +37188,91 @@ var _details = require("./styles/details");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function Details(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Container, restProps, children);
+function Details({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Container, restProps, children);
 }
 
-Details.Image = function DetailsImage(_ref2) {
-  var restProps = Object.assign({}, _ref2);
-  return /*#__PURE__*/_react.default.createElement(_details.Image, restProps);
+Details.Image = function DetailsImage({ ...restProps
+}) {
+  return _react.default.createElement(_details.Image, restProps);
 };
 
-Details.Icon = function DetailsIcon(_ref3) {
-  var restProps = Object.assign({}, _ref3);
-  return /*#__PURE__*/_react.default.createElement(_details.Icon, restProps);
+Details.Icon = function DetailsIcon({ ...restProps
+}) {
+  return _react.default.createElement(_details.Icon, restProps);
 };
 
-Details.Description = function DetailsDescription(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Description, restProps, children);
+Details.Description = function DetailsDescription({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Description, restProps, children);
 };
 
-Details.Title = function DetailsTitle(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Title, restProps, children);
+Details.Title = function DetailsTitle({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Title, restProps, children);
 };
 
-Details.Application = function DetailsApplication(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Application, restProps, children);
+Details.Application = function DetailsApplication({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Application, restProps, children);
 };
 
-Details.OtherTitle = function DetailsOtherTitle(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.OtherTitle, restProps, children);
+Details.OtherTitle = function DetailsOtherTitle({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.OtherTitle, restProps, children);
 };
 
-Details.JobType = function DetailsJobType(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.JobType, restProps, children);
+Details.JobType = function DetailsJobType({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.JobType, restProps, children);
 };
 
-Details.Location = function DetailsLocation(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Location, restProps, children);
+Details.Location = function DetailsLocation({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Location, restProps, children);
 };
 
-Details.Time = function DetailsTime(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Time, restProps, children);
+Details.Time = function DetailsTime({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Time, restProps, children);
 };
 
-Details.JobName = function DetailsJobName(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.JobName, restProps, children);
+Details.JobName = function DetailsJobName({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.JobName, restProps, children);
 };
 
-Details.Wrapper = function DetailsWrapper(_ref12) {
-  var children = _ref12.children,
-      restProps = _objectWithoutProperties(_ref12, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Wrapper, restProps, children);
+Details.Wrapper = function DetailsWrapper({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Wrapper, restProps, children);
 };
 
-Details.Text = function DetailsText(_ref13) {
-  var children = _ref13.children,
-      restProps = _objectWithoutProperties(_ref13, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_details.Text, restProps, children);
+Details.Text = function DetailsText({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_details.Text, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/details":"components/details/styles/details.js"}],"components/pagination/styles/pagination.js":[function(require,module,exports) {
 "use strict";
@@ -37493,76 +37286,55 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  color: #b7bcce;\n  border: 1px solid #b7bcce;\n  box-sizing: border-box;\n  border-radius: 4px;\n  width: 36px;\n  height: 36px;\n  background-color: transparent;\n  &:hover {\n    color: #1e86ff;\n    border: 1px solid #1e86ff;\n    box-sizing: border-box;\n    border-radius: 4px;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color: #b7bcce;\n  border: 1px solid #b7bcce;\n  box-sizing: border-box;\n  border-radius: 4px;\n  width: 36px;\n  height: 36px;\n  background-color: transparent;\n  &:hover {\n    color: #1e86ff;\n    border: 1px solid #1e86ff;\n    box-sizing: border-box;\n    border-radius: 4px;\n  }\n\n  &:focus {\n    background-color: #1e86ff;\n    color: #ffffff;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  gap: 12px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  place-content: flex-end;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.div(_templateObject());
-
+const Container = _styledComponents.default.div`
+  display: flex;
+  place-content: flex-end;
+`;
 exports.Container = Container;
-
-var List = _styledComponents.default.ul(_templateObject2());
-
+const List = _styledComponents.default.ul`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+`;
 exports.List = List;
-
-var ListItem = _styledComponents.default.li(_templateObject3());
-
+const ListItem = _styledComponents.default.li``;
 exports.ListItem = ListItem;
+const Button = _styledComponents.default.button`
+  color: #b7bcce;
+  border: 1px solid #b7bcce;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  &:hover {
+    color: #1e86ff;
+    border: 1px solid #1e86ff;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
 
-var Button = _styledComponents.default.button(_templateObject4());
-
+  &:focus {
+    background-color: #1e86ff;
+    color: #ffffff;
+  }
+`;
 exports.Button = Button;
-
-var Arrow = _styledComponents.default.button(_templateObject5());
-
+const Arrow = _styledComponents.default.button`
+  color: #b7bcce;
+  border: 1px solid #b7bcce;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  &:hover {
+    color: #1e86ff;
+    border: 1px solid #1e86ff;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+`;
 exports.Arrow = Arrow;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/pagination/index.js":[function(require,module,exports) {
 "use strict";
@@ -37578,43 +37350,39 @@ var _pagination = require("./styles/pagination");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function Pagination(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_pagination.Container, restProps, children);
+function Pagination({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_pagination.Container, restProps, children);
 }
 
-Pagination.List = function PaginationList(_ref2) {
-  var children = _ref2.children,
-      restProps = _objectWithoutProperties(_ref2, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_pagination.List, restProps, children);
+Pagination.List = function PaginationList({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_pagination.List, restProps, children);
 };
 
-Pagination.ListItem = function PaginationListItem(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_pagination.ListItem, restProps, children);
+Pagination.ListItem = function PaginationListItem({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_pagination.ListItem, restProps, children);
 };
 
-Pagination.Button = function PaginationButton(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_pagination.Button, restProps, children);
+Pagination.Button = function PaginationButton({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_pagination.Button, restProps, children);
 };
 
-Pagination.Arrow = function PaginationArrow(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_pagination.Arrow, restProps, children);
+Pagination.Arrow = function PaginationArrow({
+  children,
+  ...restProps
+}) {
+  return _react.default.createElement(_pagination.Arrow, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/pagination":"components/pagination/styles/pagination.js"}],"components/index.js":[function(require,module,exports) {
 "use strict";
@@ -55840,6 +55608,7 @@ var _index197 = require("./constants/index.js");
 Object.keys(_index197).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _index197[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
@@ -55864,92 +55633,54 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Context = (0, _react.createContext)(null);
+const Context = (0, _react.createContext)(null);
 exports.Context = Context;
 
 function GlobalContext(props) {
-  var _useState = (0, _react.useState)("New York"),
-      _useState2 = _slicedToArray(_useState, 2),
-      locations = _useState2[0],
-      setLocations = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      jobType = _useState4[0],
-      setJobType = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(""),
-      _useState6 = _slicedToArray(_useState5, 2),
-      jobDescription = _useState6[0],
-      setJobDescription = _useState6[1];
-
-  var _useState7 = (0, _react.useState)(["London", "Amsterdam", "New York", "Berlin"]),
-      _useState8 = _slicedToArray(_useState7, 2),
-      locationList = _useState8[0],
-      setLocationList = _useState8[1];
-
-  var _useState9 = (0, _react.useState)(0),
-      _useState10 = _slicedToArray(_useState9, 2),
-      currentPage = _useState10[0],
-      setCurrentPage = _useState10[1];
-
-  var perPage = 5;
-  var offSet = currentPage * perPage;
-  var regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
-  var jobUrl = "".concat(regeneratorRunTime, "https://jobs.github.com/positions.json?description=").concat(jobDescription, "&full_time=").concat(jobType, "&location=").concat(locations);
-
-  var _useReducer = (0, _react.useReducer)(function (state, action) {
+  const [locations, setLocations] = (0, _react.useState)("New York");
+  const [jobType, setJobType] = (0, _react.useState)(false);
+  const [jobDescription, setJobDescription] = (0, _react.useState)("");
+  const [locationList, setLocationList] = (0, _react.useState)(["London", "Amsterdam", "New York", "Berlin"]);
+  const [currentPage, setCurrentPage] = (0, _react.useState)(0);
+  const perPage = 5;
+  const offSet = currentPage * perPage;
+  const regeneratorRunTime = "https://cors-anywhere.herokuapp.com/";
+  const jobUrl = `${regeneratorRunTime}https://jobs.github.com/positions.json?description=${jobDescription}&full_time=${jobType}&location=${locations}`;
+  let [state, dispatch] = (0, _react.useReducer)((state, action) => {
     switch (action.type) {
       case "LOADING":
         {
-          return _objectSpread(_objectSpread({}, state), {}, {
+          return { ...state,
             loading: true
-          });
+          };
         }
 
       case "RESOLVED":
         {
-          return _objectSpread(_objectSpread({}, state), {}, {
+          return { ...state,
             loading: false,
+            allData: action.allData,
             response: action.response,
             error: null
-          });
+          };
         }
 
       case "ERROR":
         {
-          return _objectSpread(_objectSpread({}, state), {}, {
+          return { ...state,
             loading: false,
             response: null,
             error: action.error
-          });
+          };
         }
 
       case "SEARCH_BY_KEYWORD":
         {
-          return _objectSpread(_objectSpread({}, state), {}, {
+          return { ...state,
             loading: false,
             response: action.filterData,
             error: null
-          });
+          };
         }
 
       default:
@@ -55958,52 +55689,55 @@ function GlobalContext(props) {
   }, {
     loading: false,
     response: [],
+    allData: [],
     error: null
-  }),
-      _useReducer2 = _slicedToArray(_useReducer, 2),
-      state = _useReducer2[0],
-      dispatch = _useReducer2[1];
-
-  (0, _react.useEffect)(function () {
-    var isCurrent = true;
+  });
+  (0, _react.useEffect)(() => {
+    let isCurrent = true;
     dispatch({
       type: "LOADING"
     });
-    fetch(jobUrl).then(function (response) {
-      return response.json();
-    }).then(function (json) {
+    fetch(jobUrl).then(response => response.json()).then(json => {
       if (isCurrent) {
         dispatch({
           type: "RESOLVED",
-          response: json
+          response: json,
+          allData: json
         });
       }
-    }).catch(function (error) {
+    }).catch(error => {
       dispatch({
         type: "ERROR",
-        error: error
+        error
       });
     });
-    return function () {
+    return () => {
       isCurrent = false;
     };
   }, [locations, jobType]);
-  var pageNumber = Math.ceil(state.response.length / perPage);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
+  let pageNumber = "";
+
+  if (state.response) {
+    pageNumber = Math.ceil(state.response.length / perPage);
+  } else {
+    pageNumber = 1;
+  }
+
+  return _react.default.createElement("div", null, _react.default.createElement(Context.Provider, {
     value: {
-      state: state,
-      dispatch: dispatch,
-      locationList: locationList,
-      setLocationList: setLocationList,
-      locations: locations,
-      setLocations: setLocations,
-      jobType: jobType,
-      setJobType: setJobType,
-      perPage: perPage,
-      offSet: offSet,
-      currentPage: currentPage,
-      setCurrentPage: setCurrentPage,
-      pageNumber: pageNumber
+      state,
+      dispatch,
+      locationList,
+      setLocationList,
+      locations,
+      setLocations,
+      jobType,
+      setJobType,
+      perPage,
+      offSet,
+      currentPage,
+      setCurrentPage,
+      pageNumber
     }
   }, props.children));
 }
@@ -56026,13 +55760,13 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function FooterContainer() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      pageNumber = _useContext.pageNumber,
-      currentPage = _useContext.currentPage,
-      setCurrentPage = _useContext.setCurrentPage;
-
-  var pages = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-  pages.length = pageNumber;
+  const {
+    pageNumber,
+    currentPage,
+    setCurrentPage
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  const pages = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  pages.length = pageNumber || 2;
 
   function displayPagination(e) {
     setCurrentPage(e.target.value);
@@ -56050,20 +55784,16 @@ function FooterContainer() {
     }
   }
 
-  return /*#__PURE__*/_react.default.createElement(_components.Pagination, null, /*#__PURE__*/_react.default.createElement(_components.Pagination.List, null, currentPage > 0 && /*#__PURE__*/_react.default.createElement(_components.Pagination.Arrow, {
+  return _react.default.createElement(_components.Pagination, null, _react.default.createElement(_components.Pagination.List, null, currentPage > 0 && _react.default.createElement(_components.Pagination.Arrow, {
     onClick: prevPage
-  }, "\u276E"), pages.map(function (page, index) {
-    return /*#__PURE__*/_react.default.createElement(_components.Pagination.ListItem, {
-      key: index
-    }, /*#__PURE__*/_react.default.createElement(_components.Pagination.Button, {
-      className: page === currentPage + 1 && "current",
-      disabled: page === currentPage + 1 && true,
-      onClick: function onClick(value) {
-        return displayPagination(value);
-      },
-      value: index
-    }, page));
-  }), pageNumber - 1 > currentPage && /*#__PURE__*/_react.default.createElement(_components.Pagination.Arrow, {
+  }, "\u276E"), pages.map((page, index) => _react.default.createElement(_components.Pagination.ListItem, {
+    key: index
+  }, _react.default.createElement(_components.Pagination.Button, {
+    className: page === currentPage + 1 && "current",
+    disabled: page === currentPage + 1 && true,
+    onClick: value => displayPagination(value),
+    value: index
+  }, page))), pageNumber - 1 > currentPage && _react.default.createElement(_components.Pagination.Arrow, {
     onClick: nextPage
   }, "\u276F")));
 }
@@ -56100,32 +55830,30 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function CardContainer() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state,
-      perPage = _useContext.perPage,
-      offSet = _useContext.offSet;
-
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_card.default, null, state.response.slice(offSet, offSet + perPage).map(function (data) {
-    return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      key: data.id,
-      to: "/details/".concat(data.id)
-    }, /*#__PURE__*/_react.default.createElement(_card.default.Item, null, /*#__PURE__*/_react.default.createElement(_card.default.Image, {
-      src: data.company_logo
-    }), /*#__PURE__*/_react.default.createElement(_card.default.InnerWrapper, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_card.default.Title, null, data.company), /*#__PURE__*/_react.default.createElement(_card.default.JobName, null, data.title), /*#__PURE__*/_react.default.createElement(_card.default.JobType, null, data.type)), /*#__PURE__*/_react.default.createElement(_card.default.Wrapper, {
-      style: {
-        justifyContent: "space-between",
-        width: "100%",
-        maxWidth: "max-content",
-        gap: "28.5px"
-      }
-    }, /*#__PURE__*/_react.default.createElement(_card.default.Location, null, /*#__PURE__*/_react.default.createElement(_card.default.Icon, {
-      src: _globe.default
-    }), " ", data.location), /*#__PURE__*/_react.default.createElement(_card.default.Time, {
-      dateTime: data.created_at
-    }, /*#__PURE__*/_react.default.createElement(_card.default.Icon, {
-      src: _clock.default
-    }), (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(data.created_at), new Date()), " ago") : "today")))));
-  })), /*#__PURE__*/_react.default.createElement(_pagination.default, null));
+  const {
+    state,
+    perPage,
+    offSet
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_card.default, null, state.response.slice(offSet, offSet + perPage).map(data => _react.default.createElement(_reactRouterDom.Link, {
+    key: data.id,
+    to: `/details/${data.id}`
+  }, _react.default.createElement(_card.default.Item, null, _react.default.createElement(_card.default.Image, {
+    src: data.company_logo
+  }), _react.default.createElement(_card.default.InnerWrapper, null, _react.default.createElement("div", null, _react.default.createElement(_card.default.Title, null, data.company), _react.default.createElement(_card.default.JobName, null, data.title), _react.default.createElement(_card.default.JobType, null, data.type)), _react.default.createElement(_card.default.Wrapper, {
+    style: {
+      justifyContent: "space-between",
+      width: "100%",
+      maxWidth: "max-content",
+      gap: "28.5px"
+    }
+  }, _react.default.createElement(_card.default.Location, null, _react.default.createElement(_card.default.Icon, {
+    src: _globe.default
+  }), " ", data.location), _react.default.createElement(_card.default.Time, {
+    dateTime: data.created_at
+  }, _react.default.createElement(_card.default.Icon, {
+    src: _clock.default
+  }), (0, _dateFns.formatDistance)(new Date(data.created_at), new Date()) !== "today" ? `${(0, _dateFns.formatDistance)(new Date(data.created_at), new Date())} ago` : "today"))))))), _react.default.createElement(_pagination.default, null));
 }
 },{"react":"node_modules/react/index.js","date-fns":"node_modules/date-fns/esm/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../GlobalContext":"GlobalContext.js","../container/pagination":"container/pagination.js","./../components/card":"components/card/index.js","../images/globe.svg":"images/globe.svg","../images/clock.svg":"images/clock.svg"}],"container/body-form.js":[function(require,module,exports) {
 "use strict";
@@ -56148,13 +55876,14 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function BodyFormContainer() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state,
-      setLocations = _useContext.setLocations,
-      locations = _useContext.locations,
-      locationList = _useContext.locationList,
-      jobType = _useContext.jobType,
-      setJobType = _useContext.setJobType;
+  const {
+    state,
+    setLocations,
+    locations,
+    locationList,
+    jobType,
+    setJobType
+  } = (0, _react.useContext)(_GlobalContext.Context);
 
   function searchByLocation(e) {
     if (state.response) {
@@ -56171,60 +55900,56 @@ function BodyFormContainer() {
   }
 
   function searchByLocationList(e) {
-    var findJob = locationList.find(function (data) {
-      return data === e.target.value;
-    });
+    const findJob = locationList.find(data => data === e.target.value);
     setLocations(findJob);
   }
 
-  return /*#__PURE__*/_react.default.createElement(_bodyForm.default, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
+  return _react.default.createElement(_bodyForm.default, null, _react.default.createElement(_bodyForm.default.Wrapper, {
     style: {
       display: "flex",
       alignItems: "center"
     }
-  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.CheckBox, {
+  }, _react.default.createElement(_bodyForm.default.CheckBox, {
     type: "checkBox",
     style: {
       transform: "scale(1.3)"
     },
     onChange: searchByType
-  }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, "Full time")), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, {
+  }), _react.default.createElement(_bodyForm.default.Span, null, "Full time")), _react.default.createElement(_bodyForm.default.Wrapper, {
     style: {
       display: "flex",
       flexDirection: "column",
       marginTop: "35px",
       marginBottom: "27px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Label, {
+  }, _react.default.createElement(_bodyForm.default.Label, {
     htmlFor: "search"
-  }, "Location"), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Input, {
+  }, "Location"), _react.default.createElement(_bodyForm.default.Input, {
     type: "text",
     id: "search",
     onChange: searchByLocation,
     placeholder: "City, state, zip code or country"
-  })), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Wrapper, null, locationList.map(function (location) {
-    return /*#__PURE__*/_react.default.createElement("div", {
-      key: location,
-      style: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        marginTop: "18px",
-        marginBottom: "18px"
-      }
-    }, /*#__PURE__*/_react.default.createElement(_bodyForm.default.Radio, {
-      type: "radio",
-      value: location,
-      id: location,
-      name: "location",
-      checked: location.toLowerCase() === locations.toLowerCase() && "checked",
-      onChange: searchByLocationList,
-      style: {
-        transform: "scale(1.3)",
-        marginTop: 0
-      }
-    }), /*#__PURE__*/_react.default.createElement(_bodyForm.default.Span, null, location));
-  })));
+  })), _react.default.createElement(_bodyForm.default.Wrapper, null, locationList.map(location => _react.default.createElement("div", {
+    key: location,
+    style: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      marginTop: "18px",
+      marginBottom: "18px"
+    }
+  }, _react.default.createElement(_bodyForm.default.Radio, {
+    type: "radio",
+    value: location,
+    id: location,
+    name: "location",
+    checked: location.toLowerCase() === locations.toLowerCase() && "checked",
+    onChange: searchByLocationList,
+    style: {
+      transform: "scale(1.3)",
+      marginTop: 0
+    }
+  }), _react.default.createElement(_bodyForm.default.Span, null, location)))));
 }
 },{"react":"node_modules/react/index.js","../components/body-form":"components/body-form/index.js","../GlobalContext":"GlobalContext.js"}],"container/header-form.js":[function(require,module,exports) {
 "use strict";
@@ -56244,40 +55969,24 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function HeaderFormContainer() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state,
-      dispatch = _useContext.dispatch,
-      setLocations = _useContext.setLocations,
-      locations = _useContext.locations;
-
-  var copyOfData = _toConsumableArray(state.response);
+  const {
+    state,
+    dispatch,
+    setLocations,
+    locations
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  let copyOfData = state.allData;
 
   function searchByKeyword(e) {
     e.preventDefault();
-    var form = e.currentTarget;
-    var filterByKeyword = copyOfData.filter(function (data) {
-      return data.company.toLowerCase().includes(form.search.value) || data.title.toLowerCase().includes(form.search.value);
-    });
+    const form = e.currentTarget;
+    const filterByKeyword = copyOfData.filter(data => data.company.toLowerCase().includes(form.search.value) || data.title.toLowerCase().includes(form.search.value));
     dispatch({
       type: "SEARCH_BY_KEYWORD",
       filterData: filterByKeyword
     });
   }
-
-  console.log(copyOfData);
 
   function resetSearch(e) {
     if (locations === locations.toLowerCase()) {
@@ -56293,13 +56002,13 @@ function HeaderFormContainer() {
     }
   }
 
-  return /*#__PURE__*/_react.default.createElement(_components.HeaderForm, {
+  return _react.default.createElement(_components.HeaderForm, {
     onSubmit: searchByKeyword
-  }, /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Div, null, /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Input, {
+  }, _react.default.createElement(_components.HeaderForm.Div, null, _react.default.createElement(_components.HeaderForm.Input, {
     name: "search",
     onChange: resetSearch,
     placeholder: "Title, companies, expertise or benefits"
-  }), /*#__PURE__*/_react.default.createElement(_components.HeaderForm.Button, null, "Search")));
+  }), _react.default.createElement(_components.HeaderForm.Button, null, "Search")));
 }
 },{"react":"node_modules/react/index.js","../GlobalContext":"GlobalContext.js","../components":"components/index.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
@@ -56328,10 +56037,10 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Home() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state;
-
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerForm.default, null), /*#__PURE__*/_react.default.createElement(_components.Random, null, /*#__PURE__*/_react.default.createElement(_bodyForm.default, null), state.loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), state.error && /*#__PURE__*/_react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response && /*#__PURE__*/_react.default.createElement(_components.Random.Div, null, /*#__PURE__*/_react.default.createElement(_card.default, null))));
+  const {
+    state
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_headerForm.default, null), _react.default.createElement(_components.Random, null, _react.default.createElement(_bodyForm.default, null), state.loading && _react.default.createElement("h1", null, "Loading..."), state.error && _react.default.createElement("h1", null, "Oh no!\uD83D\uDE22 There is an error, please refresh your browser!"), state.response && _react.default.createElement(_components.Random.Div, null, _react.default.createElement(_card.default, null))));
 }
 },{"react":"node_modules/react/index.js","../container/card":"container/card.js","../container/body-form":"container/body-form.js","../container/header-form":"container/header-form.js","../components/":"components/index.js","../GlobalContext":"GlobalContext.js"}],"pages/details.js":[function(require,module,exports) {
 "use strict";
@@ -56362,35 +56071,33 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function details() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state;
-
-  var _useParams = (0, _reactRouterDom.useParams)(),
-      jobId = _useParams.jobId;
-
-  var findJob = state.response.find(function (job) {
-    return job.id === jobId;
-  });
-  return /*#__PURE__*/_react.default.createElement(_details.default, null, /*#__PURE__*/_react.default.createElement(_details.default.Application, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  const {
+    state
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  const {
+    jobId
+  } = (0, _reactRouterDom.useParams)();
+  const findJob = state.response.find(job => job.id === jobId);
+  return _react.default.createElement(_details.default, null, _react.default.createElement(_details.default.Application, null, _react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Text, null, "Back to search")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.OtherTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_details.default.Description, {
+  }, _react.default.createElement(_details.default.Text, null, "Back to search")), _react.default.createElement(_details.default.Wrapper, null, _react.default.createElement(_details.default.OtherTitle, null, "How to apply"), _react.default.createElement(_details.default.Description, {
     style: {
       overflowWrap: "break-word"
     }
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("div", {
     dangerouslySetInnerHTML: {
-      __html: findJob === null || findJob === void 0 ? void 0 : findJob.how_to_apply
+      __html: findJob?.how_to_apply
     }
-  })))), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+  })))), _react.default.createElement(_details.default.Wrapper, {
     style: {
       marginTop: "calc(36px - 16px)",
       marginBottom: "36px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, null, /*#__PURE__*/_react.default.createElement(_details.default.JobName, null, findJob === null || findJob === void 0 ? void 0 : findJob.title), /*#__PURE__*/_react.default.createElement(_details.default.JobType, null, findJob === null || findJob === void 0 ? void 0 : findJob.type), /*#__PURE__*/_react.default.createElement(_details.default.Time, {
-    dateTime: findJob === null || findJob === void 0 ? void 0 : findJob.created_at
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Icon, {
+  }, _react.default.createElement(_details.default.Wrapper, null, _react.default.createElement(_details.default.JobName, null, (findJob?.title)), _react.default.createElement(_details.default.JobType, null, (findJob?.type)), _react.default.createElement(_details.default.Time, {
+    dateTime: findJob?.created_at
+  }, _react.default.createElement(_details.default.Icon, {
     src: _clock.default
-  }), (0, _dateFns.formatDistance)(new Date(findJob === null || findJob === void 0 ? void 0 : findJob.created_at), new Date()) !== "today" ? "".concat((0, _dateFns.formatDistance)(new Date(findJob === null || findJob === void 0 ? void 0 : findJob.created_at), new Date()), " ago") : "today")), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+  }), (0, _dateFns.formatDistance)(new Date(findJob?.created_at), new Date()) !== "today" ? `${(0, _dateFns.formatDistance)(new Date(findJob?.created_at), new Date())} ago` : "today")), _react.default.createElement(_details.default.Wrapper, {
     style: {
       flexDirection: "row",
       marginTop: "36px",
@@ -56398,15 +56105,15 @@ function details() {
       gap: "12px",
       alignItems: "center"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Image, {
-    src: findJob === null || findJob === void 0 ? void 0 : findJob.company_logo
-  }), /*#__PURE__*/_react.default.createElement(_details.default.Wrapper, {
+  }, _react.default.createElement(_details.default.Image, {
+    src: findJob?.company_logo
+  }), _react.default.createElement(_details.default.Wrapper, {
     style: {
       gap: "10px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_details.default.Title, null, findJob === null || findJob === void 0 ? void 0 : findJob.company), /*#__PURE__*/_react.default.createElement(_details.default.Location, null, " ", /*#__PURE__*/_react.default.createElement(_details.default.Icon, {
+  }, _react.default.createElement(_details.default.Title, null, (findJob?.company)), _react.default.createElement(_details.default.Location, null, " ", _react.default.createElement(_details.default.Icon, {
     src: _globe.default
-  }), findJob === null || findJob === void 0 ? void 0 : findJob.location))), /*#__PURE__*/_react.default.createElement(_details.default, {
+  }), (findJob?.location)))), _react.default.createElement(_details.default, {
     style: {
       fontFamily: "Roboto",
       fontStyle: "normal",
@@ -56415,9 +56122,9 @@ function details() {
       lineHeight: "150%",
       color: "#334680"
     }
-  }, /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", {
+  }, _react.default.createElement("article", null, _react.default.createElement("div", {
     dangerouslySetInnerHTML: {
-      __html: findJob === null || findJob === void 0 ? void 0 : findJob.description
+      __html: findJob?.description
     }
   })))));
 }
@@ -56464,12 +56171,12 @@ var _pages = require("./pages");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Github ", /*#__PURE__*/_react.default.createElement(_components.Header.Span, null, "Jobs"))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_components.Header, null, _react.default.createElement(_components.Header.Text, null, "Github ", _react.default.createElement(_components.Header.Span, null, "Jobs"))), _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
-  }, /*#__PURE__*/_react.default.createElement(_pages.Home, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, _react.default.createElement(_pages.Home, null)), _react.default.createElement(_reactRouterDom.Route, {
     path: "/details/:jobId"
-  }, /*#__PURE__*/_react.default.createElement(_pages.Details, null)))));
+  }, _react.default.createElement(_pages.Details, null)))));
 }
 
 var _default = App;
@@ -56484,19 +56191,99 @@ exports.GlobalStyles = void 0;
 
 var _styledComponents = require("styled-components");
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nbody,\npre,\ncode {\n  font-family: \"Poppins\", Arial, Helvetica, sans-serif;\n  background-color: #f6f7fb;\n  margin: auto;\n  max-width: 1440px;\n  padding-left: 13px;\n  padding-right: 13px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n\na {\n  text-decoration: none;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 21px;\n  color: #1E86FF;\n  overflow-wrap: break-word; \n}\n\nimg {\n  width: 100%;\n  max-width: 90px;\n  border-radius: 4px;\n}\n\npre {\n  white-space: pre-wrap;\n}\n\nh1 {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 36px;\n  color: #282538;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n::-moz-input-placeholder{\n  color: #B9BDCF;\n}\n\n::-webkit-input-placeholder{\n  color: #B9BDCF;\n}\n\n:-ms-input-placeholder {\n  color: #B9BDCF;\n}\n\n::placeholder {\n  color: #B9BDCF;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n.current,\n.current:hover {\n  background-color: #1e86ff;\n  color: #ffffff;\n  cursor: default;\n}\n\n@media (min-width: 300px) {\n    h1 {\n        font-size: 24px;\n      }\n}\n\n@media (min-width: 650px) {\n  body {\n    padding-left: calc(120px / 2);\n    padding-right: calc(120px / 2);\n  }\n}\n\n@media (min-width: 1200px) {\n  body {\n    padding-left: 120px;\n    padding-right: 120px;\n  }\n}\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
+const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
+body,
+pre,
+code {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: #f6f7fb;
+  margin: auto;
+  max-width: 1440px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1E86FF;
+  overflow-wrap: break-word; 
+}
 
-var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject());
+img {
+  width: 100%;
+  max-width: 90px;
+  border-radius: 4px;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: #282538;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+::-moz-input-placeholder{
+  color: #B9BDCF;
+}
+
+::-webkit-input-placeholder{
+  color: #B9BDCF;
+}
+
+:-ms-input-placeholder {
+  color: #B9BDCF;
+}
+
+::placeholder {
+  color: #B9BDCF;
+}
+
+button {
+  cursor: pointer;
+}
+
+.current,
+.current:hover {
+  background-color: #1e86ff;
+  color: #ffffff;
+  cursor: default;
+}
+
+@media (min-width: 300px) {
+    h1 {
+        font-size: 24px;
+      }
+}
+
+@media (min-width: 650px) {
+  body {
+    padding-left: calc(120px / 2);
+    padding-right: calc(120px / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+`;
 exports.GlobalStyles = GlobalStyles;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -56513,8 +56300,8 @@ var _GlobalContext = require("./GlobalContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_GlobalContext.GlobalContext, null, /*#__PURE__*/_react.default.createElement(_globalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_App.default, null)), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js","./global-styles":"global-styles.js","./GlobalContext":"GlobalContext.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_GlobalContext.GlobalContext, null, _react.default.createElement(_globalStyles.GlobalStyles, null), _react.default.createElement(_App.default, null)), document.getElementById("root"));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js","./global-styles":"global-styles.js","./GlobalContext":"GlobalContext.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -56542,7 +56329,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57378" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -56573,9 +56360,8 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
+      } else {
+        window.location.reload();
       }
     }
 
@@ -56718,5 +56504,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/github-jobs-refactored.e31bb0bc.js.map

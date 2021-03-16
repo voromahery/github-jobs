@@ -26,7 +26,7 @@ export default function FooterContainer() {
     20,
   ];
 
-  pages.length = pageNumber;
+  pages.length = pageNumber || 2;
 
   function displayPagination(e) {
     setCurrentPage(e.target.value);

@@ -4,7 +4,7 @@ import { HeaderForm } from "../components";
 
 export default function HeaderFormContainer() {
   const { state, dispatch, setLocations, locations } = useContext(Context);
-  let copyOfData = [...state.response];
+  let copyOfData = state.allData;
 
   function searchByKeyword(e) {
     e.preventDefault();
@@ -17,8 +17,6 @@ export default function HeaderFormContainer() {
     );
     dispatch({ type: "SEARCH_BY_KEYWORD", filterData: filterByKeyword });
   }
-
-  console.log(copyOfData);
   function resetSearch(e) {
     if (locations === locations.toLowerCase()) {
       if (e.target.value.length === 0) {
