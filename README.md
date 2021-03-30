@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://https://github-jobs-refactored.netlify.app/">
+    <a href="https://github-jobs-refactored-daniel.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -29,7 +29,7 @@
 
 ![screenshot](./github-jobs.png)
 
--   Feel free to visit my demo at [https://github-jobs-daniel.netlify.app/](https://github-jobs-daniel.netlify.app/)
+-   Feel free to visit my demo at [https://github-jobs-refactored-daniel.netlify.app/](https://github-jobs-refactored-daniel.netlify.app/)
 
 ## My experience
 -   My experience was, I struggled especially filtering the job by their location. Now it works fine but I have to time the full name of the location.

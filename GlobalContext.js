@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useReducer, createContext } from "react";
+import jobs from "./jobs.json";
 const Context = createContext(null);
 
 function GlobalContext(props) {
@@ -71,7 +72,11 @@ function GlobalContext(props) {
       .then((response) => response.json())
       .then((json) => {
         if (isCurrent) {
-          dispatch({ type: "RESOLVED", response: json, allData: json });
+          dispatch({
+            type: "RESOLVED",
+            response: json ? json : jobs,
+            allData: json ? json : jobs,
+          });
         }
       })
 
@@ -84,6 +89,7 @@ function GlobalContext(props) {
     };
   }, [locations, jobType]);
 
+  console.log(state.response);
   let pageNumber = "";
 
   if (state.response) {
